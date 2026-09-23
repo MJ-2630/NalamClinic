@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard | NalamCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<main class="patient-dashboard">
+
+    <section class="dashboard-header">
+        <div class="dashboard-welcome">
+            <span class="dashboard-tag">PATIENT DASHBOARD</span>
+            <h1>Welcome back, <strong>Jeba!</strong> 👋</h1>
+            <p>Here’s a quick overview of your healthcare activity.</p>
+        </div>
+        <div class="dashboard-profile">
+            <div class="profile-avatar">JS</div>
+            <div>
+                <h3>Jeba SubikSha</h3>
+                <span>Patient</span>
+            </div>
+            <button class="profile-menu"><i class="bi bi-three-dots-vertical"></i></button>
+        </div>
+    </section>
+
+    <section class="dashboard-grid">
+
+    <div class="dashboard-card appointment-card">
+        <div class="card-top">
+            <div>
+                <span class="card-label">NEXT APPOINTMENT</span>
+                <h2 id="nextAppointmentTitle">No Upcoming Appointment</h2>
+            </div>
+            <div class="card-icon">
+                <i class="bi bi-calendar2-check"></i>
+            </div>
+        </div>
+
+        <div class="appointment-details">
+            <div>
+                <i class="bi bi-person-circle"></i>
+                <span id="nextAppointmentDoctor">
+                    No appointment booked
+                </span>
+            </div>
+
+            <div>
+                <i class="bi bi-calendar3"></i>
+                <span id="nextAppointmentDate">
+                    --
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-card health-card">
+        <div class="card-top">
+            <div>
+                <span class="card-label">HEALTH SUMMARY</span>
+                <h2>Your Health</h2>
+            </div>
+            <div class="card-icon">
+                <i class="bi bi-heart-pulse"></i>
+            </div>
+        </div>
+        <div class="health-stats">
+            <div>
+                <strong>72</strong>
+                <span>Heart Rate</span>
+                <small>BPM</small>
+            </div>
+            <div>
+                <strong>120/80</strong>
+                <span>Blood Pressure</span>
+                <small>mmHg</small>
+            </div>
+            <div>
+                <strong>98.6°F</strong>
+                <span>Temperature</span>
+                <small>Normal</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="quick-actions-section">
+        <div class="section-heading">
+            <div>
+                <span class="dashboard-tag">QUICK ACTIONS</span>
+                <h2>What would you like to do?</h2>
+            </div>
+        </div>
+        <div class="quick-actions">
+            <a href="booking.html" class="action-card">
+                <div class="action-icon"><i class="bi bi-calendar-plus"></i></div>
+                <div><h3>Book Appointment</h3><p>Schedule a new visit</p></div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="doctors.html" class="action-card">
+                <div class="action-icon"><i class="bi bi-person-badge"></i></div>
+                <div><h3>Find a Doctor</h3><p>Explore our specialists</p></div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="services.html" class="action-card">
+                <div class="action-icon"><i class="bi bi-grid"></i></div>
+                <div><h3>Our Services</h3><p>View healthcare services</p></div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="contact.html" class="action-card">
+                <div class="action-icon"><i class="bi bi-headset"></i></div>
+                <div><h3>Get Support</h3><p>Contact NalamCare</p></div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="dashboard-content-grid">
+
+        <div class="dashboard-card recent-card">
+            <div class="card-heading">
+                <div>
+                    <span class="card-label">ACTIVITY</span>
+                    <h2>Recent Appointments</h2>
+                </div>
+                <a href="#">View All</a>
+            </div>
+            <div class="appointment-list" id="recentAppointments">
+                <p>Loading appointments...</p>
+            </div>
+                
+        </div>
+
+        <div class="dashboard-card prescription-card">
+
+    <div class="card-heading">
+        <div>
+            <span class="card-label">MEDICATION</span>
+            <h2>Prescriptions</h2>
+        </div>
+
+        <i class="bi bi-capsule-pill heading-icon"></i>
+    </div>
+
+    <div id="patientPrescriptions">
+
+        <div class="prescription-item">
+            <div class="medicine-icon">
+                <i class="bi bi-capsule"></i>
+            </div>
+
+            <div>
+                <h3>Loading...</h3>
+                <p>Loading prescriptions...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button
+        type="button"
+        class="view-prescriptions"
+        id="viewPatientPrescriptions">
+        View Prescriptions
+        <i class="bi bi-arrow-right"></i>
+    </button>
+
+</div>
+
+    </section>
+
+    <section class="dashboard-card review-card">
+    <div class="card-heading">
+        <div>
+            <span class="card-label">SHARE YOUR EXPERIENCE</span>
+            <h2>Rate Your Doctor</h2>
+        </div>
+    </div>
+
+    <div class="review-form">
+        <div class="review-doctor">
+            <div class="doctor-small-avatar" id="reviewDoctorAvatar">DR</div>
+            <div>
+                <h3 id="reviewDoctorName">Select a doctor</h3>
+                <p id="reviewDoctorDepartment">Your recent doctor</p>
+            </div>
+        </div>
+
+        <div class="rating-stars" id="ratingStars">
+            <button type="button" data-rating="1">★</button>
+            <button type="button" data-rating="2">★</button>
+            <button type="button" data-rating="3">★</button>
+            <button type="button" data-rating="4">★</button>
+            <button type="button" data-rating="5">★</button>
+        </div>
+
+        <textarea
+            id="doctorReview"
+            placeholder="Write your feedback..."
+            rows="4"></textarea>
+
+        <button type="button" class="submit-review-btn" id="submitReview">
+            Submit Review
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+    </section>
+
+    <section class="dashboard-notification">
+        <div class="notification-icon"><i class="bi bi-bell"></i></div>
+        <div>
+            <span>REMINDER</span>
+            <h3>Your appointment is coming up!</h3>
+            <p>Dr. Arun Kumar · 24 September 2026 at 10:30 AM</p>
+        </div>
+        <a href="booking.html">View Details <i class="bi bi-arrow-right"></i></a>
+    </section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const patientData = localStorage.getItem("user");
+    const role = localStorage.getItem("role");
+
+    if (!patientData || role !== "patient") {
+        window.location.href = "login.html";
+        return;
+    }
+
+    const patient = JSON.parse(patientData);
+
+    const firstName =
+        patient.first_name || "";
+
+    const fullName =
+        `${patient.first_name || ""} ${patient.last_name || ""}`.trim();
+
+    document.querySelector(".dashboard-welcome h1 strong").textContent =
+        firstName;
+
+    document.querySelector(".dashboard-profile h3").textContent =
+        fullName;
+
+    const firstInitial =
+        patient.first_name?.charAt(0) || "";
+
+    const lastInitial =
+        patient.last_name?.charAt(0) || "";
+
+    document.querySelector(".profile-avatar").textContent =
+        `${firstInitial}${lastInitial}`.toUpperCase();
+
+    document.querySelector(".profile-menu")?.addEventListener("click", () => {
+        alert(`Logged in as ${fullName}\n${patient.email}`);
+    });
+
+    let patientAppointments = [];
+
+    try {
+
+        const response =
+            await fetch("/api/appointments");
+
+        const appointments =
+            await response.json();
+
+        patientAppointments =
+            appointments.filter(
+                appointment =>
+                    Number(appointment.patient_id) ===
+                    Number(patient.id)
+            );
+
+        /* Next Appointment */
+
+        const upcomingAppointments =
+            patientAppointments.filter(
+                appointment =>
+                    appointment.status !== "cancelled"
+            );
+
+        if (upcomingAppointments.length > 0) {
+
+            const appointment =
+                upcomingAppointments[0];
+
+            const nextTitle =
+                document.getElementById("nextAppointmentTitle");
+
+            if (nextTitle) {
+                nextTitle.textContent =
+                    appointment.status === "confirmed"
+                        ? "Appointment Confirmed"
+                        : "Appointment Pending";
+            }
+
+            const nextDoctor =
+                document.getElementById("nextAppointmentDoctor");
+
+            if (nextDoctor) {
+                nextDoctor.innerHTML =
+                    `${appointment.doctor_name}<br>
+                    <small>${appointment.department}</small>`;
+            }
+
+            const nextDate =
+                document.getElementById("nextAppointmentDate");
+
+            if (nextDate) {
+                nextDate.innerHTML =
+                    `${appointment.appointment_date}<br>
+                    <small>${appointment.appointment_time}</small>`;
+            }
+        }
+
+        /* Review Doctor */
+
+        const reviewDoctorName =
+            document.getElementById("reviewDoctorName");
+
+        const reviewDoctorDepartment =
+            document.getElementById("reviewDoctorDepartment");
+
+        const reviewDoctorAvatar =
+            document.getElementById("reviewDoctorAvatar");
+
+        const reviewAppointment =
+            patientAppointments.find(
+                appointment =>
+                    appointment.status === "confirmed"
+            );
+
+        if (reviewAppointment) {
+
+            const doctorName =
+                reviewAppointment.doctor_name || "Doctor";
+
+            const department =
+                reviewAppointment.department ||
+                "General Medicine";
+
+            const initials =
+                doctorName
+                    .replace(/^Dr\.\s*/i, "")
+                    .split(" ")
+                    .filter(Boolean)
+                    .map(word => word.charAt(0))
+                    .slice(0, 2)
+                    .join("")
+                    .toUpperCase();
+
+            if (reviewDoctorName) {
+                reviewDoctorName.textContent =
+                    doctorName;
+            }
+
+            if (reviewDoctorDepartment) {
+                reviewDoctorDepartment.textContent =
+                    department;
+            }
+
+            if (reviewDoctorAvatar) {
+                reviewDoctorAvatar.textContent =
+                    initials;
+            }
+
+            window.reviewDoctorId =
+                reviewAppointment.doctor_id;
+
+        } else {
+
+            if (reviewDoctorName) {
+                reviewDoctorName.textContent =
+                    "No completed appointment";
+            }
+
+            if (reviewDoctorDepartment) {
+                reviewDoctorDepartment.textContent =
+                    "Book an appointment first";
+            }
+
+            if (reviewDoctorAvatar) {
+                reviewDoctorAvatar.textContent =
+                    "DR";
+            }
+
+            window.reviewDoctorId = null;
+        }
+
+        /* Recent Appointments */
+
+        const recentAppointments =
+            document.getElementById("recentAppointments");
+
+        if (recentAppointments) {
+
+            recentAppointments.innerHTML = "";
+
+            patientAppointments
+                .slice(0, 3)
+                .forEach(appointment => {
+
+                    const row =
+                        document.createElement("div");
+
+                    row.className =
+                        "appointment-row";
+
+                    const initials =
+                        appointment.doctor_name
+                            .replace(/^Dr\.\s*/i, "")
+                            .split(" ")
+                            .filter(Boolean)
+                            .map(word => word[0])
+                            .slice(0, 2)
+                            .join("")
+                            .toUpperCase();
+
+                    row.innerHTML = `
+                        <div class="doctor-small-avatar">
+                            ${initials}
+                        </div>
+
+                        <div class="appointment-info">
+                            <h3>${appointment.doctor_name}</h3>
+                            <p>${appointment.department}</p>
+                        </div>
+
+                        <div class="appointment-date">
+                            <strong>${appointment.appointment_date}</strong>
+                            <span>${appointment.appointment_time}</span>
+                        </div>
+
+                        <span class="status ${appointment.status}">
+                            ${appointment.status}
+                        </span>
+                    `;
+
+                    recentAppointments.appendChild(row);
+
+                });
+
+            if (patientAppointments.length === 0) {
+
+                recentAppointments.innerHTML =
+                    "<p>No appointments yet.</p>";
+
+            }
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Appointment loading error:",
+            error
+        );
+
+    }
+
+    /* Rating */
+
+    const ratingStars =
+        document.querySelectorAll("#ratingStars button");
+
+    let selectedRating = 0;
+
+    ratingStars.forEach(star => {
+
+        star.addEventListener("click", () => {
+
+            selectedRating =
+                Number(star.dataset.rating);
+
+            ratingStars.forEach(item => {
+
+                const rating =
+                    Number(item.dataset.rating);
+
+                item.classList.toggle(
+                    "active",
+                    rating <= selectedRating
+                );
+
+            });
+
+            console.log(
+                "Selected Rating:",
+                selectedRating
+            );
+
+        });
+
+    });
+
+    /* Submit Review */
+
+    const submitReview =
+        document.getElementById("submitReview");
+
+    if (submitReview) {
+
+        submitReview.addEventListener("click", async () => {
+
+            const reviewText =
+                document
+                    .getElementById("doctorReview")
+                    ?.value
+                    .trim() || "";
+
+            if (!window.reviewDoctorId) {
+
+                alert(
+                    "No doctor available for review."
+                );
+
+                return;
+            }
+
+            if (!selectedRating) {
+
+                alert(
+                    "Please select a rating."
+                );
+
+                return;
+            }
+
+            try {
+
+                const response =
+                    await fetch("/api/reviews", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            patient_id: patient.id,
+                            doctor_id: window.reviewDoctorId,
+                            rating: selectedRating,
+                            review: reviewText
+                        })
+                    });
+
+                const data =
+                    await response.json();
+
+                if (!response.ok) {
+
+                    alert(
+                        data.message ||
+                        "Failed to submit review."
+                    );
+
+                    return;
+                }
+
+                alert(
+                    "Review submitted successfully! ⭐"
+                );
+
+                const reviewInput =
+                    document.getElementById("doctorReview");
+
+                if (reviewInput) {
+                    reviewInput.value = "";
+                }
+
+                selectedRating = 0;
+
+                ratingStars.forEach(star => {
+                    star.classList.remove("active");
+                });
+
+            } catch (error) {
+
+                console.error(
+                    "Review submission error:",
+                    error
+                );
+
+                alert(
+                    "Server connection failed!"
+                );
+
+            }
+
+        });
+
+    }
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const prescriptionContainer =
+        document.getElementById("patientPrescriptions");
+
+    if (!prescriptionContainer) return;
+
+    let patient;
+
+    try {
+        patient =
+            JSON.parse(localStorage.getItem("user"));
+    } catch (error) {
+        patient = null;
+    }
+
+    if (!patient?.id) {
+        prescriptionContainer.innerHTML = `
+            <div class="prescription-item">
+                <div class="medicine-icon">
+                    <i class="bi bi-capsule"></i>
+                </div>
+                <div>
+                    <h3>No patient session</h3>
+                    <p>Please login again.</p>
+                </div>
+            </div>
+        `;
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            `/api/patients/${patient.id}/prescriptions`
+        );
+
+        if (!response.ok) {
+            throw new Error("Failed to load prescriptions");
+        }
+
+        const prescriptions =
+            await response.json();
+
+        if (prescriptions.length === 0) {
+
+            prescriptionContainer.innerHTML = `
+                <div class="prescription-item">
+                    <div class="medicine-icon">
+                        <i class="bi bi-capsule"></i>
+                    </div>
+
+                    <div>
+                        <h3>No prescriptions</h3>
+                        <p>No medication records available.</p>
+                    </div>
+                </div>
+            `;
+
+            return;
+        }
+
+        prescriptionContainer.innerHTML =
+            prescriptions.slice(0, 3).map(
+                prescription => `
+                    <div class="prescription-item">
+
+                        <div class="medicine-icon">
+                            <i class="bi bi-capsule"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                ${prescription.medicine}
+                            </h3>
+
+                            <p>
+                                ${prescription.dosage || "As prescribed"}
+                                ·
+                                ${prescription.duration || "As directed"}
+                            </p>
+                        </div>
+
+                    </div>
+                `
+            ).join("");
+
+    } catch (error) {
+
+        console.error(
+            "Patient prescription loading error:",
+            error
+        );
+
+        prescriptionContainer.innerHTML = `
+            <div class="prescription-item">
+                <div class="medicine-icon">
+                    <i class="bi bi-exclamation-circle"></i>
+                </div>
+
+                <div>
+                    <h3>Unable to load</h3>
+                    <p>Please try again later.</p>
+                </div>
+            </div>
+        `;
+    }
+
+});
+</script>
+</body>
+</html>

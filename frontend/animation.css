@@ -1,0 +1,1456 @@
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   REVEAL VARIATIONS
+========================================= */
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-left.show,
+.reveal-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   HERO CONTENT ANIMATION
+========================================= */
+
+.hero-slide .hero-tag,
+.hero-slide .hero-title,
+.hero-slide .hero-description,
+.hero-slide .hero-buttons {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.hero-slide.active .hero-tag {
+    animation: heroTextUp 0.7s 0.15s ease forwards;
+}
+
+.hero-slide.active .hero-title {
+    animation: heroTextUp 0.7s 0.3s ease forwards;
+}
+
+.hero-slide.active .hero-description {
+    animation: heroTextUp 0.7s 0.45s ease forwards;
+}
+
+.hero-slide.active .hero-buttons {
+    animation: heroTextUp 0.7s 0.6s ease forwards;
+}
+
+@keyframes heroTextUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   FLOATING ANIMATION
+========================================= */
+
+.float-animation {
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================
+   PULSE
+========================================= */
+
+.pulse-animation {
+    animation: pulseEffect 2s ease-in-out infinite;
+}
+
+@keyframes pulseEffect {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+
+/* =========================================
+   BUTTON ARROW
+========================================= */
+
+.hero-btn-primary i,
+.hero-btn-secondary i,
+.cta-btn-primary i,
+.cta-btn-secondary i,
+.doctor-btn i,
+.department-link i {
+    transition: transform 0.3s ease;
+}
+
+.hero-btn-primary:hover i,
+.hero-btn-secondary:hover i,
+.cta-btn-primary:hover i,
+.cta-btn-secondary:hover i,
+.doctor-btn:hover i,
+.department-link:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   CARD STAGGER
+========================================= */
+
+.department-card:nth-child(2),
+.doctor-card:nth-child(2),
+.why-us-card:nth-child(2),
+.service-card:nth-child(2),
+.testimonial-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.department-card:nth-child(3),
+.doctor-card:nth-child(3),
+.why-us-card:nth-child(3),
+.service-card:nth-child(3),
+.testimonial-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.department-card:nth-child(4),
+.doctor-card:nth-child(4),
+.why-us-card:nth-child(4),
+.service-card:nth-child(4),
+.testimonial-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+/* =========================================
+   NAVBAR ANIMATIONS
+========================================= */
+
+.navbar {
+    animation: navbarDrop 0.7s ease forwards;
+}
+
+@keyframes navbarDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   APPOINTMENT CARD
+========================================= */
+
+.appointment-card {
+    animation: appointmentReveal 0.8s 0.2s ease both;
+}
+
+@keyframes appointmentReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   APPOINTMENT INPUT FOCUS
+========================================= */
+
+.form-control-custom {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.form-control-custom:focus {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   DOCTOR IMAGE EFFECT
+========================================= */
+
+.doctor-image-wrap {
+    overflow: hidden;
+}
+
+.doctor-image {
+    transition:
+        transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.5s ease;
+}
+
+.doctor-card:hover .doctor-image {
+    transform: scale(1.07);
+}
+
+
+/* =========================================
+   ABOUT IMAGE
+========================================= */
+
+.about-image {
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.4s ease;
+}
+
+.about-image-wrap:hover .about-image {
+    transform: scale(1.015);
+    box-shadow: 0 18px 45px rgba(18, 60, 67, 0.14);
+}
+
+
+/* =========================================
+   ICON HOVER
+========================================= */
+
+.department-icon,
+.why-us-icon,
+.service-icon {
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+.department-card:hover .department-icon,
+.why-us-card:hover .why-us-icon,
+.service-card:hover .service-icon {
+    transform: translateY(-3px) rotate(-4deg);
+}
+
+
+/* =========================================
+   STEP NUMBER ANIMATION
+========================================= */
+
+.step-number {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.step-card:hover .step-number {
+    box-shadow: 0 12px 30px rgba(15, 157, 138, 0.25);
+}
+
+
+/* =========================================
+   CTA BACKGROUND MOTION
+========================================= */
+
+.final-cta::before {
+    animation: ctaCircle 8s ease-in-out infinite;
+}
+
+.final-cta::after {
+    animation: ctaCircleReverse 10s ease-in-out infinite;
+}
+
+@keyframes ctaCircle {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-25px, 20px);
+    }
+}
+
+@keyframes ctaCircleReverse {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(25px, -15px);
+    }
+}
+
+
+/* =========================================
+   FAQ ANIMATION
+========================================= */
+
+.faq-section .accordion-item {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.faq-section .accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(18, 60, 67, 0.06);
+}
+
+
+/* =========================================
+   FOOTER SOCIAL ANIMATION
+========================================= */
+
+.footer-social a {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-4px) rotate(-3deg);
+}
+
+
+/* =========================================
+   PAGE LOADING
+========================================= */
+
+body {
+    animation: pageFade 0.5s ease;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* =========================================
+   NALAMCARE - BOOKING ANIMATIONS
+   SECTION 1
+   Hero + Step Progress
+========================================= */
+
+
+/* Booking Hero */
+
+.booking-hero-content {
+    animation: bookingHeroFade 0.9s ease both;
+}
+
+.booking-hero-content .section-tag {
+    animation: bookingTagUp 0.7s ease both;
+}
+
+.booking-hero-content h1 {
+    animation: bookingTitleUp 0.9s ease 0.15s both;
+}
+
+.booking-hero-content p {
+    animation: bookingTextUp 0.9s ease 0.3s both;
+}
+
+
+@keyframes bookingHeroFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes bookingTagUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes bookingTitleUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes bookingTextUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Decorative Hero Circles */
+
+.booking-hero::before {
+    animation: bookingFloatOne 7s ease-in-out infinite;
+}
+
+.booking-hero::after {
+    animation: bookingFloatTwo 6s ease-in-out infinite;
+}
+
+
+@keyframes bookingFloatOne {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-20px, 25px);
+    }
+}
+
+
+@keyframes bookingFloatTwo {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -18px);
+    }
+}
+
+
+/* Booking Steps */
+
+.steps-container {
+    animation: stepsReveal 0.8s ease 0.25s both;
+}
+
+.booking-step {
+    transition: transform 0.3s ease;
+}
+
+.booking-step:hover {
+    transform: translateY(-3px);
+}
+
+.booking-step.active .step-circle {
+    animation: stepPulse 2.5s ease-in-out infinite;
+}
+
+
+@keyframes stepsReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes stepPulse {
+    0%, 100% {
+        box-shadow: 0 8px 20px rgba(15, 157, 138, 0.20);
+    }
+
+    50% {
+        box-shadow: 0 8px 28px rgba(15, 157, 138, 0.40);
+    }
+}
+/* =========================================
+   NALAMCARE - BOOKING ANIMATIONS
+   SECTION 2
+   Cards + Calendar + Confirmation
+========================================= */
+
+
+/* Doctor Cards */
+
+.booking-doctor-card {
+    animation: cardReveal 0.7s ease both;
+}
+
+.booking-doctor-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.booking-doctor-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.booking-doctor-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.booking-doctor-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Doctor Image */
+
+.booking-doctor-image img {
+    transition: transform 0.6s ease;
+}
+
+
+/* Date & Time Cards */
+
+.date-selection,
+.time-selection {
+    animation: bookingCardUp 0.8s ease both;
+}
+
+.date-selection {
+    animation-delay: 0.1s;
+}
+
+.time-selection {
+    animation-delay: 0.2s;
+}
+
+
+@keyframes bookingCardUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Calendar Day */
+
+.calendar-day:not(.muted) {
+    transition: all 0.25s ease;
+}
+
+.calendar-day:not(.muted):hover {
+    transform: translateY(-2px);
+}
+
+.calendar-day.active {
+    animation: selectedDay 0.4s ease both;
+}
+
+
+@keyframes selectedDay {
+    0% {
+        transform: scale(0.85);
+    }
+
+    70% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Time Slots */
+
+.time-slot:not(.disabled) {
+    transition: all 0.25s ease;
+}
+
+.time-slot:not(.disabled):hover {
+    transform: translateY(-2px);
+}
+
+.time-slot.selected {
+    animation: selectedSlot 0.35s ease both;
+}
+
+
+@keyframes selectedSlot {
+    from {
+        transform: scale(0.92);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* Patient Form */
+
+.patient-form-card {
+    animation: formReveal 0.8s ease both;
+}
+
+.emergency-contact-card {
+    animation: formReveal 0.8s ease 0.15s both;
+}
+
+.privacy-note {
+    animation: formReveal 0.8s ease 0.25s both;
+}
+
+
+@keyframes formReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Input Focus */
+
+.input-with-icon input,
+.input-with-icon select,
+.patient-form-card textarea {
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus,
+.patient-form-card textarea:focus {
+    transform: translateY(-1px);
+}
+
+
+/* Confirmation */
+
+.appointment-summary-card {
+    animation: summaryReveal 0.8s ease both;
+}
+
+.patient-summary-card {
+    animation: summaryReveal 0.8s ease 0.12s both;
+}
+
+.booking-fee-card {
+    animation: summaryReveal 0.8s ease 0.22s both;
+}
+
+.booking-terms {
+    animation: summaryReveal 0.8s ease 0.3s both;
+}
+
+.confirm-booking-area {
+    animation: summaryReveal 0.8s ease 0.38s both;
+}
+
+
+@keyframes summaryReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Confirm Button */
+
+.confirm-booking-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.confirm-booking-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.18);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.confirm-booking-btn:hover::before {
+    left: 140%;
+}
+/* Doctors Animations */
+.doctors-hero-content { animation:doctorHeroFade .9s ease both; }
+.doctors-hero-content .section-tag { animation:doctorTagUp .7s ease both; }
+.doctors-hero-content h1 { animation:doctorTitleUp .9s ease .15s both; }
+.doctors-hero-content p { animation:doctorTextUp .9s ease .3s both; }
+
+@keyframes doctorHeroFade {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@keyframes doctorTagUp {
+    from { opacity:0; transform:translateY(15px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes doctorTitleUp {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes doctorTextUp {
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.doctors-hero::before { animation:doctorFloatOne 7s ease-in-out infinite; }
+.doctors-hero::after { animation:doctorFloatTwo 6s ease-in-out infinite; }
+
+@keyframes doctorFloatOne {
+    0%,100% { transform:translate(0,0); }
+    50% { transform:translate(-20px,25px); }
+}
+@keyframes doctorFloatTwo {
+    0%,100% { transform:translate(0,0); }
+    50% { transform:translate(20px,-18px); }
+}
+
+.doctor-search-box { animation:searchReveal .8s ease .2s both; }
+
+@keyframes searchReveal {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.doctor-page-card {
+    animation:doctorCardReveal .7s ease both;
+}
+.doctor-item:nth-child(1) .doctor-page-card { animation-delay:.1s; }
+.doctor-item:nth-child(2) .doctor-page-card { animation-delay:.2s; }
+.doctor-item:nth-child(3) .doctor-page-card { animation-delay:.3s; }
+.doctor-item:nth-child(4) .doctor-page-card { animation-delay:.4s; }
+
+@keyframes doctorCardReveal {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.doctor-page-image img { transition:transform .6s ease; }
+
+.availability-card {
+    animation:availabilityReveal .7s ease both;
+}
+.availability-card:nth-child(1) { animation-delay:.1s; }
+.availability-card:nth-child(2) { animation-delay:.2s; }
+.availability-card:nth-child(3) { animation-delay:.3s; }
+
+@keyframes availabilityReveal {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.doctor-search-input input,.doctor-department-filter select {
+    transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;
+}
+.doctor-search-input input:focus,.doctor-department-filter select:focus {
+    transform:translateY(-1px);
+}
+.availability-icon { transition:transform .3s ease; }
+.availability-card:hover .availability-icon {
+    transform:rotate(-5deg) scale(1.08);
+}
+
+/* Departments Animations */
+.departments-hero-content { animation:deptHeroFade .9s ease both; }
+.departments-hero-content .section-tag { animation:deptTagUp .7s ease both; }
+.departments-hero-content h1 { animation:deptTitleUp .9s ease .15s both; }
+.departments-hero-content p { animation:deptTextUp .9s ease .3s both; }
+
+@keyframes deptHeroFade {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@keyframes deptTagUp {
+    from { opacity:0; transform:translateY(15px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes deptTitleUp {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes deptTextUp {
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.departments-hero::before { animation:deptFloatOne 7s ease-in-out infinite; }
+.departments-hero::after { animation:deptFloatTwo 6s ease-in-out infinite; }
+
+@keyframes deptFloatOne {
+    0%,100% { transform:translate(0,0); }
+    50% { transform:translate(-20px,25px); }
+}
+@keyframes deptFloatTwo {
+    0%,100% { transform:translate(0,0); }
+    50% { transform:translate(20px,-18px); }
+}
+
+.department-page-card {
+    animation:deptCardReveal .7s ease both;
+}
+.department-page-card:nth-child(1) { animation-delay:.1s; }
+.department-page-card:nth-child(2) { animation-delay:.2s; }
+.department-page-card:nth-child(3) { animation-delay:.3s; }
+.department-page-card:nth-child(4) { animation-delay:.4s; }
+.department-page-card:nth-child(5) { animation-delay:.5s; }
+.department-page-card:nth-child(6) { animation-delay:.6s; }
+
+@keyframes deptCardReveal {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.department-highlight-content {
+    animation:highlightTextReveal .8s ease both;
+}
+.department-highlight-image {
+    animation:highlightImageReveal .8s ease .15s both;
+}
+
+@keyframes highlightTextReveal {
+    from { opacity:0; transform:translateX(-25px); }
+    to { opacity:1; transform:translateX(0); }
+}
+@keyframes highlightImageReveal {
+    from { opacity:0; transform:translateX(25px); }
+    to { opacity:1; transform:translateX(0); }
+}
+
+.highlight-item {
+    animation:highlightItemUp .6s ease both;
+}
+.highlight-item:nth-child(1) { animation-delay:.2s; }
+.highlight-item:nth-child(2) { animation-delay:.3s; }
+.highlight-item:nth-child(3) { animation-delay:.4s; }
+
+@keyframes highlightItemUp {
+    from { opacity:0; transform:translateY(15px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.highlight-badge {
+    animation:badgeFloat 3s ease-in-out infinite;
+}
+@keyframes badgeFloat {
+    0%,100% { transform:translateY(0); }
+    50% { transform:translateY(-6px); }
+}
+
+.departments-cta-content {
+    animation:ctaReveal .8s ease both;
+}
+@keyframes ctaReveal {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+.departments-cta::before { animation:ctaCircleOne 8s ease-in-out infinite; }
+.departments-cta::after { animation:ctaCircleTwo 6s ease-in-out infinite; }
+
+@keyframes ctaCircleOne {
+    0%,100% { transform:translate(0,0); }
+    50% { transform:translate(-20px,20px); }
+}
+@keyframes ctaCircleTwo {
+    0%,100% { transform:translate(0,0); }
+    50% { transform:translate(20px,-15px); }
+}
+/* About Animations */
+.about-hero-content {
+    animation:aboutHeroIn .8s ease both;
+}
+.about-hero-content .section-tag {
+    animation:aboutTagIn .7s ease both;
+}
+.about-hero-content h1 {
+    animation:aboutTitleIn .8s .15s ease both;
+}
+.about-hero-content p {
+    animation:aboutTextIn .8s .3s ease both;
+}
+
+@keyframes aboutHeroIn {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes aboutTagIn {
+    from { opacity:0; transform:translateY(15px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes aboutTitleIn {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes aboutTextIn {
+    from { opacity:0; transform:translateY(18px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Image */
+.about-main-image,
+.about-why-image {
+    transition:transform .5s ease,box-shadow .5s ease;
+}
+.about-main-image:hover,
+.about-why-image:hover {
+    transform:translateY(-6px);
+    box-shadow:0 22px 50px rgba(18,60,67,.16);
+}
+.about-main-image img,
+.about-why-image img {
+    transition:transform .7s ease;
+}
+.about-main-image:hover img,
+.about-why-image:hover img {
+    transform:scale(1.04);
+}
+.about-experience {
+    animation:experienceFloat 3s ease-in-out infinite;
+}
+@keyframes experienceFloat {
+    0%,100% { transform:translateY(0); }
+    50% { transform:translateY(-7px); }
+}
+
+/* Content */
+.about-main-content,
+.about-why-content {
+    animation:contentReveal .8s ease both;
+}
+@keyframes contentReveal {
+    from { opacity:0; transform:translateX(30px); }
+    to { opacity:1; transform:translateX(0); }
+}
+.about-check-list div {
+    transition:transform .3s ease,color .3s ease;
+}
+.about-check-list div:hover {
+    transform:translateX(6px);
+}
+.about-check-list i {
+    transition:transform .3s ease;
+}
+.about-check-list div:hover i {
+    transform:scale(1.15);
+}
+
+/* Mission Vision */
+.mission-vision .section-heading {
+    animation:sectionReveal .8s ease both;
+}
+.mission-card {
+    animation:cardReveal .7s ease both;
+}
+.mission-card:nth-child(1) {
+    animation-delay:.1s;
+}
+.mission-card:nth-child(2) {
+    animation-delay:.2s;
+}
+.purpose-icon {
+    transition:transform .35s ease,background .35s ease;
+}
+.mission-card:hover .purpose-icon {
+    transform:rotate(-6deg) scale(1.08);
+    background:#DFF7EF;
+}
+@keyframes sectionReveal {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes cardReveal {
+    from { opacity:0; transform:translateY(35px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Why Us */
+.why-about-item {
+    animation:smallCardReveal .6s ease both;
+}
+.why-about-item:nth-child(1) { animation-delay:.1s; }
+.why-about-item:nth-child(2) { animation-delay:.2s; }
+.why-about-item:nth-child(3) { animation-delay:.3s; }
+.why-about-item:nth-child(4) { animation-delay:.4s; }
+.why-about-item i {
+    transition:transform .3s ease;
+}
+.why-about-item:hover i {
+    transform:scale(1.15) rotate(-5deg);
+}
+@keyframes smallCardReveal {
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Stats */
+.about-stat {
+    animation:statReveal .7s ease both;
+}
+.about-stat:nth-child(1) { animation-delay:.1s; }
+.about-stat:nth-child(2) { animation-delay:.2s; }
+.about-stat:nth-child(3) { animation-delay:.3s; }
+.about-stat:nth-child(4) { animation-delay:.4s; }
+.about-stat i {
+    transition:transform .3s ease;
+}
+.about-stat:hover i {
+    transform:translateY(-5px) scale(1.1);
+}
+@keyframes statReveal {
+    from { opacity:0; transform:scale(.9); }
+    to { opacity:1; transform:scale(1); }
+}
+
+/* CTA */
+.about-cta-content {
+    animation:ctaReveal .8s ease both;
+}
+.about-cta-buttons a {
+    transition:all .3s ease;
+}
+@keyframes ctaReveal {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion:reduce) {
+    .about-hero-content,
+    .about-hero-content .section-tag,
+    .about-hero-content h1,
+    .about-hero-content p,
+    .about-main-content,
+    .about-why-content,
+    .mission-vision .section-heading,
+    .mission-card,
+    .why-about-item,
+    .about-stat,
+    .about-cta-content,
+    .about-experience {
+        animation:none;
+    }
+}
+/* Services Animations */
+.services-hero-content {
+    animation:serviceHeroIn .8s ease both;
+}
+.services-hero-content .section-tag {
+    animation:serviceTagIn .7s ease both;
+}
+.services-hero-content h1 {
+    animation:serviceTitleIn .8s .15s ease both;
+}
+.services-hero-content p {
+    animation:serviceTextIn .8s .3s ease both;
+}
+
+@keyframes serviceHeroIn {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes serviceTagIn {
+    from { opacity:0; transform:translateY(15px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes serviceTitleIn {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes serviceTextIn {
+    from { opacity:0; transform:translateY(18px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Overview */
+.service-overview-card {
+    animation:serviceCardIn .7s ease both;
+}
+.service-overview-card:nth-child(1) { animation-delay:.1s; }
+.service-overview-card:nth-child(2) { animation-delay:.2s; }
+.service-overview-card:nth-child(3) { animation-delay:.3s; }
+.service-icon {
+    transition:transform .35s ease,background .35s ease;
+}
+.service-overview-card:hover .service-icon {
+    transform:translateY(-5px) scale(1.08);
+    background:#0F9D8A;
+    color:#FFFFFF;
+}
+
+/* Main Services */
+.main-service-card {
+    animation:serviceCardIn .7s ease both;
+}
+.main-service-card:nth-child(1) { animation-delay:.1s; }
+.main-service-card:nth-child(2) { animation-delay:.15s; }
+.main-service-card:nth-child(3) { animation-delay:.2s; }
+.main-service-card:nth-child(4) { animation-delay:.25s; }
+.main-service-card:nth-child(5) { animation-delay:.3s; }
+.main-service-card:nth-child(6) { animation-delay:.35s; }
+
+@keyframes serviceCardIn {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Patient Support */
+.patient-support-image {
+    animation:serviceImageIn .8s ease both;
+}
+.patient-support-content {
+    animation:serviceContentIn .8s .15s ease both;
+}
+.support-item {
+    animation:supportIn .6s ease both;
+}
+.support-item:nth-child(1) { animation-delay:.15s; }
+.support-item:nth-child(2) { animation-delay:.25s; }
+.support-item:nth-child(3) { animation-delay:.35s; }
+
+@keyframes serviceImageIn {
+    from { opacity:0; transform:translateX(-30px); }
+    to { opacity:1; transform:translateX(0); }
+}
+@keyframes serviceContentIn {
+    from { opacity:0; transform:translateX(30px); }
+    to { opacity:1; transform:translateX(0); }
+}
+@keyframes supportIn {
+    from { opacity:0; transform:translateX(20px); }
+    to { opacity:1; transform:translateX(0); }
+}
+
+/* Process */
+.process-card {
+    animation:processIn .7s ease both;
+}
+.process-card:nth-child(1) { animation-delay:.1s; }
+.process-card:nth-child(2) { animation-delay:.2s; }
+.process-card:nth-child(3) { animation-delay:.3s; }
+.process-card:nth-child(4) { animation-delay:.4s; }
+.process-card > i {
+    transition:transform .35s ease,background .35s ease;
+}
+.process-card:hover > i {
+    transform:scale(1.1) rotate(-5deg);
+    background:#0F9D8A;
+    color:#FFFFFF;
+}
+
+@keyframes processIn {
+    from { opacity:0; transform:scale(.92) translateY(20px); }
+    to { opacity:1; transform:scale(1) translateY(0); }
+}
+
+/* CTA */
+.services-cta-content {
+    animation:serviceCtaIn .8s ease both;
+}
+@keyframes serviceCtaIn {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Button Arrow */
+.services-cta-buttons a i {
+    transition:transform .3s ease;
+}
+.services-cta-buttons a:hover i {
+    transform:translateX(4px);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion:reduce) {
+    .services-hero-content,
+    .services-hero-content .section-tag,
+    .services-hero-content h1,
+    .services-hero-content p,
+    .service-overview-card,
+    .main-service-card,
+    .patient-support-image,
+    .patient-support-content,
+    .support-item,
+    .process-card,
+    .services-cta-content {
+        animation:none;
+    }
+}
+/* Contact Animations */
+.contact-hero-content {
+    animation:contactHeroReveal .8s ease both;
+}
+.contact-hero-content .section-tag {
+    animation:contactFadeUp .7s ease .1s both;
+}
+.contact-hero-content h1 {
+    animation:contactFadeUp .7s ease .2s both;
+}
+.contact-hero-content p {
+    animation:contactFadeUp .7s ease .35s both;
+}
+.contact-hero::before {
+    animation:contactFloat 7s ease-in-out infinite;
+}
+.contact-hero::after {
+    animation:contactFloat 6s ease-in-out infinite reverse;
+}
+
+.contact-info-card {
+    animation:contactCardReveal .7s ease both;
+}
+.contact-info-card:nth-child(1) { animation-delay:.1s; }
+.contact-info-card:nth-child(2) { animation-delay:.2s; }
+.contact-info-card:nth-child(3) { animation-delay:.3s; }
+.contact-info-card:nth-child(4) { animation-delay:.4s; }
+.contact-info-card:hover .contact-info-icon {
+    transform:scale(1.08) rotate(-5deg);
+}
+.contact-info-icon {
+    transition:transform .3s ease;
+}
+.contact-info-card a i {
+    transition:transform .3s ease;
+}
+.contact-info-card:hover a i {
+    transform:translateX(4px);
+}
+
+.contact-form-content {
+    animation:contactFadeLeft .8s ease both;
+}
+.contact-form {
+    animation:contactFadeRight .8s ease both;
+}
+.contact-form-points div {
+    transition:transform .3s ease;
+}
+.contact-form-points div:hover {
+    transform:translateX(5px);
+}
+.contact-submit-btn i {
+    transition:transform .3s ease;
+}
+.contact-submit-btn:hover i {
+    transform:translateX(4px);
+}
+
+.clinic-map-wrapper {
+    animation:contactMapReveal .8s ease both;
+}
+.map-location-card {
+    animation:mapCardFloat 3s ease-in-out infinite;
+}
+.map-direction-btn i {
+    transition:transform .3s ease;
+}
+.map-direction-btn:hover i {
+    transform:translateX(3px) rotate(-8deg);
+}
+
+.working-hours-content {
+    animation:contactFadeLeft .8s ease both;
+}
+.hours-card {
+    animation:contactFadeRight .8s ease both;
+}
+.hours-row {
+    transition:padding-left .3s ease,background .3s ease;
+}
+.hours-row:hover {
+    padding-left:7px;
+}
+.hours-note i {
+    animation:infoPulse 2s ease-in-out infinite;
+}
+
+.contact-cta-content {
+    animation:contactFadeUp .8s ease both;
+}
+.contact-cta-buttons a {
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+.contact-cta-buttons a:hover {
+    box-shadow:0 10px 25px rgba(18,60,67,.12);
+}
+
+@keyframes contactHeroReveal {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes contactFadeUp {
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@keyframes contactFadeLeft {
+    from { opacity:0; transform:translateX(-30px); }
+    to { opacity:1; transform:translateX(0); }
+}
+@keyframes contactFadeRight {
+    from { opacity:0; transform:translateX(30px); }
+    to { opacity:1; transform:translateX(0); }
+}
+@keyframes contactCardReveal {
+    from { opacity:0; transform:translateY(25px) scale(.97); }
+    to { opacity:1; transform:translateY(0) scale(1); }
+}
+@keyframes contactMapReveal {
+    from { opacity:0; transform:scale(.97); }
+    to { opacity:1; transform:scale(1); }
+}
+@keyframes contactFloat {
+    0%,100% { transform:translateY(0) rotate(0deg); }
+    50% { transform:translateY(-18px) rotate(5deg); }
+}
+@keyframes mapCardFloat {
+    0%,100% { transform:translateY(0); }
+    50% { transform:translateY(-5px); }
+}
+@keyframes infoPulse {
+    0%,100% { transform:scale(1); }
+    50% { transform:scale(1.15); }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .contact-hero-content,
+    .contact-hero-content .section-tag,
+    .contact-hero-content h1,
+    .contact-hero-content p,
+    .contact-info-card,
+    .contact-form-content,
+    .contact-form,
+    .clinic-map-wrapper,
+    .working-hours-content,
+    .hours-card,
+    .contact-cta-content {
+        animation:none;
+    }
+    .contact-hero::before,
+    .contact-hero::after,
+    .map-location-card,
+    .hours-note i {
+        animation:none;
+    }
+}

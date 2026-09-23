@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NalamCare - Doctor Test</title>
+</head>
+<body>
+
+  <h2>Add Doctor</h2>
+
+  <input type="text" id="name" placeholder="Doctor Name">
+  <input type="text" id="department" placeholder="Department">
+  <button onclick="addDoctor()">Add Doctor</button>
+
+  <h3>Doctors List</h3>
+  <div id="doctors"></div>
+
+  <script>
+    async function addDoctor() {
+      const name = document.getElementById("name").value;
+      const department = document.getElementById("department").value;
+
+      const response = await fetch("/api/doctors", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, department })
+      });
+
+      const data = await response.json();
+      alert(data.message);
+
+      document.getElementById("name").value = "";
+      document.getElementById("department").value = "";
+
+      loadDoctors();
+    }
+
+    async function loadDoctors() {
+      const response = await fetch("/api/doctors");
+      const doctors = await response.json();
+
+      document.getElementById("doctors").innerHTML =
+        doctors.map(doctor =>
+          `<p>${doctor.id} - ${doctor.name} - ${doctor.department}</p>`
+        ).join("");
+    }
+
+    loadDoctors();
+  </script>
+
+</body>
+</html>

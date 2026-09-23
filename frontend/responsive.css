@@ -1,0 +1,10314 @@
+/* =========================================================
+   NALAMCLINIC
+   RESPONSIVE CSS
+   Common Navbar + Footer + Index Page
+   ========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL RESPONSIVE FIXES
+   ========================================================= */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+
+/* =========================================================
+   02. COMMON NAVBAR
+   ========================================================= */
+
+/* Large Tablet / Small Laptop */
+@media (max-width: 1199px) {
+
+    .navbar {
+        padding: 9px 0;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 9px 8px !important;
+        font-size: 0.82rem;
+    }
+
+    .nav-actions {
+        gap: 9px;
+    }
+
+    .nav-book-btn {
+        padding: 0 14px;
+        font-size: 0.82rem;
+    }
+
+    .nav-search {
+        width: 36px;
+        height: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   03. NAVBAR TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .main-header {
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar {
+        min-height: 72px;
+        padding: 9px 0;
+    }
+
+    .navbar > .container {
+        position: relative;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .brand-logo {
+        gap: 9px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 1.1rem;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+    }
+
+    .brand-text small {
+        font-size: 0.62rem;
+    }
+
+
+    /* Mobile Toggle */
+
+    .navbar-toggler {
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        border: 1px solid var(--border);
+        border-radius: 10px;
+
+        background: var(--light-mint);
+        color: var(--deep-teal);
+
+        box-shadow: none;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 3px rgba(15, 157, 138, 0.12);
+    }
+
+    .navbar-toggler i {
+        font-size: 1.35rem;
+    }
+
+
+    /* Mobile Navigation */
+
+    .navbar-collapse {
+        width: 100%;
+        margin-top: 10px;
+
+        padding: 15px;
+
+        border: 1px solid var(--border);
+        border-radius: 14px;
+
+        background: var(--white);
+        box-shadow: var(--shadow);
+    }
+
+    .navbar-nav {
+        width: 100%;
+        gap: 3px;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        width: 100%;
+
+        padding: 11px 12px !important;
+
+        border-radius: 8px;
+
+        font-size: 0.9rem;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: var(--light-mint);
+    }
+
+
+    /* Navbar Actions */
+
+    .nav-actions {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+
+        margin-top: 12px;
+        padding-top: 12px;
+
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-search {
+        width: 42px;
+        height: 42px;
+    }
+
+    .login-link,
+    .nav-login {
+        min-height: 42px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 12px;
+
+        border-radius: 9px;
+
+        background: var(--light-mint);
+    }
+
+    .nav-book-btn {
+        grid-column: 1 / -1;
+
+        width: 100%;
+        min-height: 44px;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   04. NAVBAR MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .navbar > .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .brand-logo {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    .brand-text small {
+        font-size: 0.58rem;
+        letter-spacing: 0.3px;
+    }
+
+    .navbar-toggler {
+        width: 42px;
+        height: 42px;
+    }
+
+    .navbar-collapse {
+        margin-top: 8px;
+        padding: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   05. SMALL MOBILE NAVBAR
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .brand-name {
+        font-size: 0.95rem;
+    }
+
+    .brand-text small {
+        font-size: 0.52rem;
+    }
+
+    .navbar-toggler {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   06. HERO
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .hero-slider,
+    .hero-slide,
+    .hero-container {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        width: min(600px, 100%);
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+}
+
+
+/* =========================================================
+   07. HERO TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .hero-slider,
+    .hero-slide,
+    .hero-container {
+        min-height: 600px;
+    }
+
+    .hero-container {
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.4rem, 6vw, 3.5rem);
+    }
+
+    .hero-content p {
+        max-width: 570px;
+    }
+
+    .hero-controls {
+        right: 30px;
+        bottom: 65px;
+    }
+
+}
+
+
+/* =========================================================
+   08. HERO MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .hero-slider,
+    .hero-slide,
+    .hero-container {
+        min-height: 650px;
+    }
+
+    .hero-image img {
+        object-position: center center;
+    }
+
+    .hero-container {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-tag {
+        margin-bottom: 16px;
+        padding: 7px 10px;
+
+        font-size: 0.62rem;
+        letter-spacing: 0.8px;
+    }
+
+    .hero-content h1 {
+        margin-bottom: 17px;
+
+        font-size: clamp(2.1rem, 10vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.8px;
+    }
+
+    .hero-content p {
+        margin-bottom: 23px;
+
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-primary-btn,
+    .hero-secondary-btn {
+        min-height: 46px;
+        padding: 0 16px;
+
+        font-size: 0.8rem;
+    }
+
+    .hero-controls {
+        right: 20px;
+        bottom: 65px;
+        gap: 7px;
+    }
+
+    .hero-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-dots {
+        bottom: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   09. HERO SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-slider,
+    .hero-slide,
+    .hero-container {
+        min-height: 610px;
+    }
+
+    .hero-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-tag {
+        max-width: 100%;
+
+        font-size: 0.57rem;
+        letter-spacing: 0.6px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.05rem;
+    }
+
+    .hero-content p {
+        font-size: 0.84rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-primary-btn,
+    .hero-secondary-btn {
+        width: 100%;
+    }
+
+    .hero-controls {
+        right: 16px;
+        bottom: 58px;
+    }
+
+}
+
+
+/* =========================================================
+   10. QUICK APPOINTMENT
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .appointment-card {
+        padding: 25px;
+    }
+
+    .appointment-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-find-slots {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   11. QUICK APPOINTMENT TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .quick-appointment {
+        margin-top: -45px;
+    }
+
+    .appointment-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .appointment-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   12. QUICK APPOINTMENT MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .quick-appointment {
+        margin-top: -30px;
+        padding: 0 15px;
+    }
+
+    .appointment-card {
+        padding: 20px 17px;
+        border-radius: 14px;
+    }
+
+    .appointment-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-bottom: 20px;
+    }
+
+    .appointment-title {
+        gap: 10px;
+    }
+
+    .appointment-icon {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    .appointment-title h3 {
+        font-size: 1rem;
+    }
+
+    .appointment-title p {
+        font-size: 0.75rem;
+    }
+
+    .appointment-badge {
+        align-self: flex-start;
+    }
+
+    .appointment-form {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-control-custom {
+        height: 46px;
+    }
+
+    .btn-find-slots {
+        min-height: 46px;
+    }
+
+}
+
+
+/* =========================================================
+   13. ABOUT
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .about-image-wrapper {
+        padding-right: 25px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-content {
+        padding-left: 0;
+    }
+
+    .about-stats {
+        margin-top: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   14. ABOUT MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .about-image-wrapper {
+        padding-right: 18px;
+    }
+
+    .about-image {
+        height: 390px;
+        border-radius: 14px;
+    }
+
+    .about-experience {
+        right: -2px;
+        bottom: 22px;
+
+        width: 120px;
+        min-height: 105px;
+    }
+
+    .about-experience strong {
+        font-size: 1.7rem;
+    }
+
+    .about-experience span {
+        font-size: 0.68rem;
+    }
+
+    .about-content {
+        padding-left: 0;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .about-content p {
+        font-size: 0.88rem;
+    }
+
+    .about-stats {
+        margin-top: 35px;
+    }
+
+    .stat-card {
+        padding: 20px 14px;
+    }
+
+}
+
+
+/* =========================================================
+   15. ABOUT SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-image-wrapper {
+        padding-right: 12px;
+    }
+
+    .about-image {
+        height: 330px;
+    }
+
+    .about-experience {
+        width: 105px;
+        min-height: 90px;
+        bottom: 15px;
+    }
+
+    .about-experience strong {
+        font-size: 1.45rem;
+    }
+
+    .about-experience span {
+        font-size: 0.62rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.75rem;
+    }
+
+}
+
+
+/* =========================================================
+   16. DEPARTMENTS
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .department-card {
+        padding: 25px;
+    }
+
+    .department-card p {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .department-card {
+        padding: 23px;
+    }
+
+    .department-icon {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 17px;
+    }
+
+    .department-card h3 {
+        font-size: 1.05rem;
+    }
+
+    .department-card p {
+        font-size: 0.84rem;
+    }
+
+}
+
+
+/* =========================================================
+   17. DOCTORS
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .doctors-section {
+        padding: 75px 0;
+    }
+
+    .doctor-image-wrapper {
+        height: 260px;
+    }
+
+    .doctor-info {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .doctors-section {
+        padding: 60px 0;
+    }
+
+    .doctor-image-wrapper {
+        height: 300px;
+    }
+
+    .doctor-info {
+        padding: 20px;
+    }
+
+    .doctor-meta {
+        flex-wrap: wrap;
+        gap: 9px 13px;
+    }
+
+}
+
+
+/* =========================================================
+   18. WHY CHOOSE US
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .feature-card {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .feature-card {
+        padding: 22px;
+    }
+
+    .feature-icon {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.02rem;
+    }
+
+    .feature-card p {
+        font-size: 0.84rem;
+    }
+
+}
+
+
+/* =========================================================
+   19. HOW IT WORKS
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .steps-wrapper {
+        grid-template-columns: 1fr;
+        gap: 18px;
+
+        max-width: 650px;
+    }
+
+    .step-line {
+        width: 2px;
+        height: 30px;
+
+        justify-self: center;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .steps-wrapper {
+        margin-top: 35px;
+        gap: 12px;
+    }
+
+    .step-card {
+        padding: 27px 20px;
+    }
+
+    .step-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .step-card h3 {
+        font-size: 1rem;
+    }
+
+    .step-card p {
+        font-size: 0.82rem;
+    }
+
+}
+
+
+/* =========================================================
+   20. SERVICES
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .services-section .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .services-section .section-heading > p {
+        max-width: 650px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-card p {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .service-card {
+        padding: 23px;
+    }
+
+    .service-icon {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 17px;
+    }
+
+    .service-card h3 {
+        font-size: 1.03rem;
+    }
+
+    .service-card p {
+        font-size: 0.84rem;
+    }
+
+}
+
+
+/* =========================================================
+   21. TESTIMONIALS
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .testimonial-card {
+        padding: 23px;
+    }
+
+    .testimonial-card > p {
+        font-size: 0.85rem;
+    }
+
+    .quote-icon {
+        right: 18px;
+        top: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   22. FAQ
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .faq-content {
+        position: static;
+    }
+
+    .faq-section .row {
+        gap: 10px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .faq-content h2 {
+        font-size: 2rem;
+    }
+
+    .faq-content p {
+        font-size: 0.86rem;
+    }
+
+    .accordion {
+        gap: 9px;
+    }
+
+    .accordion-button {
+        padding: 16px 17px;
+        font-size: 0.85rem;
+    }
+
+    .accordion-body {
+        padding: 0 17px 17px;
+        font-size: 0.82rem;
+    }
+
+}
+
+
+/* =========================================================
+   23. FINAL CTA
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .cta-box {
+        padding: 45px 40px;
+    }
+
+    .cta-icon {
+        width: 100px;
+        height: 100px;
+
+        font-size: 2.5rem;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .cta-section {
+        padding-bottom: 65px;
+    }
+
+    .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 35px 25px;
+        border-radius: 15px;
+    }
+
+    .cta-content {
+        max-width: 100%;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .cta-content p {
+        font-size: 0.86rem;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cta-primary-btn,
+    .cta-secondary-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cta-icon {
+        width: 75px;
+        height: 75px;
+
+        margin-top: 25px;
+
+        font-size: 2rem;
+    }
+
+}
+
+
+/* =========================================================
+   24. COMMON FOOTER
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .footer {
+        padding: 65px 0 22px;
+    }
+
+    .footer .row {
+        row-gap: 40px !important;
+    }
+
+    .footer p {
+        max-width: 100%;
+    }
+
+    .footer h3 {
+        margin-bottom: 15px;
+    }
+
+    .contact-list {
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   25. FOOTER MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .footer {
+        padding: 55px 0 20px;
+    }
+
+    .footer .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer .row {
+        row-gap: 32px !important;
+    }
+
+    .footer-brand {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    .footer-brand .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer p {
+        font-size: 0.82rem;
+        line-height: 1.7;
+    }
+
+    .footer h3 {
+        font-size: 0.9rem;
+        margin-bottom: 13px;
+    }
+
+    .footer-links {
+        gap: 7px;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        gap: 7px;
+    }
+
+    .social-links a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .contact-list {
+        gap: 12px;
+    }
+
+    .contact-list li {
+        font-size: 0.78rem;
+        gap: 9px;
+    }
+
+
+    /* Footer Bottom */
+
+    .footer-bottom {
+        margin-top: 35px;
+        padding-top: 17px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.7rem;
+    }
+
+    .footer-bottom div {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .footer-bottom a {
+        font-size: 0.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   26. FOOTER SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .footer .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .footer {
+        padding-top: 45px;
+    }
+
+    .footer .row {
+        row-gap: 28px !important;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   27. COMMON SECTION SPACING
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .section-padding {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .section-padding {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+}
+
+
+/* =========================================================
+   28. SECTION HEADINGS
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .section-heading {
+        width: 100%;
+    }
+
+    .section-heading h2,
+    .section-header h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .section-heading p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .section-tag {
+        font-size: 0.68rem;
+    }
+
+}
+
+
+/* =========================================================
+   29. BOOTSTRAP ROW SAFETY
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .row {
+        --bs-gutter-x: 1.25rem;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   30. VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .brand-name {
+        font-size: 0.88rem;
+    }
+
+    .brand-text small {
+        font-size: 0.48rem;
+    }
+
+    .navbar-toggler {
+        width: 38px;
+        height: 38px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.85rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+
+    .appointment-card {
+        padding: 17px 14px;
+    }
+
+    .appointment-title h3 {
+        font-size: 0.92rem;
+    }
+
+    .appointment-title p {
+        font-size: 0.7rem;
+    }
+
+    .about-content h2,
+    .faq-content h2,
+    .cta-content h2 {
+        font-size: 1.65rem;
+    }
+
+    .section-heading h2,
+    .section-header h2 {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   31. TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .department-card:hover,
+    .feature-card:hover,
+    .service-card:hover,
+    .testimonial-card:hover,
+    .step-card:hover,
+    .stat-card:hover,
+    .doctor-card:hover {
+        transform: none;
+    }
+
+    .doctor-card:hover .doctor-image {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   32. OVERFLOW SAFETY
+   ========================================================= */
+
+.hero-section,
+.quick-appointment,
+.about-section,
+.departments-section,
+.doctors-section,
+.why-us-section,
+.how-it-works-section,
+.services-section,
+.testimonials-section,
+.faq-section,
+.cta-section,
+.footer {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   01. ABOUT HERO
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .about-hero {
+        min-height: 400px;
+    }
+
+    .about-hero-content {
+        max-width: 650px;
+        padding: 65px 0;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(38px, 5vw, 55px);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .about-hero {
+        min-height: 380px;
+    }
+
+    .about-hero-content {
+        max-width: 620px;
+        padding: 60px 0;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(36px, 6vw, 50px);
+        line-height: 1.15;
+    }
+
+    .about-hero p {
+        max-width: 560px;
+        font-size: 16px;
+    }
+
+    .about-hero::after {
+        width: 250px;
+        height: 250px;
+
+        right: -100px;
+        bottom: -125px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .about-hero {
+        min-height: 350px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(18, 60, 58, .96),
+                rgba(18, 60, 58, .78)
+            ),
+            url("clinic2.jpg") center / cover no-repeat;
+    }
+
+    .about-hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 55px 0;
+    }
+
+    .about-hero .section-tag {
+        font-size: 0.67rem;
+    }
+
+    .about-hero h1 {
+        margin-bottom: 14px;
+
+        font-size: clamp(32px, 9vw, 43px);
+        line-height: 1.15;
+        letter-spacing: -1px;
+    }
+
+    .about-hero p {
+        max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .about-hero::after {
+        width: 200px;
+        height: 200px;
+
+        right: -100px;
+        bottom: -100px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .about-hero {
+        min-height: 320px;
+    }
+
+    .about-hero-content {
+        padding: 45px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 30px;
+    }
+
+    .about-hero p {
+        font-size: 13px;
+    }
+
+    .about-hero::after {
+        width: 170px;
+        height: 170px;
+
+        right: -85px;
+        bottom: -85px;
+    }
+
+}
+
+
+/* =========================================================
+   02. ABOUT MAIN
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .about-main-wrapper {
+        gap: 50px;
+    }
+
+    .about-main-image {
+        padding-right: 20px;
+    }
+
+    .about-main-image > img {
+        height: 500px;
+    }
+
+    .about-main-content {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .about-main-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-main-image {
+        width: 100%;
+        max-width: 700px;
+
+        margin: 0 auto;
+        padding-right: 20px;
+    }
+
+    .about-main-image > img {
+        height: 480px;
+    }
+
+    .about-main-content {
+        width: 100%;
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .about-main-content h2 {
+        font-size: clamp(30px, 5vw, 42px);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .about-main-wrapper {
+        gap: 40px;
+    }
+
+    .about-main-image {
+        padding-right: 14px;
+    }
+
+    .about-main-image > img {
+        height: 400px;
+        border-radius: 15px;
+    }
+
+    .about-main-image .about-experience {
+        right: 0;
+        bottom: 25px;
+    }
+
+    .about-main-content h2 {
+        margin-bottom: 16px;
+
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+
+    .about-main-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .about-check-list {
+        gap: 11px;
+        margin: 22px 0;
+    }
+
+    .about-check-list > div {
+        align-items: flex-start;
+        gap: 9px;
+    }
+
+    .about-check-list i {
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    .about-check-list span {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .about-primary-btn {
+        min-height: 46px;
+        padding: 0 17px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .about-main-wrapper {
+        gap: 32px;
+    }
+
+    .about-main-image {
+        padding-right: 10px;
+    }
+
+    .about-main-image > img {
+        height: 330px;
+    }
+
+    .about-main-image .about-experience {
+        right: -1px;
+        bottom: 16px;
+    }
+
+    .about-main-content h2 {
+        font-size: 27px;
+    }
+
+    .about-main-content > p {
+        font-size: 13px;
+    }
+
+    .about-check-list span {
+        font-size: 12.5px;
+    }
+
+    .about-primary-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   03. MISSION & VISION
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .mission-card {
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .mission-card {
+        padding: 30px;
+    }
+
+    .mission-card h3 {
+        font-size: 21px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .mission-vision .section-heading {
+        text-align: center;
+    }
+
+    .mission-card {
+        padding: 25px;
+    }
+
+    .purpose-icon {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 18px;
+
+        border-radius: 13px;
+        font-size: 21px;
+    }
+
+    .mission-card > span {
+        font-size: 10px;
+    }
+
+    .mission-card h3 {
+        margin-bottom: 10px;
+
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .mission-card p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .mission-card {
+        padding: 22px;
+    }
+
+    .purpose-icon {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 16px;
+
+        font-size: 19px;
+    }
+
+    .mission-card h3 {
+        font-size: 18px;
+    }
+
+    .mission-card p {
+        font-size: 12.5px;
+    }
+
+}
+
+
+/* =========================================================
+   04. ABOUT WHY
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .about-why-wrapper {
+        gap: 50px;
+    }
+
+    .about-why-image {
+        height: 470px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .about-why-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-why-content {
+        width: 100%;
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .about-why-image {
+        width: 100%;
+        max-width: 700px;
+
+        height: 450px;
+
+        margin: 0 auto;
+    }
+
+    .about-why-content h2 {
+        font-size: clamp(30px, 5vw, 42px);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .about-why-wrapper {
+        gap: 35px;
+    }
+
+    .about-why-content h2 {
+        margin-bottom: 15px;
+
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .about-why-content > p {
+        margin-bottom: 22px;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .why-about-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .why-about-item {
+        padding: 17px;
+    }
+
+    .why-about-item > i {
+        width: 38px;
+        height: 38px;
+
+        margin-bottom: 10px;
+
+        border-radius: 9px;
+        font-size: 16px;
+    }
+
+    .why-about-item h4 {
+        font-size: 14px;
+    }
+
+    .why-about-item p {
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .about-why-image {
+        height: 360px;
+        border-radius: 15px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .about-why-content h2 {
+        font-size: 27px;
+    }
+
+    .about-why-content > p {
+        font-size: 13px;
+    }
+
+    .why-about-grid {
+        gap: 10px;
+    }
+
+    .why-about-item {
+        padding: 14px;
+    }
+
+    .why-about-item > i {
+        width: 35px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .why-about-item h4 {
+        font-size: 13px;
+    }
+
+    .why-about-item p {
+        font-size: 10.5px;
+    }
+
+    .about-why-image {
+        height: 300px;
+    }
+
+}
+
+
+/* =========================================================
+   05. ABOUT STATS
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .about-stats-section {
+        padding: 55px 0;
+    }
+
+    .about-stat {
+        min-height: 140px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .about-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-stat {
+        min-height: 140px;
+
+        border-right: 1px solid rgba(255, 255, 255, .12);
+        border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .about-stat:nth-child(2) {
+        border-right: 0;
+    }
+
+    .about-stat:nth-child(3),
+    .about-stat:nth-child(4) {
+        border-bottom: 0;
+    }
+
+    .about-stat:nth-child(4) {
+        border-right: 0;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .about-stats-section {
+        padding: 45px 0;
+    }
+
+    .about-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        border-radius: 14px;
+    }
+
+    .about-stat {
+        min-height: 125px;
+
+        padding: 20px 10px;
+    }
+
+    .about-stat i {
+        margin-bottom: 8px;
+        font-size: 19px;
+    }
+
+    .about-stat strong {
+        font-size: 25px;
+    }
+
+    .about-stat span {
+        font-size: 10.5px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .about-stats-section {
+        padding: 38px 0;
+    }
+
+    .about-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-stat {
+        min-height: 115px;
+        padding: 16px 7px;
+    }
+
+    .about-stat i {
+        font-size: 17px;
+    }
+
+    .about-stat strong {
+        font-size: 22px;
+    }
+
+    .about-stat span {
+        font-size: 9.5px;
+        line-height: 1.4;
+    }
+
+}
+
+
+/* =========================================================
+   06. ABOUT CTA
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .about-cta {
+        padding: 85px 0;
+    }
+
+    .about-cta-content {
+        max-width: 760px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .about-cta {
+        padding: 75px 0;
+    }
+
+    .about-cta-content h2 {
+        font-size: clamp(30px, 5vw, 42px);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .about-cta {
+        padding: 60px 0;
+    }
+
+    .about-cta-content {
+        max-width: 100%;
+    }
+
+    .about-cta-content h2 {
+        margin-bottom: 15px;
+
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .about-cta-content > p {
+        margin-bottom: 22px;
+
+        font-size: 13.5px;
+        line-height: 1.7;
+    }
+
+    .about-cta-buttons {
+        width: 100%;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-cta-buttons .cta-primary-btn,
+    .about-cta-buttons .cta-secondary-btn {
+        width: 100%;
+        min-height: 46px;
+
+        padding: 0 16px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .about-cta {
+        padding: 50px 0;
+    }
+
+    .about-cta-content h2 {
+        font-size: 27px;
+    }
+
+    .about-cta-content > p {
+        font-size: 12.5px;
+    }
+
+    .about-cta-buttons .cta-primary-btn,
+    .about-cta-buttons .cta-secondary-btn {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   07. ABOUT PAGE OVERFLOW SAFETY
+========================================================= */
+
+.about-hero,
+.about-main,
+.mission-vision,
+.about-why,
+.about-stats-section,
+.about-cta {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   08. MOBILE IMAGE SAFETY
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .about-main-image img,
+    .about-why-image img {
+        max-width: 100%;
+    }
+
+}
+
+/* =========================================================
+   01. DOCTORS HERO
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .doctors-hero {
+        min-height: 400px;
+    }
+
+    .doctors-hero-content {
+        max-width: 650px;
+        padding: 65px 0;
+    }
+
+    .doctors-hero h1 {
+        font-size: clamp(38px, 5vw, 55px);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .doctors-hero {
+        min-height: 380px;
+    }
+
+    .doctors-hero-content {
+        max-width: 620px;
+        padding: 60px 0;
+    }
+
+    .doctors-hero h1 {
+        font-size: clamp(36px, 6vw, 50px);
+        line-height: 1.15;
+    }
+
+    .doctors-hero p {
+        max-width: 560px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .doctors-hero::after {
+        width: 260px;
+        height: 260px;
+
+        right: -100px;
+        bottom: -135px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .doctors-hero {
+        min-height: 350px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(18, 60, 58, .96),
+                rgba(18, 60, 58, .78)
+            ),
+            url("clinic3.jpg") center / cover no-repeat;
+    }
+
+    .doctors-hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 55px 0;
+    }
+
+    .doctors-hero .section-tag {
+        font-size: 0.67rem;
+    }
+
+    .doctors-hero h1 {
+        margin-bottom: 14px;
+
+        font-size: clamp(32px, 9vw, 43px);
+        line-height: 1.15;
+        letter-spacing: -1px;
+    }
+
+    .doctors-hero p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .doctors-hero::after {
+        width: 200px;
+        height: 200px;
+
+        right: -100px;
+        bottom: -100px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .doctors-hero {
+        min-height: 320px;
+    }
+
+    .doctors-hero-content {
+        padding: 45px 0;
+    }
+
+    .doctors-hero h1 {
+        font-size: 30px;
+    }
+
+    .doctors-hero p {
+        font-size: 13px;
+    }
+
+    .doctors-hero::after {
+        width: 170px;
+        height: 170px;
+
+        right: -85px;
+        bottom: -85px;
+    }
+
+}
+
+
+/* =========================================================
+   02. DOCTOR SEARCH
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .doctor-search-box {
+        grid-template-columns: 1fr 240px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .doctor-search-section {
+        margin-top: -45px;
+    }
+
+    .doctor-search-box {
+        grid-template-columns: 1fr 220px;
+        padding: 16px;
+    }
+
+    .doctor-search-input,
+    .doctor-department-filter {
+        height: 50px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .doctor-search-section {
+        margin-top: -30px;
+        padding-bottom: 10px;
+    }
+
+    .doctor-search-box {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 13px;
+
+        border-radius: 14px;
+    }
+
+    .doctor-search-input,
+    .doctor-department-filter {
+        width: 100%;
+        height: 48px;
+
+        padding: 0 13px;
+    }
+
+    .doctor-search-input i,
+    .doctor-department-filter i {
+        font-size: 15px;
+    }
+
+    .doctor-search-input input,
+    .doctor-department-filter select {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .doctor-search-box {
+        padding: 11px;
+    }
+
+    .doctor-search-input,
+    .doctor-department-filter {
+        height: 46px;
+        gap: 9px;
+    }
+
+    .doctor-search-input input,
+    .doctor-department-filter select {
+        font-size: 11.5px;
+    }
+
+}
+
+
+/* =========================================================
+   03. NO DOCTORS FOUND
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .no-doctors-found {
+        width: calc(100% - 30px);
+
+        margin: 25px auto;
+        padding: 35px 20px;
+
+        border-radius: 14px;
+    }
+
+    .no-doctors-found i {
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+    }
+
+    .no-doctors-found h3 {
+        font-size: 19px;
+    }
+
+    .no-doctors-found p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   04. FEATURED DOCTORS SECTION
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .featured-doctors .section-heading h2,
+    .all-doctors .section-heading h2 {
+        font-size: clamp(30px, 4vw, 42px);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .featured-doctors .section-heading p,
+    .all-doctors .section-heading p {
+        max-width: 580px;
+    }
+
+}
+
+
+/* =========================================================
+   05. DOCTOR PAGE CARD
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .doctor-page-image {
+        height: 230px;
+    }
+
+    .doctor-page-content {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .doctor-page-image {
+        height: 250px;
+    }
+
+    .doctor-page-content h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .doctor-page-card {
+        border-radius: 15px;
+    }
+
+    .doctor-page-image {
+        height: 260px;
+    }
+
+    .doctor-available {
+        top: 12px;
+        right: 12px;
+
+        padding: 6px 10px;
+
+        font-size: 10px;
+    }
+
+    .doctor-page-content {
+        padding: 19px;
+    }
+
+    .doctor-page-content .doctor-specialty {
+        margin-bottom: 7px;
+        font-size: 10px;
+    }
+
+    .doctor-page-content h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .doctor-rating {
+        margin-bottom: 11px;
+    }
+
+    .doctor-rating i {
+        font-size: 12px;
+    }
+
+    .doctor-rating strong {
+        font-size: 12px;
+    }
+
+    .doctor-rating span {
+        font-size: 10px;
+    }
+
+    .doctor-page-content p {
+        min-height: auto;
+
+        margin-bottom: 15px;
+
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .doctor-card-footer {
+        padding-top: 13px;
+    }
+
+    .doctor-card-footer span,
+    .doctor-card-footer a {
+        font-size: 10.5px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .doctor-page-image {
+        height: 230px;
+    }
+
+    .doctor-page-content {
+        padding: 17px;
+    }
+
+    .doctor-page-content h3 {
+        font-size: 17px;
+    }
+
+    .doctor-page-content p {
+        font-size: 11.5px;
+    }
+
+    .doctor-card-footer {
+        gap: 7px;
+    }
+
+    .doctor-card-footer span,
+    .doctor-card-footer a {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   06. ALL DOCTORS HEADING
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .all-doctors .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .all-doctors .section-heading p {
+        margin: 0;
+    }
+
+    .doctor-count {
+        align-self: flex-start;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .all-doctors .section-heading h2 {
+        margin-top: 10px;
+    }
+
+    .all-doctors .section-heading p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .doctor-count {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   07. DOCTOR AVAILABILITY
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .availability-wrapper {
+        gap: 16px;
+    }
+
+    .availability-card {
+        padding: 25px 20px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .availability-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        margin-top: 35px;
+    }
+
+    .availability-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .availability-wrapper {
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        margin-top: 30px;
+    }
+
+    .availability-card:last-child {
+        grid-column: auto;
+    }
+
+    .availability-card {
+        padding: 21px 18px;
+
+        gap: 13px;
+
+        border-radius: 14px;
+    }
+
+    .availability-icon {
+        width: 45px;
+        height: 45px;
+
+        flex: 0 0 45px;
+
+        border-radius: 11px;
+
+        font-size: 18px;
+    }
+
+    .availability-card h3 {
+        margin-bottom: 6px;
+        font-size: 15px;
+    }
+
+    .availability-card p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .availability-card {
+        padding: 18px 15px;
+    }
+
+    .availability-icon {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+
+        font-size: 17px;
+    }
+
+    .availability-card h3 {
+        font-size: 14px;
+    }
+
+    .availability-card p {
+        font-size: 11.5px;
+    }
+
+}
+
+
+/* =========================================================
+   08. DOCTORS CTA
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .doctors-cta {
+        padding: 85px 0;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .doctors-cta {
+        padding: 75px 0;
+    }
+
+    .doctors-cta-content {
+        max-width: 750px;
+    }
+
+    .doctors-cta h2 {
+        font-size: clamp(30px, 5vw, 42px);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .doctors-cta {
+        padding: 60px 0;
+    }
+
+    .doctors-cta-content {
+        max-width: 100%;
+    }
+
+    .doctors-cta h2 {
+        margin-bottom: 15px;
+
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .doctors-cta-content > p {
+        margin-bottom: 22px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .doctors-cta-buttons {
+        width: 100%;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .doctors-cta-buttons .cta-primary-btn,
+    .doctors-cta-buttons .cta-secondary-btn {
+        width: 100%;
+        min-height: 46px;
+
+        padding: 0 16px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .doctors-cta {
+        padding: 50px 0;
+    }
+
+    .doctors-cta h2 {
+        font-size: 27px;
+    }
+
+    .doctors-cta-content > p {
+        font-size: 12.5px;
+    }
+
+    .doctors-cta-buttons .cta-primary-btn,
+    .doctors-cta-buttons .cta-secondary-btn {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   09. DOCTORS PAGE OVERFLOW SAFETY
+========================================================= */
+
+.doctors-hero,
+.doctor-search-section,
+.featured-doctors,
+.all-doctors,
+.doctor-availability,
+.doctors-cta {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   10. MOBILE GRID SAFETY
+========================================================= */
+
+@media (max-width: 767px) {
+
+    #featuredDoctorsList,
+    #allDoctorsList {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #featuredDoctorsList > [class*="col-"],
+    #allDoctorsList > [class*="col-"] {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   11. TOUCH DEVICE
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .doctor-page-card:hover {
+        transform: none;
+        border-color: #E4EEEE;
+        box-shadow: 0 10px 35px rgba(18,60,67,.07);
+    }
+
+    .doctor-page-card:hover .doctor-page-image img {
+        transform: none;
+    }
+
+    .availability-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+}
+
+
+/* =========================================================
+   12. VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .doctors-hero h1 {
+        font-size: 28px;
+    }
+
+    .doctors-hero p {
+        font-size: 12.5px;
+    }
+
+    .doctor-search-box {
+        padding: 9px;
+    }
+
+    .doctor-search-input,
+    .doctor-department-filter {
+        height: 44px;
+    }
+
+    .doctor-page-image {
+        height: 210px;
+    }
+
+    .doctor-page-content {
+        padding: 15px;
+    }
+
+    .doctor-page-content h3 {
+        font-size: 16px;
+    }
+
+    .availability-card {
+        gap: 10px;
+        padding: 16px 13px;
+    }
+
+    .availability-icon {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+    }
+
+    .doctors-cta h2 {
+        font-size: 25px;
+    }
+
+}
+
+/* =========================================================
+   01. DEPARTMENTS HERO
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .departments-hero {
+        min-height: 400px;
+    }
+
+    .departments-hero-content {
+        max-width: 680px;
+        padding: 65px 0;
+    }
+
+    .departments-hero h1 {
+        font-size: clamp(40px, 5vw, 58px);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .departments-hero {
+        min-height: 380px;
+    }
+
+    .departments-hero-content {
+        max-width: 620px;
+        padding: 60px 0;
+    }
+
+    .departments-hero h1 {
+        font-size: clamp(36px, 6vw, 52px);
+        line-height: 1.12;
+    }
+
+    .departments-hero p {
+        max-width: 560px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .departments-hero::after {
+        width: 260px;
+        height: 260px;
+
+        right: -90px;
+        bottom: -125px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .departments-hero {
+        min-height: 350px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7, 30, 28, .95),
+                rgba(15, 157, 138, .68)
+            ),
+            url("clinic4.jpg") center / cover no-repeat;
+    }
+
+    .departments-hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 52px 0;
+    }
+
+    .departments-hero .section-tag {
+        gap: 6px;
+        margin-bottom: 14px;
+        font-size: 10px;
+    }
+
+    .departments-hero h1 {
+        margin-bottom: 14px;
+
+        font-size: clamp(32px, 9vw, 44px);
+        line-height: 1.15;
+        letter-spacing: -1px;
+    }
+
+    .departments-hero p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .departments-hero::after {
+        width: 210px;
+        height: 210px;
+
+        right: -105px;
+        bottom: -105px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .departments-hero {
+        min-height: 320px;
+    }
+
+    .departments-hero-content {
+        padding: 45px 0;
+    }
+
+    .departments-hero h1 {
+        font-size: 30px;
+    }
+
+    .departments-hero p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .departments-hero::after {
+        width: 170px;
+        height: 170px;
+
+        right: -85px;
+        bottom: -85px;
+    }
+
+}
+
+
+/* =========================================================
+   02. DEPARTMENTS LIST
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .department-page-card {
+        padding: 30px 27px;
+    }
+
+    .department-page-icon {
+        width: 58px;
+        height: 58px;
+
+        margin-bottom: 21px;
+
+        font-size: 25px;
+    }
+
+    .department-page-card h3 {
+        font-size: 20px;
+    }
+
+    .department-page-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .department-page-card {
+        padding: 28px 25px;
+    }
+
+    .department-page-icon {
+        width: 56px;
+        height: 56px;
+
+        border-radius: 16px;
+
+        font-size: 24px;
+    }
+
+    .department-page-card h3 {
+        font-size: 20px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .department-page-card {
+        padding: 25px 22px;
+
+        border-radius: 15px;
+    }
+
+    .department-page-icon {
+        width: 54px;
+        height: 54px;
+
+        margin-bottom: 18px;
+
+        border-radius: 15px;
+
+        font-size: 22px;
+    }
+
+    .department-page-card > span {
+        margin-bottom: 7px;
+        font-size: 11px;
+    }
+
+    .department-page-card h3 {
+        margin-bottom: 10px;
+        font-size: 19px;
+    }
+
+    .department-page-card p {
+        margin-bottom: 18px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .department-page-card a {
+        gap: 6px;
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .department-page-card {
+        padding: 22px 19px;
+    }
+
+    .department-page-icon {
+        width: 50px;
+        height: 50px;
+
+        margin-bottom: 16px;
+
+        font-size: 21px;
+    }
+
+    .department-page-card h3 {
+        font-size: 18px;
+    }
+
+    .department-page-card p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .department-page-card a {
+        font-size: 11.5px;
+    }
+
+}
+
+
+/* =========================================================
+   03. DEPARTMENT HIGHLIGHTS
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .department-highlight-wrapper {
+        gap: 55px;
+    }
+
+    .department-highlight-content h2 {
+        font-size: clamp(32px, 4vw, 44px);
+    }
+
+    .department-highlight-content > p {
+        font-size: 15px;
+    }
+
+    .department-highlight-image {
+        min-height: 460px;
+    }
+
+    .department-highlight-image img {
+        min-height: 460px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .department-highlight-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .department-highlight-content {
+        max-width: 700px;
+    }
+
+    .department-highlight-content h2 {
+        font-size: 40px;
+    }
+
+    .department-highlight-content > p {
+        max-width: 650px;
+    }
+
+    .department-highlight-image {
+        width: 100%;
+        min-height: 480px;
+    }
+
+    .department-highlight-image img {
+        min-height: 480px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .department-highlight-wrapper {
+        gap: 30px;
+    }
+
+    .department-highlight-content h2 {
+        margin: 10px 0 15px;
+
+        font-size: 31px;
+        line-height: 1.2;
+        letter-spacing: -.5px;
+    }
+
+    .department-highlight-content > p {
+        margin-bottom: 24px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .highlight-list {
+        gap: 12px;
+    }
+
+    .highlight-item {
+        gap: 13px;
+
+        padding: 15px 14px;
+
+        border-radius: 13px;
+    }
+
+    .highlight-item > i {
+        flex: 0 0 43px;
+
+        width: 43px;
+        height: 43px;
+
+        border-radius: 12px;
+
+        font-size: 18px;
+    }
+
+    .highlight-item h4 {
+        margin: 1px 0 5px;
+        font-size: 14px;
+    }
+
+    .highlight-item p {
+        font-size: 11.5px;
+        line-height: 1.6;
+    }
+
+    .department-highlight-image {
+        min-height: 400px;
+
+        border-radius: 16px;
+    }
+
+    .department-highlight-image img {
+        min-height: 400px;
+    }
+
+    .highlight-badge {
+        left: 18px;
+        bottom: 18px;
+
+        min-width: 160px;
+
+        padding: 14px 17px;
+
+        border-radius: 14px;
+    }
+
+    .highlight-badge strong {
+        font-size: 26px;
+    }
+
+    .highlight-badge span {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .department-highlight-wrapper {
+        gap: 25px;
+    }
+
+    .department-highlight-content h2 {
+        font-size: 28px;
+    }
+
+    .department-highlight-content > p {
+        font-size: 12px;
+    }
+
+    .highlight-item {
+        gap: 10px;
+        padding: 13px 12px;
+    }
+
+    .highlight-item > i {
+        flex: 0 0 39px;
+
+        width: 39px;
+        height: 39px;
+
+        font-size: 16px;
+    }
+
+    .highlight-item h4 {
+        font-size: 13px;
+    }
+
+    .highlight-item p {
+        font-size: 10.5px;
+    }
+
+    .department-highlight-image {
+        min-height: 330px;
+        border-radius: 14px;
+    }
+
+    .department-highlight-image img {
+        min-height: 330px;
+    }
+
+    .highlight-badge {
+        left: 13px;
+        bottom: 13px;
+
+        min-width: 140px;
+
+        padding: 12px 14px;
+
+        border-radius: 12px;
+    }
+
+    .highlight-badge strong {
+        font-size: 23px;
+    }
+
+    .highlight-badge span {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   04. DEPARTMENTS CTA
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .departments-cta {
+        padding: 85px 0;
+    }
+
+    .departments-cta h2 {
+        font-size: clamp(32px, 4vw, 46px);
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .departments-cta {
+        padding: 75px 0;
+    }
+
+    .departments-cta-content {
+        max-width: 680px;
+    }
+
+    .departments-cta p {
+        max-width: 580px;
+        font-size: 15px;
+    }
+
+    .departments-cta::before {
+        width: 300px;
+        height: 300px;
+
+        right: -120px;
+        top: -170px;
+    }
+
+    .departments-cta::after {
+        width: 210px;
+        height: 210px;
+
+        left: -70px;
+        bottom: -145px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .departments-cta {
+        padding: 60px 0;
+    }
+
+    .departments-cta-content {
+        max-width: 100%;
+    }
+
+    .departments-cta h2 {
+        margin: 11px 0 15px;
+
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .departments-cta p {
+        margin-bottom: 23px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .departments-cta .cta-primary-btn {
+        width: 100%;
+        max-width: 300px;
+
+        min-height: 46px;
+
+        padding: 0 20px;
+
+        font-size: 13px;
+    }
+
+    .departments-cta::before {
+        width: 220px;
+        height: 220px;
+
+        right: -110px;
+        top: -130px;
+    }
+
+    .departments-cta::after {
+        width: 160px;
+        height: 160px;
+
+        left: -80px;
+        bottom: -110px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .departments-cta {
+        padding: 50px 0;
+    }
+
+    .departments-cta h2 {
+        font-size: 27px;
+    }
+
+    .departments-cta p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .departments-cta .cta-primary-btn {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   05. MOBILE GRID SAFETY
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .departments-list .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .departments-list .row > [class*="col-"] {
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   06. TOUCH DEVICE SAFETY
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .department-page-card:hover {
+        transform: none;
+        border-color: var(--border);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .department-page-card:hover::before {
+        transform: scaleX(0);
+    }
+
+    .department-page-card:hover .department-page-icon {
+        color: var(--primary);
+        background: var(--mint);
+        transform: none;
+    }
+
+    .highlight-item:hover {
+        transform: none;
+        background: var(--light-mint);
+        box-shadow: none;
+    }
+
+    .department-highlight-image:hover img {
+        transform: none;
+    }
+
+    .departments-cta .cta-primary-btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+}
+
+
+/* =========================================================
+   07. OVERFLOW SAFETY
+========================================================= */
+
+.departments-hero,
+.departments-list,
+.department-highlights,
+.departments-cta {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   08. VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .departments-hero {
+        min-height: 300px;
+    }
+
+    .departments-hero-content {
+        padding: 40px 0;
+    }
+
+    .departments-hero h1 {
+        font-size: 27px;
+    }
+
+    .departments-hero p {
+        font-size: 12px;
+    }
+
+    .department-page-card {
+        padding: 20px 17px;
+    }
+
+    .department-page-icon {
+        width: 47px;
+        height: 47px;
+
+        font-size: 19px;
+    }
+
+    .department-page-card h3 {
+        font-size: 17px;
+    }
+
+    .department-page-card p {
+        font-size: 11.5px;
+    }
+
+    .department-highlight-content h2 {
+        font-size: 26px;
+    }
+
+    .department-highlight-image {
+        min-height: 300px;
+    }
+
+    .department-highlight-image img {
+        min-height: 300px;
+    }
+
+    .departments-cta h2 {
+        font-size: 24px;
+    }
+
+}
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    /* Services Hero */
+    .services-hero {
+        min-height: 400px;
+    }
+
+    .services-hero-content {
+        max-width: 720px;
+        padding: 65px 0;
+    }
+
+    .services-hero h1 {
+        font-size: clamp(38px, 5vw, 56px);
+    }
+
+
+    /* Services Overview */
+    .services-overview-grid {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .service-overview-card {
+        padding: 30px 24px;
+    }
+
+
+    /* Main Services */
+    .main-services-grid {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .main-service-card {
+        min-height: 310px;
+        padding: 28px;
+    }
+
+
+    /* Patient Support */
+    .patient-support-wrapper {
+        gap: 50px;
+    }
+
+    .patient-support-image,
+    .patient-support-image img {
+        min-height: 480px;
+    }
+
+    .patient-support-content h2 {
+        font-size: 40px;
+    }
+
+
+    /* Process */
+    .service-process-grid {
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    .process-card {
+        padding: 30px 20px;
+    }
+
+
+    /* CTA */
+    .services-cta {
+        padding: 85px 0;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    /* Services Hero */
+    .services-hero {
+        min-height: 380px;
+    }
+
+    .services-hero-content {
+        max-width: 680px;
+        padding: 60px 0;
+    }
+
+    .services-hero h1 {
+        font-size: 46px;
+        letter-spacing: -1px;
+    }
+
+    .services-hero p {
+        max-width: 620px;
+        font-size: 16px;
+    }
+
+
+    /* Services Overview */
+    .services-overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .service-overview-card {
+        padding: 30px 25px;
+    }
+
+    .service-overview-card .service-icon {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 18px;
+        font-size: 25px;
+    }
+
+
+    /* Main Services */
+    .main-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .main-service-card {
+        min-height: 300px;
+        padding: 28px;
+    }
+
+    .main-service-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 20px;
+        font-size: 23px;
+    }
+
+    .main-service-card h3 {
+        font-size: 20px;
+    }
+
+
+    /* Patient Support */
+    .patient-support-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .patient-support-image {
+        min-height: 420px;
+        max-height: 500px;
+    }
+
+    .patient-support-image img {
+        min-height: 420px;
+        max-height: 500px;
+    }
+
+    .patient-support-content {
+        max-width: 100%;
+    }
+
+    .patient-support-content h2 {
+        font-size: 38px;
+    }
+
+    .patient-support-content > p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+
+    /* Service Process */
+    .service-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .process-card {
+        padding: 30px 22px;
+    }
+
+
+    /* Services CTA */
+    .services-cta {
+        padding: 80px 0;
+    }
+
+    .services-cta-content {
+        max-width: 680px;
+    }
+
+    .services-cta h2 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Services Hero */
+    .services-hero {
+        min-height: 360px;
+    }
+
+    .services-hero::after {
+        width: 240px;
+        height: 240px;
+        right: -100px;
+        bottom: -120px;
+    }
+
+    .services-hero-content {
+        max-width: 100%;
+        padding: 55px 0;
+    }
+
+    .services-hero .section-tag {
+        margin-bottom: 14px;
+        font-size: 12px;
+    }
+
+    .services-hero h1 {
+        margin-bottom: 15px;
+        font-size: 38px;
+        line-height: 1.12;
+        letter-spacing: -.7px;
+    }
+
+    .services-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Services Overview */
+    .services-overview-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .service-overview-card {
+        padding: 28px 22px;
+    }
+
+    .service-overview-card .service-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 17px;
+        border-radius: 17px;
+        font-size: 24px;
+    }
+
+    .service-overview-card h3 {
+        font-size: 19px;
+        margin-bottom: 9px;
+    }
+
+    .service-overview-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* Main Services */
+    .main-services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .main-service-card {
+        min-height: auto;
+        padding: 26px 22px;
+    }
+
+    .main-service-number {
+        top: 18px;
+        right: 20px;
+        font-size: 36px;
+    }
+
+    .main-service-icon {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 18px;
+        border-radius: 15px;
+        font-size: 22px;
+    }
+
+    .main-service-card h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .main-service-card p {
+        margin-bottom: 18px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .main-service-card a {
+        font-size: 14px;
+    }
+
+
+    /* Patient Support */
+    .patient-support-wrapper {
+        gap: 32px;
+    }
+
+    .patient-support-image {
+        min-height: 360px;
+        max-height: 420px;
+        border-radius: var(--radius-lg);
+    }
+
+    .patient-support-image img {
+        min-height: 360px;
+        max-height: 420px;
+    }
+
+    .patient-support-content h2 {
+        margin: 10px 0 15px;
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: -.5px;
+    }
+
+    .patient-support-content > p {
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .support-list {
+        gap: 12px;
+    }
+
+    .support-item {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .support-item > i {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+        font-size: 18px;
+    }
+
+    .support-item h4 {
+        margin-top: 0;
+        font-size: 15px;
+    }
+
+    .support-item p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+
+    /* Service Process */
+    .service-process-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .process-card {
+        padding: 28px 20px;
+    }
+
+    .process-card > span {
+        top: 16px;
+        right: 17px;
+        font-size: 26px;
+    }
+
+    .process-card > i {
+        width: 60px;
+        height: 60px;
+        margin: 8px auto 18px;
+        font-size: 23px;
+    }
+
+    .process-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .process-card p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* Services CTA */
+    .services-cta {
+        padding: 70px 0;
+    }
+
+    .services-cta::before {
+        width: 280px;
+        height: 280px;
+        top: -170px;
+        right: -100px;
+    }
+
+    .services-cta::after {
+        width: 210px;
+        height: 210px;
+        bottom: -150px;
+        left: -90px;
+    }
+
+    .services-cta-content {
+        max-width: 100%;
+    }
+
+    .services-cta h2 {
+        margin: 12px 0 15px;
+        font-size: 34px;
+        line-height: 1.18;
+    }
+
+    .services-cta p {
+        margin-bottom: 25px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .services-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .services-cta-buttons .cta-primary-btn,
+    .services-cta-buttons .cta-secondary-btn {
+        width: 100%;
+        max-width: 320px;
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Services Hero */
+    .services-hero {
+        min-height: 330px;
+    }
+
+    .services-hero-content {
+        padding: 45px 0;
+    }
+
+    .services-hero h1 {
+        font-size: 32px;
+    }
+
+    .services-hero p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* Services Overview */
+    .services-overview-grid {
+        gap: 14px;
+        margin-top: 25px;
+    }
+
+    .service-overview-card {
+        padding: 25px 18px;
+        border-radius: var(--radius-md);
+    }
+
+    .service-overview-card .service-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    .service-overview-card h3 {
+        font-size: 18px;
+    }
+
+    .service-overview-card p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+
+    /* Main Services */
+    .main-services-grid {
+        gap: 14px;
+        margin-top: 25px;
+    }
+
+    .main-service-card {
+        padding: 24px 18px;
+        border-radius: var(--radius-md);
+    }
+
+    .main-service-number {
+        top: 17px;
+        right: 17px;
+        font-size: 32px;
+    }
+
+    .main-service-icon {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 16px;
+        font-size: 21px;
+    }
+
+    .main-service-card h3 {
+        font-size: 18px;
+    }
+
+    .main-service-card p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .main-service-card a {
+        font-size: 13px;
+    }
+
+
+    /* Patient Support */
+    .patient-support-wrapper {
+        gap: 25px;
+    }
+
+    .patient-support-image {
+        min-height: 300px;
+        max-height: 350px;
+        border-radius: var(--radius-md);
+    }
+
+    .patient-support-image img {
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    .patient-support-content h2 {
+        font-size: 30px;
+    }
+
+    .patient-support-content > p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .support-list {
+        gap: 10px;
+    }
+
+    .support-item {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .support-item > i {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .support-item h4 {
+        font-size: 14px;
+    }
+
+    .support-item p {
+        font-size: 12px;
+    }
+
+
+    /* Service Process */
+    .service-process-grid {
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .process-card {
+        padding: 25px 17px;
+        border-radius: var(--radius-md);
+    }
+
+    .process-card > i {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 16px;
+        font-size: 21px;
+    }
+
+    .process-card h3 {
+        font-size: 17px;
+    }
+
+    .process-card p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* Services CTA */
+    .services-cta {
+        padding: 60px 0;
+    }
+
+    .services-cta h2 {
+        font-size: 30px;
+    }
+
+    .services-cta p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .services-cta-buttons .cta-primary-btn,
+    .services-cta-buttons .cta-secondary-btn {
+        max-width: 100%;
+        padding: 12px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .services-hero {
+        min-height: 310px;
+    }
+
+    .services-hero h1 {
+        font-size: 29px;
+    }
+
+    .services-hero p {
+        font-size: 13px;
+    }
+
+    .service-overview-card,
+    .main-service-card,
+    .process-card {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .patient-support-content h2 {
+        font-size: 27px;
+    }
+
+    .support-item {
+        align-items: flex-start;
+    }
+
+    .support-item > i {
+        flex: 0 0 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .services-cta h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE TOUCH DEVICES
+   Prevent hover movement from causing unwanted shifts
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .service-overview-card:hover,
+    .main-service-card:hover,
+    .process-card:hover {
+        transform: none;
+    }
+
+    .support-item:hover {
+        transform: none;
+    }
+
+    .patient-support-image:hover img {
+        transform: none;
+    }
+
+    .main-service-card:hover::before {
+        transform: scaleX(0);
+    }
+
+}
+
+/* =========================================================
+   BOOKING PAGE 
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    /* Booking Hero */
+    .booking-hero {
+        min-height: 390px;
+    }
+
+    .booking-hero-content {
+        max-width: 680px;
+        padding: 65px 0;
+    }
+
+    .booking-hero h1 {
+        font-size: clamp(40px, 5vw, 56px);
+    }
+
+
+    /* Booking Steps */
+    .steps-container {
+        gap: 14px;
+    }
+
+    .booking-step {
+        gap: 10px;
+    }
+
+    .step-circle {
+        flex-basis: 44px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .step-info strong {
+        font-size: 13px;
+    }
+
+    .step-info small {
+        font-size: 11px;
+    }
+
+    .step-connector {
+        min-width: 20px;
+    }
+
+
+    /* Doctor Selection */
+    .doctor-selection .section-heading {
+        gap: 25px;
+    }
+
+    .doctor-filter {
+        flex-basis: 230px;
+    }
+
+    #doctorList {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    #doctorList .doctor-card img {
+        height: 230px;
+    }
+
+    #doctorList .doctor-card-content {
+        padding: 20px;
+    }
+
+
+    /* Date & Time */
+    .booking-date-time-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .date-selection,
+    .time-selection {
+        padding: 25px;
+    }
+
+    .calendar-week,
+    .calendar-days {
+        gap: 6px;
+    }
+
+    .time-slots {
+        gap: 8px;
+    }
+
+
+    /* Patient Details */
+    .patient-form-card,
+    .emergency-contact-card {
+        padding: 27px;
+    }
+
+
+    /* Confirmation */
+    .confirmation-wrapper {
+        max-width: 900px;
+    }
+
+    .appointment-summary-card,
+    .patient-summary-card {
+        padding: 26px;
+    }
+
+    .summary-details {
+        gap: 10px;
+    }
+
+    .summary-detail-item {
+        padding: 13px;
+    }
+
+    .patient-summary-grid {
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    /* Booking Hero */
+    .booking-hero {
+        min-height: 360px;
+    }
+
+    .booking-hero-content {
+        padding: 60px 0;
+        max-width: 620px;
+    }
+
+    .booking-hero h1 {
+        font-size: 46px;
+        letter-spacing: -1px;
+    }
+
+    .booking-hero p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* Booking Steps */
+    .booking-steps {
+        padding: 22px 0;
+    }
+
+    .steps-container {
+        gap: 10px;
+    }
+
+    .booking-step {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 7px;
+        flex: 1;
+    }
+
+    .step-circle {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+    }
+
+    .step-info {
+        align-items: center;
+    }
+
+    .step-info strong {
+        font-size: 12px;
+    }
+
+    .step-info small {
+        font-size: 10px;
+    }
+
+    .step-connector {
+        flex: 0 0 25px;
+        min-width: 25px;
+        margin-bottom: 40px;
+    }
+
+
+    /* Doctor Selection */
+    .doctor-selection .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .doctor-selection .section-heading > div {
+        max-width: 100%;
+    }
+
+    .doctor-filter {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    #doctorList {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #doctorList .doctor-card img {
+        height: 250px;
+    }
+
+
+    /* Date & Time */
+    .booking-date-time-wrapper {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 38px;
+    }
+
+    .date-selection,
+    .time-selection {
+        padding: 25px;
+    }
+
+    .booking-card-header {
+        gap: 15px;
+    }
+
+    .calendar-month strong {
+        min-width: 125px;
+    }
+
+    .calendar-week,
+    .calendar-days {
+        gap: 7px;
+    }
+
+
+    /* Patient Details */
+    .patient-form-wrapper {
+        margin-top: 38px;
+    }
+
+    .patient-form-card,
+    .emergency-contact-card {
+        padding: 25px;
+    }
+
+    .form-card-header {
+        margin-bottom: 25px;
+    }
+
+
+    /* Confirmation */
+    .confirmation-wrapper {
+        max-width: 100%;
+        margin-top: 38px;
+    }
+
+    .summary-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .patient-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Booking Hero */
+    .booking-hero {
+        min-height: 330px;
+    }
+
+    .booking-hero-content {
+        padding: 55px 0;
+    }
+
+    .booking-hero .section-tag {
+        margin-bottom: 14px;
+        font-size: 11px;
+    }
+
+    .booking-hero h1 {
+        margin-bottom: 15px;
+        font-size: 38px;
+        line-height: 1.12;
+    }
+
+    .booking-hero p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .booking-hero::after {
+        width: 260px;
+        height: 260px;
+        right: -120px;
+        bottom: -130px;
+    }
+
+
+    /* Booking Steps */
+    .booking-steps {
+        padding: 18px 0;
+    }
+
+    .steps-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .booking-step {
+        gap: 6px;
+    }
+
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 11px;
+    }
+
+    .step-info strong {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .step-info small {
+        display: none;
+    }
+
+    .step-connector {
+        display: none;
+    }
+
+
+    /* Doctor Selection */
+    .doctor-selection .section-heading {
+        gap: 20px;
+    }
+
+    .doctor-filter {
+        padding: 14px;
+    }
+
+    #doctorList {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #doctorList .doctor-card img {
+        height: 260px;
+    }
+
+    #doctorList .doctor-card-content {
+        padding: 20px;
+    }
+
+    #doctorList .doctor-card h3 {
+        font-size: 19px;
+    }
+
+
+    /* Date & Time */
+    .booking-date-time-wrapper {
+        margin-top: 32px;
+    }
+
+    .date-selection,
+    .time-selection {
+        padding: 20px;
+    }
+
+    .booking-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 22px;
+    }
+
+    .calendar-month {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .calendar-month strong {
+        min-width: 0;
+        flex: 1;
+        font-size: 13px;
+    }
+
+    .calendar-month button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .calendar-week,
+    .calendar-days {
+        gap: 5px;
+    }
+
+    .calendar-week span {
+        font-size: 10px;
+    }
+
+    .calendar-day {
+        border-radius: 8px;
+        font-size: 12px;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .time-slot {
+        padding: 10px 6px;
+        font-size: 11px;
+    }
+
+    .slot-count {
+        align-self: flex-start;
+    }
+
+    .slot-note {
+        margin-top: 20px;
+        padding: 12px;
+        font-size: 11px;
+    }
+
+
+    /* Patient Details */
+    .patient-form-wrapper {
+        gap: 18px;
+        margin-top: 32px;
+    }
+
+    .patient-form-card,
+    .emergency-contact-card {
+        padding: 20px;
+    }
+
+    .form-card-header {
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .form-header-icon {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+        border-radius: 13px;
+        font-size: 19px;
+    }
+
+    .form-card-header h3 {
+        font-size: 18px;
+    }
+
+    .form-card-header p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .patient-form-card label,
+    .emergency-contact-card label {
+        font-size: 12px;
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+        height: 46px;
+        padding-left: 42px;
+        font-size: 13px;
+    }
+
+    .patient-form-card textarea {
+        font-size: 13px;
+    }
+
+    .privacy-note {
+        padding: 14px 15px;
+        gap: 10px;
+    }
+
+    .privacy-note strong {
+        font-size: 12px;
+    }
+
+    .privacy-note p {
+        font-size: 11px;
+    }
+
+
+    /* Confirmation */
+    .confirmation-wrapper {
+        gap: 15px;
+        margin-top: 32px;
+    }
+
+    .appointment-summary-card,
+    .patient-summary-card {
+        padding: 20px;
+    }
+
+    .summary-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .summary-header h3 {
+        font-size: 18px;
+    }
+
+    .confirmed-badge {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+
+    .summary-doctor {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .summary-doctor-image {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+        border-radius: 13px;
+    }
+
+    .summary-doctor-info h4 {
+        font-size: 16px;
+    }
+
+    .summary-doctor-info p {
+        flex-wrap: wrap;
+        font-size: 11px;
+    }
+
+    .change-doctor-btn {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    .summary-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+    }
+
+    .summary-detail-item {
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .summary-detail-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        border-radius: 9px;
+    }
+
+    .summary-detail-item span,
+    .patient-summary-grid span {
+        font-size: 10px;
+    }
+
+    .summary-detail-item strong,
+    .patient-summary-grid strong {
+        font-size: 12px;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    .patient-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+    }
+
+    .patient-summary-grid > div {
+        padding: 13px;
+    }
+
+
+    /* Booking Fee */
+    .booking-fee-card {
+        padding: 18px;
+    }
+
+    .fee-info > span {
+        font-size: 14px;
+    }
+
+    .fee-info small {
+        font-size: 10px;
+    }
+
+    .booking-fee-card > strong {
+        font-size: 23px;
+    }
+
+
+    /* Terms */
+    .booking-terms {
+        padding: 14px 15px;
+    }
+
+    .booking-terms label {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .booking-terms input {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    /* Confirm Booking */
+    .confirm-booking-btn {
+        min-height: 54px;
+        padding: 0 17px 0 20px;
+        border-radius: 12px;
+        font-size: 13px;
+    }
+
+    .confirm-booking-btn > i {
+        font-size: 16px;
+    }
+
+    .confirm-booking-area > p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Booking Hero */
+    .booking-hero {
+        min-height: 300px;
+    }
+
+    .booking-hero-content {
+        padding: 45px 0;
+    }
+
+    .booking-hero h1 {
+        font-size: 32px;
+        letter-spacing: -.7px;
+    }
+
+    .booking-hero p {
+        font-size: 13px;
+    }
+
+
+    /* Booking Steps */
+    .booking-steps {
+        padding: 15px 0;
+    }
+
+    .steps-container {
+        gap: 2px;
+    }
+
+    .step-circle {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+        font-size: 10px;
+    }
+
+    .step-info strong {
+        font-size: 9px;
+    }
+
+
+    /* Doctor */
+    #doctorList .doctor-card img {
+        height: 230px;
+    }
+
+    #doctorList .doctor-card-content {
+        padding: 17px;
+    }
+
+
+    /* Date & Time */
+    .date-selection,
+    .time-selection {
+        padding: 16px;
+    }
+
+    .booking-card-header h3 {
+        font-size: 18px;
+    }
+
+    .calendar-month {
+        gap: 7px;
+    }
+
+    .calendar-month button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .calendar-month strong {
+        font-size: 12px;
+    }
+
+    .calendar-week,
+    .calendar-days {
+        gap: 4px;
+    }
+
+    .calendar-day {
+        font-size: 11px;
+        border-radius: 7px;
+    }
+
+    .time-group + .time-group {
+        margin-top: 22px;
+    }
+
+    .time-group h4 {
+        margin-bottom: 11px;
+        font-size: 13px;
+    }
+
+    .time-slots {
+        gap: 7px;
+    }
+
+    .time-slot {
+        padding: 9px 5px;
+        font-size: 10px;
+        border-radius: 8px;
+    }
+
+
+    /* Patient Details */
+    .patient-form-card,
+    .emergency-contact-card {
+        padding: 16px;
+    }
+
+    .form-card-header {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .form-header-icon {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+        font-size: 18px;
+    }
+
+    .form-card-header h3 {
+        font-size: 16px;
+    }
+
+    .form-card-header p {
+        font-size: 11px;
+    }
+
+    .input-with-icon > i {
+        left: 13px;
+        font-size: 14px;
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+        height: 44px;
+        padding-left: 38px;
+        font-size: 12px;
+    }
+
+    .patient-form-card textarea {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .privacy-note {
+        padding: 12px;
+    }
+
+
+    /* Confirmation */
+    .appointment-summary-card,
+    .patient-summary-card {
+        padding: 16px;
+    }
+
+    .summary-header h3 {
+        font-size: 17px;
+    }
+
+    .summary-doctor {
+        position: relative;
+        padding: 13px;
+        padding-right: 13px;
+        flex-wrap: wrap;
+    }
+
+    .summary-doctor-image {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+    }
+
+    .summary-doctor-info {
+        min-width: 0;
+    }
+
+    .summary-doctor-info h4 {
+        font-size: 15px;
+    }
+
+    .change-doctor-btn {
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .summary-details {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-summary-grid > div {
+        padding: 12px;
+    }
+
+
+    /* Booking Fee */
+    .booking-fee-card {
+        padding: 16px;
+    }
+
+    .fee-info > span {
+        font-size: 13px;
+    }
+
+    .booking-fee-card > strong {
+        font-size: 21px;
+    }
+
+
+    /* Terms */
+    .booking-terms {
+        padding: 13px;
+    }
+
+    .booking-terms label {
+        font-size: 11px;
+    }
+
+
+    /* Confirm */
+    .confirm-booking-btn {
+        min-height: 52px;
+        padding: 0 14px 0 16px;
+        font-size: 12px;
+    }
+
+    .confirm-booking-btn span {
+        gap: 6px;
+    }
+
+    .confirm-booking-btn > i {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    /* Hero */
+    .booking-hero {
+        min-height: 285px;
+    }
+
+    .booking-hero-content {
+        padding: 40px 0;
+    }
+
+    .booking-hero h1 {
+        font-size: 29px;
+    }
+
+    .booking-hero p {
+        font-size: 12px;
+    }
+
+
+    /* Steps */
+    .step-circle {
+        width: 33px;
+        height: 33px;
+        flex-basis: 33px;
+        font-size: 9px;
+    }
+
+    .step-info strong {
+        font-size: 8px;
+    }
+
+
+    /* Calendar */
+    .date-selection,
+    .time-selection {
+        padding: 13px;
+    }
+
+    .calendar-week,
+    .calendar-days {
+        gap: 3px;
+    }
+
+    .calendar-day {
+        font-size: 10px;
+    }
+
+
+    /* Time Slots */
+    .time-slots {
+        gap: 5px;
+    }
+
+    .time-slot {
+        padding: 8px 3px;
+        font-size: 9px;
+    }
+
+
+    /* Patient Form */
+    .patient-form-card,
+    .emergency-contact-card {
+        padding: 13px;
+    }
+
+    .form-header-icon {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+        font-size: 16px;
+    }
+
+    .form-card-header h3 {
+        font-size: 15px;
+    }
+
+
+    /* Confirmation */
+    .appointment-summary-card,
+    .patient-summary-card {
+        padding: 13px;
+    }
+
+    .summary-header h3 {
+        font-size: 16px;
+    }
+
+    .summary-doctor {
+        padding: 11px;
+    }
+
+    .summary-doctor-image {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+
+    .summary-doctor-info h4 {
+        font-size: 14px;
+    }
+
+    .summary-detail-item {
+        padding: 10px;
+    }
+
+    .booking-fee-card {
+        padding: 14px;
+    }
+
+    .booking-fee-card > strong {
+        font-size: 19px;
+    }
+
+    .confirm-booking-btn {
+        min-height: 50px;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE TOUCH SAFETY
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    #doctorList .doctor-card:hover,
+    .calendar-month button:hover,
+    .calendar-day:hover,
+    .time-slot:hover,
+    .change-doctor-btn:hover,
+    .edit-details-btn:hover,
+    .confirm-booking-btn:hover {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    /* Contact Hero */
+    .contact-hero {
+        min-height: 400px;
+    }
+
+    .contact-hero-content {
+        max-width: 700px;
+        padding: 70px 0;
+    }
+
+    .contact-hero h1 {
+        font-size: 58px;
+    }
+
+    .contact-hero p {
+        max-width: 600px;
+        font-size: 17px;
+    }
+
+
+    /* Contact Info */
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .contact-info-card {
+        padding: 30px 24px;
+    }
+
+
+    /* Contact Form */
+    .contact-form-wrapper {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 45px;
+        padding: 50px;
+    }
+
+    .contact-form-content h2 {
+        font-size: 36px;
+    }
+
+
+    /* Map */
+    .clinic-map-section {
+        padding: 90px 0;
+    }
+
+    .clinic-map-wrapper {
+        height: 460px;
+        margin-top: 40px;
+    }
+
+
+    /* Working Hours */
+    .working-hours-wrapper {
+        gap: 45px;
+    }
+
+    .working-hours-content h2 {
+        font-size: 36px;
+    }
+
+
+    /* CTA */
+    .contact-cta {
+        padding: 85px 0;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    /* Contact Hero */
+    .contact-hero {
+        min-height: 380px;
+    }
+
+    .contact-hero::after {
+        width: 330px;
+        height: 330px;
+        right: -120px;
+        bottom: -180px;
+    }
+
+    .contact-hero-content {
+        max-width: 650px;
+        padding: 60px 0;
+    }
+
+    .contact-hero h1 {
+        font-size: 48px;
+        line-height: 1.1;
+    }
+
+    .contact-hero p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* Contact Info */
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+    .contact-info-card {
+        padding: 28px 22px;
+    }
+
+    .contact-info-icon {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 18px;
+        font-size: 25px;
+    }
+
+    .contact-info-card h3 {
+        font-size: 19px;
+    }
+
+    .contact-info-card p {
+        font-size: 14px;
+    }
+
+
+    /* Contact Form */
+    .contact-form-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 45px;
+    }
+
+    .contact-form-content {
+        max-width: 100%;
+    }
+
+    .contact-form-content h2 {
+        font-size: 36px;
+    }
+
+    .contact-form-content > p {
+        font-size: 15px;
+    }
+
+    .contact-form-points {
+        margin-top: 25px;
+        gap: 12px;
+    }
+
+    .contact-form {
+        gap: 18px;
+    }
+
+
+    /* Map */
+    .clinic-map-section {
+        padding: 80px 0;
+    }
+
+    .clinic-map-wrapper {
+        height: 420px;
+        margin-top: 35px;
+    }
+
+    .map-location-card {
+        left: 20px;
+        bottom: 20px;
+    }
+
+
+    /* Working Hours */
+    .working-hours-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .working-hours-content {
+        max-width: 650px;
+    }
+
+    .working-hours-content h2 {
+        font-size: 36px;
+    }
+
+    .working-hours-content > p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .hours-card {
+        padding: 25px;
+    }
+
+
+    /* CTA */
+    .contact-cta {
+        padding: 80px 0;
+    }
+
+    .contact-cta-content {
+        max-width: 680px;
+    }
+
+    .contact-cta h2 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Contact Hero */
+    .contact-hero {
+        min-height: 350px;
+    }
+
+    .contact-hero::after {
+        width: 260px;
+        height: 260px;
+        right: -100px;
+        bottom: -140px;
+    }
+
+    .contact-hero-content {
+        max-width: 100%;
+        padding: 50px 0;
+    }
+
+    .contact-hero .section-tag {
+        margin-bottom: 14px;
+        font-size: 12px;
+    }
+
+    .contact-hero h1 {
+        margin-bottom: 15px;
+        font-size: 38px;
+        line-height: 1.12;
+    }
+
+    .contact-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Contact Info */
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 28px;
+    }
+
+    .contact-info-card {
+        padding: 26px 20px;
+        border-radius: var(--radius-md);
+    }
+
+    .contact-info-icon {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 16px;
+        border-radius: 17px;
+        font-size: 23px;
+    }
+
+    .contact-info-card h3 {
+        margin-bottom: 9px;
+        font-size: 18px;
+    }
+
+    .contact-info-card p {
+        min-height: auto;
+        margin-bottom: 15px;
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .contact-info-card a {
+        font-size: 13px;
+    }
+
+
+    /* Contact Form */
+    .contact-form-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+        border-radius: var(--radius-lg);
+    }
+
+    .contact-form-content h2 {
+        margin: 10px 0 13px;
+        font-size: 32px;
+        line-height: 1.18;
+    }
+
+    .contact-form-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .contact-form-points {
+        gap: 11px;
+        margin-top: 22px;
+    }
+
+    .contact-form-points > div {
+        align-items: flex-start;
+        gap: 9px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .contact-form-points i {
+        margin-top: 1px;
+        font-size: 16px;
+    }
+
+    .contact-form {
+        gap: 16px;
+    }
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contact-field {
+        gap: 7px;
+    }
+
+    .contact-field label {
+        font-size: 13px;
+    }
+
+    .contact-input input,
+    .contact-input select {
+        height: 50px;
+        padding-left: 45px;
+        font-size: 13px;
+    }
+
+    .contact-input textarea {
+        min-height: 125px;
+        padding-left: 45px;
+        font-size: 13px;
+    }
+
+    .contact-input > i {
+        left: 15px;
+        font-size: 16px;
+    }
+
+    .contact-submit-btn {
+        min-height: 52px;
+        margin-top: 2px;
+        font-size: 14px;
+    }
+
+
+    /* Clinic Map */
+    .clinic-map-section {
+        padding: 65px 0;
+    }
+
+    .clinic-map-wrapper {
+        height: 360px;
+        margin-top: 28px;
+        border-radius: var(--radius-lg);
+    }
+
+    .map-location-card {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        max-width: none;
+        padding: 13px 15px;
+        gap: 11px;
+        border-radius: 13px;
+    }
+
+    .map-location-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    .map-location-card strong {
+        font-size: 14px;
+    }
+
+    .map-location-card span {
+        font-size: 12px;
+    }
+
+    .map-actions {
+        margin-top: 20px;
+    }
+
+    .map-direction-btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+
+    /* Working Hours */
+    .working-hours-wrapper {
+        gap: 28px;
+    }
+
+    .working-hours-content h2 {
+        margin: 10px 0 13px;
+        font-size: 32px;
+    }
+
+    .working-hours-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hours-card {
+        padding: 20px 17px;
+        border-radius: var(--radius-md);
+    }
+
+    .hours-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 14px 2px;
+    }
+
+    .hours-row span,
+    .hours-row strong {
+        font-size: 14px;
+    }
+
+    .hours-note {
+        gap: 8px;
+        margin-top: 17px;
+        padding: 12px 13px;
+        font-size: 12px;
+    }
+
+
+    /* CTA */
+    .contact-cta {
+        padding: 65px 0;
+    }
+
+    .contact-cta::before {
+        width: 280px;
+        height: 280px;
+        top: -170px;
+        right: -100px;
+    }
+
+    .contact-cta::after {
+        width: 210px;
+        height: 210px;
+        bottom: -150px;
+        left: -90px;
+    }
+
+    .contact-cta-content {
+        max-width: 100%;
+    }
+
+    .contact-cta h2 {
+        margin: 12px 0 14px;
+        font-size: 34px;
+        line-height: 1.18;
+    }
+
+    .contact-cta p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .contact-cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 24px;
+    }
+
+    .contact-cta .cta-primary-btn,
+    .contact-cta .cta-secondary-btn {
+        width: 100%;
+        max-width: 320px;
+        min-height: 50px;
+        padding: 0 18px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Contact Hero */
+    .contact-hero {
+        min-height: 325px;
+    }
+
+    .contact-hero-content {
+        padding: 43px 0;
+    }
+
+    .contact-hero h1 {
+        font-size: 32px;
+    }
+
+    .contact-hero p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* Contact Info */
+    .contact-info-grid {
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .contact-info-card {
+        padding: 23px 17px;
+    }
+
+    .contact-info-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 21px;
+    }
+
+    .contact-info-card h3 {
+        font-size: 17px;
+    }
+
+    .contact-info-card p {
+        font-size: 12px;
+    }
+
+    .contact-info-card a {
+        font-size: 12px;
+    }
+
+
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+
+    .contact-form-content h2 {
+        font-size: 29px;
+    }
+
+    .contact-form-content > p {
+        font-size: 13px;
+    }
+
+    .contact-form-points {
+        margin-top: 18px;
+        gap: 9px;
+    }
+
+    .contact-form-points > div {
+        font-size: 12px;
+    }
+
+    .contact-input input,
+    .contact-input select {
+        height: 48px;
+        padding-left: 43px;
+        font-size: 12px;
+    }
+
+    .contact-input textarea {
+        min-height: 115px;
+        padding-left: 43px;
+        font-size: 12px;
+    }
+
+    .contact-input > i {
+        left: 14px;
+        font-size: 15px;
+    }
+
+    .contact-submit-btn {
+        min-height: 50px;
+        font-size: 13px;
+    }
+
+
+    /* Clinic Map */
+    .clinic-map-section {
+        padding: 55px 0;
+    }
+
+    .clinic-map-wrapper {
+        height: 310px;
+        margin-top: 24px;
+        border-radius: var(--radius-md);
+    }
+
+    .map-location-card {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 11px 12px;
+    }
+
+    .map-location-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .map-location-card strong {
+        font-size: 13px;
+    }
+
+    .map-location-card span {
+        font-size: 11px;
+    }
+
+    .map-direction-btn {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+
+    /* Working Hours */
+    .working-hours-content h2 {
+        font-size: 29px;
+    }
+
+    .working-hours-content > p {
+        font-size: 13px;
+    }
+
+    .hours-card {
+        padding: 17px 14px;
+    }
+
+    .hours-row {
+        padding: 13px 1px;
+    }
+
+    .hours-row span,
+    .hours-row strong {
+        font-size: 13px;
+    }
+
+    .hours-note {
+        padding: 11px 12px;
+        font-size: 11px;
+    }
+
+
+    /* CTA */
+    .contact-cta {
+        padding: 55px 0;
+    }
+
+    .contact-cta h2 {
+        font-size: 29px;
+    }
+
+    .contact-cta p {
+        font-size: 13px;
+    }
+
+    .contact-cta .cta-primary-btn,
+    .contact-cta .cta-secondary-btn {
+        max-width: 100%;
+        min-height: 48px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .contact-hero {
+        min-height: 305px;
+    }
+
+    .contact-hero h1 {
+        font-size: 28px;
+    }
+
+    .contact-hero p {
+        font-size: 13px;
+    }
+
+    .contact-info-card {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .contact-form-wrapper {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .contact-form-content h2 {
+        font-size: 27px;
+    }
+
+    .clinic-map-wrapper {
+        height: 290px;
+    }
+
+    .map-location-card {
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .working-hours-content h2 {
+        font-size: 27px;
+    }
+
+    .contact-cta h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICE SAFETY
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .contact-info-card:hover {
+        transform: none;
+    }
+
+    .contact-info-card:hover::before {
+        transform: scaleX(0);
+    }
+
+    .contact-info-card:hover .contact-info-icon {
+        transform: none;
+    }
+
+    .contact-submit-btn:hover,
+    .map-direction-btn:hover,
+    .contact-cta .cta-primary-btn:hover,
+    .contact-cta .cta-secondary-btn:hover {
+        transform: none;
+    }
+
+}
+
+/* =========================================================
+   ADMIN DASHBOARD 
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .admin-dashboard {
+        padding: 40px 4% 60px;
+    }
+
+    /* Dashboard Header */
+    .dashboard-header {
+        gap: 22px;
+        margin-bottom: 30px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 32px;
+    }
+
+    .dashboard-profile {
+        padding: 9px 10px;
+    }
+
+
+    /* Stats */
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .admin-stat-card {
+        padding: 21px 20px;
+    }
+
+
+    /* Main Grid */
+    .admin-main-grid {
+        grid-template-columns: 1.45fr .95fr;
+        gap: 20px;
+    }
+
+    .dashboard-card {
+        padding: 24px;
+    }
+
+
+    /* Bottom Grid */
+    .admin-bottom-grid {
+        grid-template-columns: 1.25fr .75fr;
+        gap: 20px;
+    }
+
+
+    /* Notification */
+    .admin-notification {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .admin-dashboard {
+        padding: 35px 4% 55px;
+    }
+
+
+    /* Dashboard Header */
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-profile {
+        width: 100%;
+        max-width: 360px;
+    }
+
+
+    /* Stats */
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .admin-stat-card {
+        padding: 20px;
+    }
+
+    .admin-stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+
+    .admin-stat-card h2 {
+        font-size: 25px;
+    }
+
+
+    /* Main Grid */
+    .admin-main-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .admin-quick-actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+
+    .admin-quick-actions .card-heading {
+        grid-column: 1 / -1;
+    }
+
+    .admin-action {
+        padding: 14px 0;
+    }
+
+
+    /* Bottom Grid */
+    .admin-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* Notification */
+    .admin-notification {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .admin-dashboard {
+        min-height: 100%;
+        padding: 28px 18px 45px;
+        overflow-x: hidden;
+    }
+
+
+    /* Dashboard Header */
+    .dashboard-header {
+        margin-bottom: 25px;
+        gap: 18px;
+    }
+
+    .dashboard-tag,
+    .card-label {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .dashboard-welcome h1 {
+        margin: 8px 0 7px;
+        font-size: 27px;
+        line-height: 1.25;
+    }
+
+    .dashboard-welcome p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .dashboard-profile {
+        max-width: 100%;
+        padding: 9px 10px;
+    }
+
+    .profile-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 13px;
+    }
+
+    .dashboard-profile h3 {
+        font-size: 13px;
+    }
+
+    .dashboard-profile span {
+        font-size: 11px;
+    }
+
+    .profile-menu {
+        margin-left: auto;
+    }
+
+
+    /* Stats */
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .admin-stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 17px 15px;
+        border-radius: 14px;
+    }
+
+    .admin-stat-icon {
+        width: 43px;
+        height: 43px;
+        border-radius: 12px;
+        font-size: 19px;
+    }
+
+    .admin-stat-card span {
+        font-size: 11px;
+    }
+
+    .admin-stat-card h2 {
+        font-size: 22px;
+    }
+
+    .admin-stat-card small {
+        font-size: 10px;
+    }
+
+
+    /* Dashboard Cards */
+    .dashboard-card {
+        padding: 20px 16px;
+        border-radius: 15px;
+    }
+
+    .admin-main-grid,
+    .admin-bottom-grid {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .card-heading {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .card-heading h2,
+    .system-card h2 {
+        font-size: 18px;
+    }
+
+    .card-heading > a {
+        font-size: 11px;
+    }
+
+
+    /* Appointments Table */
+    .admin-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .admin-table-head,
+    .admin-table-body {
+        min-width: 520px;
+    }
+
+    .admin-table-head {
+        min-height: 42px;
+        padding: 0 14px;
+    }
+
+    .admin-table-head span {
+        font-size: 10px;
+    }
+
+    .admin-table-body {
+        min-height: 85px;
+        padding: 14px;
+    }
+
+    .admin-table-body > p {
+        font-size: 12px;
+    }
+
+
+    /* Quick Actions */
+    .admin-quick-actions {
+        display: flex;
+    }
+
+    .admin-action {
+        grid-template-columns: 43px 1fr 18px;
+        gap: 11px;
+        padding: 13px 0;
+    }
+
+    .admin-action-icon {
+        width: 43px;
+        height: 43px;
+        border-radius: 11px;
+        font-size: 18px;
+    }
+
+    .admin-action h3 {
+        font-size: 13px;
+    }
+
+    .admin-action p {
+        font-size: 10px;
+    }
+
+    .admin-action > i:last-child {
+        font-size: 13px;
+    }
+
+
+    /* System Overview */
+    .system-card h2 {
+        margin-bottom: 22px;
+    }
+
+    .system-item {
+        margin-bottom: 20px;
+    }
+
+    .system-item > div:first-child {
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .system-item > div:first-child span {
+        font-size: 12px;
+    }
+
+    .system-item strong {
+        font-size: 12px;
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    .system-status {
+        padding: 11px 13px;
+    }
+
+    .system-status p {
+        font-size: 11px;
+    }
+
+
+    /* Notification */
+    .admin-notification {
+        flex-wrap: wrap;
+        gap: 13px;
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .notification-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+
+    .admin-notification > div:nth-child(2) {
+        min-width: 0;
+    }
+
+    .admin-notification > div:nth-child(2) span {
+        font-size: 9px;
+    }
+
+    .admin-notification h3 {
+        font-size: 14px;
+    }
+
+    .admin-notification p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .admin-notification > a {
+        width: 100%;
+        justify-content: flex-end;
+        padding-top: 4px;
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .admin-dashboard {
+        padding: 24px 14px 40px;
+    }
+
+
+    /* Header */
+    .dashboard-welcome h1 {
+        font-size: 24px;
+    }
+
+    .dashboard-welcome p {
+        font-size: 12px;
+    }
+
+    .dashboard-profile {
+        padding: 8px;
+    }
+
+    .profile-avatar {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+
+
+    /* Stats */
+    .admin-stats {
+        gap: 10px;
+    }
+
+    .admin-stat-card {
+        padding: 14px 12px;
+        gap: 10px;
+        border-radius: 13px;
+    }
+
+    .admin-stat-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    .admin-stat-card span {
+        font-size: 10px;
+    }
+
+    .admin-stat-card h2 {
+        margin-bottom: 3px;
+        font-size: 20px;
+    }
+
+    .admin-stat-card small {
+        font-size: 9px;
+    }
+
+
+    /* Cards */
+    .dashboard-card {
+        padding: 17px 13px;
+    }
+
+    .card-heading {
+        align-items: flex-start;
+    }
+
+    .card-heading h2,
+    .system-card h2 {
+        font-size: 17px;
+    }
+
+    .card-heading > a {
+        font-size: 10px;
+    }
+
+
+    /* Table */
+    .admin-table-head,
+    .admin-table-body {
+        min-width: 500px;
+    }
+
+
+    /* Quick Actions */
+    .admin-action {
+        grid-template-columns: 39px 1fr 16px;
+        gap: 9px;
+    }
+
+    .admin-action-icon {
+        width: 39px;
+        height: 39px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .admin-action h3 {
+        font-size: 12px;
+    }
+
+    .admin-action p {
+        font-size: 9px;
+    }
+
+
+    /* System */
+    .system-item > div:first-child span {
+        font-size: 11px;
+    }
+
+    .system-item strong {
+        font-size: 11px;
+    }
+
+    .system-status {
+        gap: 8px;
+        padding: 10px 11px;
+    }
+
+    .system-status i {
+        font-size: 15px;
+    }
+
+
+    /* Notification */
+    .admin-notification {
+        padding: 15px;
+    }
+
+    .notification-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .admin-notification h3 {
+        font-size: 13px;
+    }
+
+    .admin-notification p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .admin-dashboard {
+        padding: 20px 11px 35px;
+    }
+
+
+    /* Header */
+    .dashboard-welcome h1 {
+        font-size: 21px;
+    }
+
+    .dashboard-welcome p {
+        font-size: 11px;
+    }
+
+    .dashboard-profile h3 {
+        font-size: 12px;
+    }
+
+    .dashboard-profile span {
+        font-size: 10px;
+    }
+
+
+    /* Stats */
+    .admin-stats {
+        gap: 8px;
+    }
+
+    .admin-stat-card {
+        padding: 12px 10px;
+    }
+
+    .admin-stat-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .admin-stat-card span {
+        font-size: 9px;
+    }
+
+    .admin-stat-card h2 {
+        font-size: 18px;
+    }
+
+    .admin-stat-card small {
+        font-size: 8px;
+    }
+
+
+    /* Cards */
+    .dashboard-card {
+        padding: 15px 11px;
+    }
+
+    .card-heading h2,
+    .system-card h2 {
+        font-size: 16px;
+    }
+
+
+    /* Table */
+    .admin-table-head,
+    .admin-table-body {
+        min-width: 480px;
+    }
+
+
+    /* Quick Actions */
+    .admin-action {
+        grid-template-columns: 36px 1fr 14px;
+        gap: 8px;
+    }
+
+    .admin-action-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .admin-action h3 {
+        font-size: 11px;
+    }
+
+    .admin-action p {
+        font-size: 8px;
+    }
+
+
+    /* Notification */
+    .admin-notification {
+        padding: 13px;
+    }
+
+    .notification-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .admin-notification h3 {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICE SAFETY
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .admin-stat-card:hover,
+    .admin-action:hover,
+    .profile-menu:hover,
+    .card-heading > a:hover,
+    .admin-notification > a:hover {
+        transform: none;
+    }
+
+}
+
+/* =========================================================
+   DOCTOR DASHBOARD
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .doctor-dashboard {
+        padding: 40px 4% 60px;
+    }
+
+    /* Header */
+    .doctor-dashboard .dashboard-header {
+        gap: 22px;
+        margin-bottom: 30px;
+    }
+
+    .doctor-dashboard .dashboard-welcome h1 {
+        font-size: 32px;
+    }
+
+    .doctor-dashboard .dashboard-profile {
+        padding: 9px 10px;
+    }
+
+    /* Stats */
+    .doctor-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .doctor-stat-card {
+        padding: 21px 20px;
+    }
+
+    /* Main Grid */
+    .doctor-main-grid {
+        grid-template-columns: 1.35fr .95fr;
+        gap: 20px;
+    }
+
+    /* Bottom Grid */
+    .doctor-bottom-grid {
+        grid-template-columns: 1.2fr .8fr;
+        gap: 20px;
+    }
+
+    /* Cards */
+    .doctor-dashboard .dashboard-card {
+        padding: 24px;
+    }
+
+    /* Notification */
+    .doctor-notification {
+        padding: 20px;
+    }
+
+    /* Modals */
+    .add-patient-box,
+    .prescription-box,
+    .availability-box {
+        width: min(620px, 100%);
+        padding: 32px;
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .doctor-dashboard {
+        padding: 35px 4% 55px;
+    }
+
+    /* Header */
+    .doctor-dashboard .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .doctor-dashboard .dashboard-welcome h1 {
+        font-size: 30px;
+    }
+
+    .doctor-dashboard .dashboard-profile {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    /* Stats */
+    .doctor-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .doctor-stat-card {
+        padding: 20px;
+    }
+
+    .doctor-stat-card .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+
+    .doctor-stat-card h2 {
+        font-size: 25px;
+    }
+
+    /* Main Grid */
+    .doctor-main-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Request Card */
+    .request-card {
+        min-height: auto;
+    }
+
+    /* Bottom Grid */
+    .doctor-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Quick Actions */
+    .quick-doctor-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+
+    .quick-doctor-card > .card-label,
+    .quick-doctor-card > h2 {
+        grid-column: 1 / -1;
+    }
+
+    .quick-doctor-card h2 {
+        margin-bottom: 18px;
+    }
+
+    .doctor-action {
+        padding: 14px 0;
+    }
+
+    /* Notification */
+    .doctor-notification {
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .doctor-dashboard {
+        min-height: 100%;
+        padding: 28px 18px 45px;
+        overflow-x: hidden;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .doctor-dashboard .dashboard-header {
+        margin-bottom: 25px;
+        gap: 18px;
+    }
+
+    .doctor-dashboard .dashboard-tag {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .doctor-dashboard .dashboard-welcome h1 {
+        margin: 8px 0 7px;
+        font-size: 27px;
+        line-height: 1.25;
+    }
+
+    .doctor-dashboard .dashboard-welcome p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .doctor-dashboard .dashboard-profile {
+        width: 100%;
+        max-width: 100%;
+        padding: 9px 10px;
+    }
+
+    .doctor-dashboard .profile-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 13px;
+    }
+
+    .doctor-dashboard .dashboard-profile h3 {
+        font-size: 13px;
+    }
+
+    .doctor-dashboard .dashboard-profile span {
+        font-size: 11px;
+    }
+
+    .doctor-dashboard .profile-menu {
+        margin-left: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       STATS
+       ----------------------------------------------------- */
+
+    .doctor-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .doctor-stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 17px 15px;
+        border-radius: 14px;
+    }
+
+    .doctor-stat-card .stat-icon {
+        width: 43px;
+        height: 43px;
+        border-radius: 12px;
+        font-size: 19px;
+    }
+
+    .doctor-stat-card span {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .doctor-stat-card h2 {
+        margin-bottom: 3px;
+        font-size: 22px;
+    }
+
+    .doctor-stat-card small {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       DASHBOARD CARDS
+       ----------------------------------------------------- */
+
+    .doctor-dashboard .dashboard-card {
+        padding: 20px 16px;
+        border-radius: 15px;
+    }
+
+    .doctor-main-grid,
+    .doctor-bottom-grid {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .doctor-dashboard .card-heading {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .doctor-dashboard .card-label {
+        font-size: 9px;
+        letter-spacing: 1.15px;
+    }
+
+    .doctor-dashboard .card-heading h2,
+    .quick-doctor-card h2 {
+        font-size: 18px;
+    }
+
+    .doctor-dashboard .card-heading > a {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------------------
+       SCHEDULE
+       ----------------------------------------------------- */
+
+    .schedule-list {
+        gap: 10px;
+    }
+
+    .schedule-list > .text-center {
+        padding: 25px 0;
+    }
+
+    .schedule-list p,
+    #doctorRequestList p,
+    #doctorRecentPatients p {
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       REQUEST CARD
+       ----------------------------------------------------- */
+
+    .request-count {
+        min-width: 27px;
+        height: 27px;
+        padding: 0 8px;
+        border-radius: 8px;
+        font-size: 11px;
+    }
+
+    .view-requests {
+        min-height: 43px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       QUICK ACTIONS
+       ----------------------------------------------------- */
+
+    .quick-doctor-card {
+        display: flex;
+    }
+
+    .quick-doctor-card h2 {
+        margin-bottom: 18px;
+    }
+
+    .doctor-action {
+        grid-template-columns: 43px 1fr 18px;
+        gap: 11px;
+        padding: 13px 0;
+    }
+
+    .doctor-action > i:first-child {
+        width: 43px;
+        height: 43px;
+        border-radius: 11px;
+        font-size: 18px;
+    }
+
+    .doctor-action span {
+        font-size: 13px;
+    }
+
+    .doctor-action > i:last-child {
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------------------
+       NOTIFICATION
+       ----------------------------------------------------- */
+
+    .doctor-notification {
+        flex-wrap: wrap;
+        gap: 13px;
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .doctor-notification .notification-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+
+    .doctor-notification > div:nth-child(2) {
+        min-width: 0;
+    }
+
+    .doctor-notification > div:nth-child(2) span {
+        font-size: 9px;
+    }
+
+    .doctor-notification h3 {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .doctor-notification p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .doctor-notification > a {
+        width: 100%;
+        justify-content: flex-end;
+        padding-top: 4px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       MODALS
+       ===================================================== */
+
+    .add-patient-modal,
+    .prescription-modal,
+    .availability-modal {
+        align-items: center;
+        padding: 18px;
+        overflow-y: auto;
+    }
+
+    .add-patient-box,
+    .prescription-box,
+    .availability-box {
+        width: 100%;
+        max-width: 100%;
+        max-height: 88vh;
+        padding: 27px 20px 22px;
+        border-radius: 20px;
+    }
+
+    .close-patient-modal,
+    .close-prescription-modal,
+    .close-availability-modal {
+        top: 13px;
+        right: 13px;
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+    }
+
+    .add-patient-box h2,
+    .prescription-box h2,
+    .availability-box h2 {
+        margin-top: 8px;
+        font-size: 23px;
+        line-height: 1.25;
+    }
+
+    .add-patient-box > p,
+    .prescription-box > p,
+    .availability-box > p {
+        margin-bottom: 21px;
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------------------
+       PATIENT FORM
+       ----------------------------------------------------- */
+
+    .patient-form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .patient-form-group,
+    .prescription-form-group,
+    .availability-form-group {
+        gap: 7px;
+    }
+
+    .patient-form-group label,
+    .prescription-form-group label,
+    .availability-form-group label {
+        font-size: 12px;
+    }
+
+    .patient-form-group input,
+    .patient-form-group select,
+    .prescription-form-group input,
+    .prescription-form-group select,
+    .prescription-form-group textarea,
+    .availability-form-group input {
+        height: 45px;
+        padding: 0 12px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       FORM BUTTONS
+       ----------------------------------------------------- */
+
+    .patient-form-actions,
+    .prescription-form-actions,
+    .availability-form-actions {
+        flex-direction: column-reverse;
+        gap: 9px;
+        margin-top: 22px;
+    }
+
+    .cancel-patient-btn,
+    .save-patient-btn,
+    .cancel-prescription-btn,
+    .save-prescription-btn,
+    .cancel-availability-btn,
+    .save-availability-btn {
+        width: 100%;
+        min-height: 44px;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       PRESCRIPTION FORM
+       ----------------------------------------------------- */
+
+    .prescription-form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .prescription-form-group.full {
+        grid-column: auto;
+    }
+
+    .prescription-form-group textarea {
+        min-height: 95px;
+        padding: 12px;
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------------------
+       AVAILABILITY
+       ----------------------------------------------------- */
+
+    .availability-days {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+        margin-bottom: 20px;
+    }
+
+    .day-option span {
+        min-height: 42px;
+        font-size: 11px;
+    }
+
+    .availability-time-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .doctor-dashboard {
+        padding: 24px 14px 40px;
+    }
+
+
+    /* Header */
+    .doctor-dashboard .dashboard-welcome h1 {
+        font-size: 24px;
+    }
+
+    .doctor-dashboard .dashboard-welcome p {
+        font-size: 12px;
+    }
+
+    .doctor-dashboard .dashboard-profile {
+        padding: 8px;
+    }
+
+    .doctor-dashboard .profile-avatar {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+
+
+    /* Stats */
+    .doctor-stats {
+        gap: 10px;
+    }
+
+    .doctor-stat-card {
+        padding: 14px 12px;
+        gap: 10px;
+        border-radius: 13px;
+    }
+
+    .doctor-stat-card .stat-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    .doctor-stat-card span {
+        font-size: 10px;
+    }
+
+    .doctor-stat-card h2 {
+        font-size: 20px;
+    }
+
+    .doctor-stat-card small {
+        font-size: 9px;
+    }
+
+
+    /* Cards */
+    .doctor-dashboard .dashboard-card {
+        padding: 17px 13px;
+    }
+
+    .doctor-dashboard .card-heading {
+        align-items: flex-start;
+    }
+
+    .doctor-dashboard .card-heading h2,
+    .quick-doctor-card h2 {
+        font-size: 17px;
+    }
+
+    .doctor-dashboard .card-heading > a {
+        font-size: 10px;
+    }
+
+
+    /* Request */
+    .request-count {
+        min-width: 25px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .view-requests {
+        min-height: 41px;
+        font-size: 11px;
+    }
+
+
+    /* Quick Actions */
+    .doctor-action {
+        grid-template-columns: 39px 1fr 16px;
+        gap: 9px;
+    }
+
+    .doctor-action > i:first-child {
+        width: 39px;
+        height: 39px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .doctor-action span {
+        font-size: 12px;
+    }
+
+    .doctor-action > i:last-child {
+        font-size: 12px;
+    }
+
+
+    /* Notification */
+    .doctor-notification {
+        padding: 15px;
+    }
+
+    .doctor-notification .notification-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .doctor-notification h3 {
+        font-size: 13px;
+    }
+
+    .doctor-notification p {
+        font-size: 10px;
+    }
+
+
+    /* Modals */
+    .add-patient-modal,
+    .prescription-modal,
+    .availability-modal {
+        padding: 12px;
+    }
+
+    .add-patient-box,
+    .prescription-box,
+    .availability-box {
+        max-height: 90vh;
+        padding: 25px 16px 18px;
+        border-radius: 17px;
+    }
+
+    .close-patient-modal,
+    .close-prescription-modal,
+    .close-availability-modal {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .add-patient-box h2,
+    .prescription-box h2,
+    .availability-box h2 {
+        font-size: 21px;
+    }
+
+    .add-patient-box > p,
+    .prescription-box > p,
+    .availability-box > p {
+        font-size: 12px;
+    }
+
+
+    /* Forms */
+    .patient-form-grid,
+    .prescription-form-grid {
+        gap: 12px;
+    }
+
+    .patient-form-group label,
+    .prescription-form-group label,
+    .availability-form-group label {
+        font-size: 11px;
+    }
+
+    .patient-form-group input,
+    .patient-form-group select,
+    .prescription-form-group input,
+    .prescription-form-group select,
+    .prescription-form-group textarea,
+    .availability-form-group input {
+        height: 43px;
+        font-size: 11px;
+    }
+
+    .prescription-form-group textarea {
+        min-height: 90px;
+    }
+
+    .availability-days {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .day-option span {
+        min-height: 40px;
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .doctor-dashboard {
+        padding: 20px 11px 35px;
+    }
+
+
+    /* Header */
+    .doctor-dashboard .dashboard-welcome h1 {
+        font-size: 21px;
+    }
+
+    .doctor-dashboard .dashboard-welcome p {
+        font-size: 11px;
+    }
+
+    .doctor-dashboard .dashboard-profile h3 {
+        font-size: 12px;
+    }
+
+    .doctor-dashboard .dashboard-profile span {
+        font-size: 10px;
+    }
+
+
+    /* Stats */
+    .doctor-stats {
+        gap: 8px;
+    }
+
+    .doctor-stat-card {
+        padding: 12px 10px;
+    }
+
+    .doctor-stat-card .stat-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .doctor-stat-card span {
+        font-size: 9px;
+    }
+
+    .doctor-stat-card h2 {
+        font-size: 18px;
+    }
+
+    .doctor-stat-card small {
+        font-size: 8px;
+    }
+
+
+    /* Cards */
+    .doctor-dashboard .dashboard-card {
+        padding: 15px 11px;
+    }
+
+    .doctor-dashboard .card-heading h2,
+    .quick-doctor-card h2 {
+        font-size: 16px;
+    }
+
+    .doctor-dashboard .card-heading > a {
+        font-size: 9px;
+    }
+
+
+    /* Quick Actions */
+    .doctor-action {
+        grid-template-columns: 36px 1fr 14px;
+        gap: 8px;
+    }
+
+    .doctor-action > i:first-child {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .doctor-action span {
+        font-size: 11px;
+    }
+
+    .doctor-action > i:last-child {
+        font-size: 11px;
+    }
+
+
+    /* Notification */
+    .doctor-notification {
+        padding: 13px;
+    }
+
+    .doctor-notification .notification-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .doctor-notification h3 {
+        font-size: 12px;
+    }
+
+    .doctor-notification p {
+        font-size: 9px;
+    }
+
+    .doctor-notification > a {
+        font-size: 10px;
+    }
+
+
+    /* Modals */
+    .add-patient-modal,
+    .prescription-modal,
+    .availability-modal {
+        padding: 8px;
+    }
+
+    .add-patient-box,
+    .prescription-box,
+    .availability-box {
+        padding: 23px 13px 15px;
+        border-radius: 15px;
+    }
+
+    .add-patient-box h2,
+    .prescription-box h2,
+    .availability-box h2 {
+        font-size: 19px;
+    }
+
+    .add-patient-box > p,
+    .prescription-box > p,
+    .availability-box > p {
+        font-size: 11px;
+        margin-bottom: 17px;
+    }
+
+    .patient-form-group input,
+    .patient-form-group select,
+    .prescription-form-group input,
+    .prescription-form-group select,
+    .prescription-form-group textarea,
+    .availability-form-group input {
+        font-size: 10px;
+    }
+
+    .day-option span {
+        min-height: 38px;
+        font-size: 9px;
+    }
+
+    .cancel-patient-btn,
+    .save-patient-btn,
+    .cancel-prescription-btn,
+    .save-prescription-btn,
+    .cancel-availability-btn,
+    .save-availability-btn {
+        min-height: 42px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICE SAFETY
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .doctor-stat-card:hover,
+    .doctor-action:hover,
+    .doctor-dashboard .profile-menu:hover,
+    .doctor-dashboard .card-heading > a:hover,
+    .view-requests:hover,
+    .doctor-notification > a:hover,
+    .day-option:hover span,
+    .close-patient-modal:hover,
+    .close-prescription-modal:hover,
+    .close-availability-modal:hover,
+    .cancel-patient-btn:hover,
+    .cancel-prescription-btn:hover,
+    .cancel-availability-btn:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   PATIENT DASHBOARD 
+   ========================================================= */
+
+
+/* =========================
+   LARGE TABLET / LAPTOP
+   ========================= */
+
+@media (max-width: 1199px) {
+
+    .patient-dashboard {
+        max-width: 100%;
+        padding: 45px 4% 70px;
+    }
+
+    .patient-dashboard .dashboard-header {
+        gap: 25px;
+    }
+
+    .patient-dashboard .dashboard-grid {
+        gap: 20px;
+    }
+
+    .patient-dashboard .appointment-card,
+    .patient-dashboard .health-card {
+        padding: 25px;
+    }
+
+    .patient-dashboard .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .patient-dashboard .dashboard-content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .patient-dashboard .recent-card,
+    .patient-dashboard .prescription-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 991px) {
+
+    .patient-dashboard {
+        padding: 40px 4% 65px;
+    }
+
+    /* Dashboard Header */
+
+    .patient-dashboard .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+        margin-bottom: 30px;
+    }
+
+    .patient-dashboard .dashboard-welcome {
+        width: 100%;
+    }
+
+    .patient-dashboard .dashboard-profile {
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* Summary Cards */
+
+    .patient-dashboard .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 45px;
+    }
+
+    .patient-dashboard .appointment-card,
+    .patient-dashboard .health-card {
+        min-height: auto;
+    }
+
+    /* Quick Actions */
+
+    .patient-dashboard .quick-actions-section {
+        margin-bottom: 45px;
+    }
+
+    .patient-dashboard .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* Recent + Prescription */
+
+    .patient-dashboard .dashboard-content-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .patient-dashboard .recent-card,
+    .patient-dashboard .prescription-card {
+        min-height: auto;
+    }
+
+    /* Review */
+
+    .patient-dashboard .review-card {
+        padding: 25px;
+    }
+
+    .patient-dashboard .review-form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .patient-dashboard .rating-stars {
+        justify-content: flex-start;
+    }
+
+    .patient-dashboard #doctorReview {
+        grid-column: auto;
+    }
+
+    /* Notification */
+
+    .patient-dashboard .dashboard-notification {
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 767px) {
+
+    .patient-dashboard {
+        padding: 32px 20px 55px;
+    }
+
+    /* Header */
+
+    .patient-dashboard .dashboard-header {
+        gap: 18px;
+        margin-bottom: 25px;
+    }
+
+    .patient-dashboard .dashboard-welcome h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .patient-dashboard .dashboard-welcome p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .patient-dashboard .dashboard-profile {
+        padding: 11px 13px;
+        border-radius: 14px;
+    }
+
+    .patient-dashboard .profile-avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Summary Cards */
+
+    .patient-dashboard .dashboard-grid {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .patient-dashboard .appointment-card,
+    .patient-dashboard .health-card {
+        padding: 22px;
+    }
+
+    .patient-dashboard .card-top {
+        gap: 14px;
+    }
+
+    .patient-dashboard .card-top h2 {
+        font-size: 19px;
+        line-height: 1.35;
+    }
+
+    .patient-dashboard .card-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+        font-size: 19px;
+    }
+
+    .patient-dashboard .appointment-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 25px;
+        padding-top: 17px;
+    }
+
+    .patient-dashboard .appointment-details div {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Health */
+
+    .patient-dashboard .health-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 23px;
+    }
+
+    .patient-dashboard .health-stats > div {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 14px;
+        text-align: left;
+    }
+
+    .patient-dashboard .health-stats strong {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .patient-dashboard .health-stats span {
+        font-size: 12px;
+    }
+
+    .patient-dashboard .health-stats small {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    /* Quick Actions */
+
+    .patient-dashboard .quick-actions-section {
+        margin-bottom: 40px;
+    }
+
+    .patient-dashboard .section-heading {
+        margin-bottom: 18px;
+    }
+
+    .patient-dashboard .section-heading h2 {
+        font-size: 21px;
+        line-height: 1.35;
+    }
+
+    .patient-dashboard .quick-actions {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .patient-dashboard .action-card {
+        min-height: 88px;
+        padding: 16px;
+        gap: 13px;
+    }
+
+    .patient-dashboard .action-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 17px;
+    }
+
+    .patient-dashboard .action-card h3 {
+        font-size: 13px;
+    }
+
+    .patient-dashboard .action-card p {
+        font-size: 11px;
+    }
+
+    .patient-dashboard .action-card > i:last-child {
+        top: 16px;
+        right: 15px;
+    }
+
+    /* Recent + Prescription */
+
+    .patient-dashboard .dashboard-content-grid {
+        gap: 16px;
+    }
+
+    .patient-dashboard .recent-card,
+    .patient-dashboard .prescription-card {
+        padding: 22px;
+        min-height: auto;
+    }
+
+    .patient-dashboard .card-heading {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .patient-dashboard .card-heading h2 {
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .patient-dashboard .card-heading a {
+        font-size: 12px;
+    }
+
+    .patient-dashboard .appointment-list {
+        min-height: 150px;
+    }
+
+    .patient-dashboard .appointment-list > p {
+        padding: 45px 15px;
+        font-size: 13px;
+    }
+
+    .patient-dashboard #patientPrescriptions {
+        min-height: 130px;
+    }
+
+    .patient-dashboard .prescription-item {
+        gap: 12px;
+        padding: 13px;
+    }
+
+    .patient-dashboard .medicine-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .patient-dashboard .prescription-item h3 {
+        font-size: 13px;
+    }
+
+    .patient-dashboard .prescription-item p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    /* Review */
+
+    .patient-dashboard .review-card {
+        padding: 22px;
+        margin-bottom: 18px;
+    }
+
+    .patient-dashboard .review-form {
+        gap: 16px;
+    }
+
+    .patient-dashboard .review-doctor {
+        gap: 11px;
+    }
+
+    .patient-dashboard .doctor-small-avatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .patient-dashboard .review-doctor h3 {
+        font-size: 14px;
+    }
+
+    .patient-dashboard .review-doctor p {
+        font-size: 11px;
+    }
+
+    .patient-dashboard .rating-stars {
+        gap: 5px;
+    }
+
+    .patient-dashboard .rating-stars button {
+        font-size: 23px;
+    }
+
+    .patient-dashboard #doctorReview {
+        min-height: 110px;
+        padding: 13px 14px;
+        font-size: 13px;
+    }
+
+    .patient-dashboard .submit-review-btn {
+        width: 100%;
+        padding: 12px 18px;
+    }
+
+    /* Notification */
+
+    .patient-dashboard .dashboard-notification {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        padding: 18px;
+        margin-top: 18px;
+    }
+
+    .patient-dashboard .notification-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    .patient-dashboard .dashboard-notification h3 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .patient-dashboard .dashboard-notification p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .patient-dashboard .dashboard-notification > a {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .patient-dashboard {
+        padding: 27px 15px 45px;
+    }
+
+    /* Header */
+
+    .patient-dashboard .dashboard-tag {
+        font-size: 10px;
+        letter-spacing: 1.1px;
+    }
+
+    .patient-dashboard .dashboard-welcome h1 {
+        margin-top: 8px;
+        font-size: 25px;
+    }
+
+    .patient-dashboard .dashboard-welcome p {
+        font-size: 13px;
+    }
+
+    .patient-dashboard .dashboard-profile {
+        gap: 10px;
+        padding: 10px 11px;
+    }
+
+    .patient-dashboard .profile-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .patient-dashboard .dashboard-profile h3 {
+        font-size: 13px;
+    }
+
+    .patient-dashboard .dashboard-profile span {
+        font-size: 11px;
+    }
+
+    .patient-dashboard .profile-menu {
+        width: 31px;
+        height: 31px;
+        margin-left: auto;
+    }
+
+    /* Summary Cards */
+
+    .patient-dashboard .appointment-card,
+    .patient-dashboard .health-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .patient-dashboard .card-label {
+        margin-bottom: 6px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .patient-dashboard .card-top h2 {
+        font-size: 17px;
+    }
+
+    .patient-dashboard .card-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+        font-size: 17px;
+    }
+
+    .patient-dashboard .appointment-details {
+        margin-top: 20px;
+        padding-top: 14px;
+    }
+
+    .patient-dashboard .appointment-details div {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .patient-dashboard .appointment-details i {
+        font-size: 15px;
+    }
+
+    /* Health Stats */
+
+    .patient-dashboard .health-stats {
+        margin-top: 18px;
+    }
+
+    .patient-dashboard .health-stats > div {
+        grid-template-columns: 1fr auto;
+        gap: 3px 8px;
+        padding: 12px;
+    }
+
+    .patient-dashboard .health-stats strong {
+        font-size: 17px;
+        grid-row: span 2;
+        align-self: center;
+    }
+
+    .patient-dashboard .health-stats span {
+        font-size: 11px;
+    }
+
+    .patient-dashboard .health-stats small {
+        font-size: 9px;
+    }
+
+    /* Quick Actions */
+
+    .patient-dashboard .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .patient-dashboard .action-card {
+        min-height: 82px;
+        padding: 14px;
+    }
+
+    .patient-dashboard .action-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .patient-dashboard .action-card h3 {
+        font-size: 12px;
+    }
+
+    .patient-dashboard .action-card p {
+        font-size: 10px;
+    }
+
+    /* Content Cards */
+
+    .patient-dashboard .recent-card,
+    .patient-dashboard .prescription-card,
+    .patient-dashboard .review-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .patient-dashboard .card-heading h2 {
+        font-size: 16px;
+    }
+
+    .patient-dashboard .card-heading a {
+        font-size: 11px;
+    }
+
+    .patient-dashboard .heading-icon {
+        font-size: 19px;
+    }
+
+    .patient-dashboard .appointment-list > p {
+        padding: 40px 10px;
+        font-size: 12px;
+    }
+
+    .patient-dashboard .prescription-item {
+        padding: 11px;
+    }
+
+    .patient-dashboard .medicine-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    /* Review */
+
+    .patient-dashboard .doctor-small-avatar {
+        width: 42px;
+        height: 42px;
+        font-size: 11px;
+    }
+
+    .patient-dashboard .review-doctor h3 {
+        font-size: 13px;
+    }
+
+    .patient-dashboard .rating-stars {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .patient-dashboard .rating-stars button {
+        font-size: 24px;
+        padding: 3px 7px;
+    }
+
+    .patient-dashboard #doctorReview {
+        min-height: 100px;
+        font-size: 12px;
+    }
+
+    .patient-dashboard .submit-review-btn {
+        font-size: 12px;
+    }
+
+    /* Notification */
+
+    .patient-dashboard .dashboard-notification {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .patient-dashboard .notification-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .patient-dashboard .dashboard-notification h3 {
+        font-size: 13px;
+    }
+
+    .patient-dashboard .dashboard-notification p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================
+   EXTRA SMALL DEVICES
+   ========================= */
+
+@media (max-width: 360px) {
+
+    .patient-dashboard {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .patient-dashboard .dashboard-welcome h1 {
+        font-size: 22px;
+    }
+
+    .patient-dashboard .dashboard-welcome p {
+        font-size: 12px;
+    }
+
+    .patient-dashboard .dashboard-profile {
+        padding: 9px;
+    }
+
+    .patient-dashboard .dashboard-profile h3 {
+        font-size: 12px;
+    }
+
+    .patient-dashboard .appointment-card,
+    .patient-dashboard .health-card,
+    .patient-dashboard .recent-card,
+    .patient-dashboard .prescription-card,
+    .patient-dashboard .review-card {
+        padding: 15px;
+    }
+
+    .patient-dashboard .card-top h2 {
+        font-size: 15px;
+    }
+
+    .patient-dashboard .card-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .patient-dashboard .health-stats > div {
+        padding: 10px;
+    }
+
+    .patient-dashboard .health-stats strong {
+        font-size: 15px;
+    }
+
+    .patient-dashboard .health-stats span {
+        font-size: 10px;
+    }
+
+    .patient-dashboard .action-card {
+        padding: 12px;
+    }
+
+    .patient-dashboard .action-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .patient-dashboard .action-card h3 {
+        font-size: 11px;
+    }
+
+    .patient-dashboard .action-card p {
+        font-size: 9px;
+    }
+
+    .patient-dashboard .card-heading h2 {
+        font-size: 14px;
+    }
+
+    .patient-dashboard .rating-stars button {
+        font-size: 21px;
+        padding: 2px 5px;
+    }
+
+}
+
+
+/* =========================
+   TOUCH DEVICE SAFETY
+   ========================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .patient-dashboard .action-card:hover,
+    .patient-dashboard .submit-review-btn:hover {
+        transform: none;
+    }
+
+    .patient-dashboard .action-card:hover .action-icon {
+        background: var(--mint);
+        color: var(--primary);
+    }
+
+    .patient-dashboard .action-card:hover > i:last-child {
+        color: var(--text-light);
+        transform: none;
+    }
+
+    .patient-dashboard .profile-menu:hover {
+        background: transparent;
+        color: var(--text-light);
+    }
+
+    .patient-dashboard .submit-review-btn:hover {
+        background: var(--primary);
+        box-shadow: none;
+    }
+
+    .patient-dashboard .view-prescriptions:hover {
+        color: var(--primary);
+    }
+
+    .patient-dashboard .view-prescriptions:hover i {
+        transform: none;
+    }
+
+    .patient-dashboard .dashboard-notification > a:hover {
+        color: var(--primary);
+    }
+
+    .patient-dashboard .dashboard-notification > a:hover i {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+   ========================================================= */
+
+
+/* =========================
+   LARGE TABLET / LAPTOP
+   ========================= */
+
+@media (max-width: 1199px) {
+
+    .login-page {
+        padding: 40px 4%;
+    }
+
+    .login-container {
+        width: min(1050px, 100%);
+        min-height: 650px;
+        border-radius: 26px;
+    }
+
+    .login-visual {
+        padding: 50px;
+    }
+
+    .login-card {
+        padding: 45px 50px;
+    }
+
+    .login-visual h1 {
+        font-size: clamp(38px, 4vw, 52px);
+    }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 991px) {
+
+    .login-page {
+        min-height: auto;
+        padding: 35px 4%;
+    }
+
+    .login-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        max-width: 700px;
+        border-radius: 24px;
+    }
+
+    /* Visual Section */
+
+    .login-visual {
+        min-height: 400px;
+        padding: 45px;
+        align-items: center;
+    }
+
+    .login-visual-content {
+        max-width: 100%;
+    }
+
+    .login-visual h1 {
+        margin: 18px 0 15px;
+        font-size: 42px;
+    }
+
+    .login-visual > .login-visual-content > p {
+        max-width: 600px;
+        font-size: 14px;
+    }
+
+    .login-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .login-feature {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .login-feature > i {
+        width: 40px;
+        height: 40px;
+        border-radius: 11px;
+        font-size: 17px;
+    }
+
+    .login-feature strong {
+        font-size: 12px;
+    }
+
+    .login-feature small {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    /* Login Card */
+
+    .login-card {
+        padding: 45px 55px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 767px) {
+
+    .login-page {
+        min-height: 100vh;
+        padding: 25px 18px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 520px;
+        border-radius: 20px;
+    }
+
+    /* Visual */
+
+    .login-visual {
+        min-height: auto;
+        padding: 38px 28px;
+    }
+
+    .login-visual h1 {
+        margin: 16px 0 13px;
+        font-size: 34px;
+        line-height: 1.12;
+    }
+
+    .login-visual > .login-visual-content > p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .login-badge {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .login-badge i {
+        font-size: 14px;
+    }
+
+    /* Features */
+
+    .login-features {
+        display: flex;
+        gap: 13px;
+        margin-top: 28px;
+    }
+
+    .login-feature {
+        gap: 11px;
+    }
+
+    .login-feature > i {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        border-radius: 11px;
+        font-size: 16px;
+    }
+
+    .login-feature strong {
+        font-size: 12px;
+    }
+
+    .login-feature small {
+        font-size: 10px;
+    }
+
+    /* Login Card */
+
+    .login-card {
+        padding: 35px 28px 38px;
+    }
+
+    .login-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 15px;
+        border-radius: 16px;
+        font-size: 22px;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    .login-header > p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Form */
+
+    .login-form {
+        margin-top: 25px;
+    }
+
+    .role-selection {
+        margin-bottom: 20px;
+    }
+
+    .role-options {
+        gap: 7px;
+    }
+
+    .role-option span {
+        min-height: 45px;
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    .role-option span i {
+        font-size: 14px;
+    }
+
+    .login-form .form-group {
+        margin-bottom: 18px;
+    }
+
+    .password-label {
+        gap: 10px;
+    }
+
+    .password-label a {
+        font-size: 10px;
+    }
+
+    .input-wrapper input {
+        height: 49px;
+        padding-left: 44px;
+        padding-right: 44px;
+        font-size: 12px;
+    }
+
+    .input-wrapper > i:first-child {
+        left: 14px;
+        font-size: 16px;
+    }
+
+    .password-toggle {
+        right: 6px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .remember-me {
+        margin-bottom: 18px;
+        font-size: 11px;
+    }
+
+    .login-btn {
+        min-height: 50px;
+        font-size: 13px;
+    }
+
+    .login-divider {
+        margin: 24px 0 19px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .login-page {
+        padding: 15px 12px;
+    }
+
+    .login-container {
+        border-radius: 17px;
+    }
+
+    /* Visual */
+
+    .login-visual {
+        padding: 30px 20px;
+    }
+
+    .login-visual h1 {
+        font-size: 29px;
+    }
+
+    .login-visual > .login-visual-content > p {
+        font-size: 12px;
+    }
+
+    .login-features {
+        margin-top: 23px;
+        gap: 11px;
+    }
+
+    .login-feature {
+        gap: 9px;
+    }
+
+    .login-feature > i {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+
+    .login-feature strong {
+        font-size: 11px;
+    }
+
+    .login-feature small {
+        font-size: 9px;
+        line-height: 1.35;
+    }
+
+    /* Card */
+
+    .login-card {
+        padding: 30px 20px 32px;
+    }
+
+    .login-icon {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 13px;
+        border-radius: 14px;
+        font-size: 20px;
+    }
+
+    .login-header .section-tag {
+        margin-bottom: 7px;
+    }
+
+    .login-header h2 {
+        font-size: 21px;
+        line-height: 1.3;
+    }
+
+    .login-header > p {
+        font-size: 11px;
+    }
+
+    .login-form {
+        margin-top: 22px;
+    }
+
+    /* Role Selection */
+
+    .role-selection > label,
+    .form-group > label,
+    .password-label label {
+        font-size: 12px;
+    }
+
+    .role-options {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .role-option span {
+        min-height: 43px;
+        justify-content: flex-start;
+        padding: 0 14px;
+        font-size: 11px;
+    }
+
+    .role-option span i {
+        width: 20px;
+        text-align: center;
+    }
+
+    /* Inputs */
+
+    .input-wrapper input {
+        height: 47px;
+        padding-left: 42px;
+        padding-right: 42px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .input-wrapper > i:first-child {
+        left: 13px;
+        font-size: 15px;
+    }
+
+    .password-toggle {
+        right: 5px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .remember-me {
+        gap: 7px;
+        font-size: 10px;
+    }
+
+    .remember-me input {
+        width: 14px;
+        height: 14px;
+    }
+
+    .login-btn {
+        min-height: 48px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    .login-divider {
+        margin: 21px 0 17px;
+    }
+
+}
+
+
+/* =========================
+   EXTRA SMALL DEVICES
+   ========================= */
+
+@media (max-width: 360px) {
+
+    .login-page {
+        padding: 10px 8px;
+    }
+
+    .login-container {
+        border-radius: 15px;
+    }
+
+    .login-visual {
+        padding: 25px 16px;
+    }
+
+    .login-visual h1 {
+        font-size: 25px;
+    }
+
+    .login-visual > .login-visual-content > p {
+        font-size: 11px;
+    }
+
+    .login-features {
+        gap: 9px;
+    }
+
+    .login-feature > i {
+        width: 33px;
+        height: 33px;
+        flex-basis: 33px;
+        font-size: 13px;
+    }
+
+    .login-feature strong {
+        font-size: 10px;
+    }
+
+    .login-feature small {
+        font-size: 8px;
+    }
+
+    .login-card {
+        padding: 25px 15px 28px;
+    }
+
+    .login-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .login-header h2 {
+        font-size: 19px;
+    }
+
+    .login-header > p {
+        font-size: 10px;
+    }
+
+    .role-option span {
+        min-height: 41px;
+        font-size: 10px;
+    }
+
+    .input-wrapper input {
+        height: 45px;
+        font-size: 11px;
+    }
+
+    .password-label a {
+        font-size: 9px;
+    }
+
+    .login-btn {
+        min-height: 46px;
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================
+   TOUCH DEVICE SAFETY
+   ========================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .role-option:hover span {
+        border-color: var(--border);
+    }
+
+    .role-option.active span,
+    .role-option input:checked + span {
+        border-color: var(--primary);
+        background: var(--mint);
+        color: var(--primary-dark);
+    }
+
+    .password-toggle:hover {
+        background: transparent;
+        color: var(--text-light);
+    }
+
+    .login-btn:hover {
+        background: var(--primary);
+        transform: none;
+        box-shadow: none;
+    }
+
+}
+
+
+/* =========================================================
+   REGISTER PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .register-page {
+        padding: 45px 4%;
+    }
+
+    .register-container {
+        max-width: 1100px;
+        grid-template-columns: 1fr 0.9fr;
+    }
+
+    .register-card {
+        padding: 45px 40px;
+    }
+
+    .register-side {
+        padding: 50px 45px;
+    }
+
+    .register-side h1 {
+        font-size: clamp(36px, 4vw, 50px);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .register-page {
+        min-height: auto;
+        padding: 40px 4%;
+    }
+
+    .register-container {
+        max-width: 760px;
+        min-height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    /* Register Card */
+
+    .register-card {
+        order: 1;
+        padding: 45px 50px;
+    }
+
+    .register-header {
+        margin-bottom: 28px;
+    }
+
+    /* Side Panel */
+
+    .register-side {
+        order: 2;
+        min-height: 390px;
+        padding: 50px;
+    }
+
+    .register-side-content {
+        max-width: 650px;
+    }
+
+    .register-side h1 {
+        font-size: clamp(36px, 6vw, 48px);
+    }
+
+    .register-side > .register-side-content > p {
+        max-width: 600px;
+    }
+
+    .register-points {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .register-points > div {
+        align-items: flex-start;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .register-page {
+        padding: 30px 16px 45px;
+    }
+
+    .register-container {
+        width: 100%;
+        border-radius: 22px;
+    }
+
+    /* Register Card */
+
+    .register-card {
+        padding: 35px 25px;
+    }
+
+    .register-header {
+        margin-bottom: 25px;
+    }
+
+    .register-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 15px;
+        border-radius: 13px;
+        font-size: 19px;
+    }
+
+    .register-header .section-tag {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .register-header h2 {
+        font-size: 25px;
+        line-height: 1.25;
+    }
+
+    .register-header p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* Form */
+
+    .register-form {
+        gap: 16px;
+    }
+
+    .register-form .role-options {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .register-form .role-option span {
+        min-height: 44px;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .register-form .role-option span i {
+        font-size: 15px;
+    }
+
+    /* Form Rows */
+
+    .register-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .register-form .form-group > label {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .register-form .input-wrapper input,
+    .register-form .input-wrapper select {
+        height: 46px;
+        font-size: 13px;
+    }
+
+    /* Doctor Fields */
+
+    #doctorFields .form-row {
+        margin-bottom: 16px;
+    }
+
+    /* Terms */
+
+    .register-form .terms-check {
+        font-size: 10.5px;
+        gap: 8px;
+    }
+
+    .register-form .terms-check input {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Button */
+
+    .register-btn {
+        min-height: 48px;
+        font-size: 13px;
+    }
+
+    /* Divider */
+
+    .register-divider {
+        margin: 23px 0 17px;
+        font-size: 8px;
+        gap: 10px;
+    }
+
+    .register-card .login-link a {
+        font-size: 12px;
+    }
+
+    /* Side Panel */
+
+    .register-side {
+        min-height: 370px;
+        padding: 45px 30px;
+    }
+
+    .register-side::before {
+        width: 330px;
+        height: 330px;
+        top: -150px;
+        right: -150px;
+    }
+
+    .register-side::after {
+        width: 260px;
+        height: 260px;
+        bottom: -150px;
+        left: -130px;
+    }
+
+    .register-side .login-badge {
+        margin-bottom: 22px;
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .register-side h1 {
+        margin-bottom: 16px;
+        font-size: clamp(34px, 9vw, 44px);
+    }
+
+    .register-side > .register-side-content > p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .register-points {
+        grid-template-columns: 1fr;
+        gap: 13px;
+        margin-top: 28px;
+    }
+
+    .register-points > div {
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .register-points i {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .register-page {
+        padding: 20px 10px 35px;
+    }
+
+    .register-container {
+        border-radius: 18px;
+    }
+
+    .register-card {
+        padding: 28px 18px;
+    }
+
+    .register-header {
+        margin-bottom: 22px;
+    }
+
+    .register-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 13px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    .register-header h2 {
+        font-size: 22px;
+    }
+
+    .register-header p {
+        font-size: 11.5px;
+    }
+
+    .register-form {
+        gap: 15px;
+    }
+
+    /* Roles */
+
+    .register-form .role-options {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .register-form .role-option span {
+        min-height: 43px;
+        font-size: 12px;
+    }
+
+    /* Inputs */
+
+    .register-form .input-wrapper input,
+    .register-form .input-wrapper select {
+        height: 45px;
+        padding-left: 40px;
+        font-size: 12px;
+    }
+
+    .register-form .input-wrapper > i {
+        left: 13px;
+        font-size: 14px;
+    }
+
+    .register-form .password-toggle {
+        right: 5px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .register-form #password,
+    .register-form #confirmPassword {
+        padding-right: 42px;
+    }
+
+    /* Terms */
+
+    .register-form .terms-check {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    /* Button */
+
+    .register-btn {
+        min-height: 46px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    /* Divider */
+
+    .register-divider {
+        margin: 21px 0 15px;
+        font-size: 7px;
+    }
+
+    .register-card .login-link a {
+        font-size: 11.5px;
+    }
+
+    /* Side */
+
+    .register-side {
+        min-height: 340px;
+        padding: 38px 22px;
+    }
+
+    .register-side h1 {
+        font-size: 34px;
+    }
+
+    .register-side > .register-side-content > p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .register-points {
+        margin-top: 24px;
+        gap: 11px;
+    }
+
+    .register-points > div {
+        font-size: 11.5px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .register-page {
+        padding: 15px 7px 30px;
+    }
+
+    .register-card {
+        padding: 24px 14px;
+    }
+
+    .register-header h2 {
+        font-size: 20px;
+    }
+
+    .register-header p {
+        font-size: 11px;
+    }
+
+    .register-form {
+        gap: 13px;
+    }
+
+    .register-form .role-option span {
+        min-height: 41px;
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .register-form .input-wrapper input,
+    .register-form .input-wrapper select {
+        height: 43px;
+        font-size: 11.5px;
+    }
+
+    .register-form .input-wrapper > i {
+        left: 12px;
+        font-size: 13px;
+    }
+
+    .register-form .form-group > label {
+        font-size: 10.5px;
+    }
+
+    .register-form .terms-check {
+        font-size: 9.5px;
+    }
+
+    .register-btn {
+        min-height: 44px;
+        font-size: 11.5px;
+    }
+
+    .register-side {
+        min-height: 315px;
+        padding: 32px 18px;
+    }
+
+    .register-side .login-badge {
+        margin-bottom: 18px;
+        font-size: 9px;
+    }
+
+    .register-side h1 {
+        font-size: 29px;
+    }
+
+    .register-side > .register-side-content > p {
+        font-size: 11px;
+    }
+
+    .register-points {
+        gap: 9px;
+        margin-top: 20px;
+    }
+
+    .register-points > div {
+        font-size: 10.5px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICE SAFETY
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .register-btn:hover,
+    .register-form .role-option:hover span,
+    .register-form .password-toggle:hover,
+    .register-card .login-link a:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+}
+
+/* =========================================================
+   PATIENTS MANAGEMENT
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .patients-page {
+        padding: 45px 4% 70px;
+    }
+
+    .patients-header {
+        gap: 25px;
+    }
+
+    .patients-header h1 {
+        font-size: 32px;
+    }
+
+    .patients-card {
+        padding: 26px;
+    }
+
+    .patients-table-head,
+    .patients-table-body .patient-row {
+        gap: 15px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .patient-search {
+        width: 250px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .patients-page {
+        padding: 40px 4% 60px;
+    }
+
+    /* Header */
+
+    .patients-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .patients-header h1 {
+        font-size: 30px;
+    }
+
+    .patients-header p {
+        font-size: 13px;
+    }
+
+    .back-dashboard-btn {
+        padding: 11px 16px;
+        font-size: 12px;
+    }
+
+    /* Stats */
+
+    .patients-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 25px;
+    }
+
+    .patient-stat-card {
+        min-height: 100px;
+        padding: 18px;
+    }
+
+    .patient-stat-card .stat-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 19px;
+    }
+
+    .patient-stat-card h2 {
+        font-size: 24px;
+    }
+
+    /* Main Card */
+
+    .patients-card {
+        padding: 24px;
+        border-radius: var(--radius-lg);
+    }
+
+    .patients-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .patient-search {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /*
+       Keep the patient table horizontally scrollable.
+       This prevents email/phone/action columns from
+       becoming too narrow on tablets.
+    */
+
+    .patients-table {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .patients-table-head,
+    .patients-table-body .patient-row {
+        min-width: 700px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .patients-page {
+        padding: 30px 16px 45px;
+    }
+
+    /* Header */
+
+    .patients-header {
+        gap: 17px;
+        margin-bottom: 25px;
+    }
+
+    .patients-header .dashboard-tag {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .patients-header h1 {
+        margin-bottom: 6px;
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    .patients-header p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .back-dashboard-btn {
+        width: fit-content;
+        padding: 10px 14px;
+        font-size: 11.5px;
+    }
+
+    /* Stats */
+
+    .patients-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .patient-stat-card {
+        min-height: 88px;
+        padding: 16px;
+        gap: 14px;
+        border-radius: 14px;
+    }
+
+    .patient-stat-card .stat-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+    .patient-stat-card span {
+        font-size: 11px;
+    }
+
+    .patient-stat-card h2 {
+        font-size: 22px;
+    }
+
+    /* Main Card */
+
+    .patients-card {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    .patients-card-header {
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .patients-card-header .card-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .patients-card-header h2 {
+        font-size: 19px;
+    }
+
+    /* Search */
+
+    .patient-search {
+        width: 100%;
+    }
+
+    .patient-search input {
+        height: 43px;
+        padding-left: 38px;
+        font-size: 12px;
+    }
+
+    .patient-search i {
+        left: 13px;
+        font-size: 13px;
+    }
+
+    /*
+       Horizontal table scrolling on mobile
+    */
+
+    .patients-table {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .patients-table-head,
+    .patients-table-body .patient-row {
+        min-width: 680px;
+        gap: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .patients-table-head {
+        min-height: 50px;
+    }
+
+    .patients-table-head span {
+        font-size: 9px;
+    }
+
+    .patients-table-body {
+        min-height: 220px;
+    }
+
+    .patients-table-body > p {
+        padding: 75px 15px;
+        font-size: 12px;
+    }
+
+    .patients-table-body .patient-row {
+        min-height: 68px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .patients-table-body .patient-info {
+        gap: 9px;
+    }
+
+    .patients-table-body .patient-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+    }
+
+    .patients-table-body .patient-name {
+        font-size: 12px;
+    }
+
+    .patients-table-body .patient-email,
+    .patients-table-body .patient-phone {
+        font-size: 11px;
+    }
+
+    .patients-table-body .patient-gender {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .patients-table-body .patient-action {
+        width: 32px;
+        height: 32px;
+    }
+
+    .patients-table-body .empty-state {
+        padding: 60px 15px;
+    }
+
+    .patients-table-body .empty-state i {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .patients-page {
+        padding: 22px 10px 35px;
+    }
+
+    .patients-header {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .patients-header h1 {
+        font-size: 24px;
+    }
+
+    .patients-header p {
+        font-size: 11.5px;
+    }
+
+    .back-dashboard-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+        border-radius: 10px;
+    }
+
+    /* Stats */
+
+    .patients-stats {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .patient-stat-card {
+        min-height: 82px;
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .patient-stat-card .stat-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .patient-stat-card span {
+        font-size: 10px;
+    }
+
+    .patient-stat-card h2 {
+        font-size: 20px;
+    }
+
+    /* Main Card */
+
+    .patients-card {
+        padding: 17px 12px;
+        border-radius: 15px;
+    }
+
+    .patients-card-header {
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .patients-card-header h2 {
+        font-size: 17px;
+    }
+
+    .patient-search input {
+        height: 41px;
+        font-size: 11.5px;
+    }
+
+    /* Table */
+
+    .patients-table-head,
+    .patients-table-body .patient-row {
+        min-width: 650px;
+        gap: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .patients-table-head {
+        min-height: 47px;
+    }
+
+    .patients-table-head span {
+        font-size: 8px;
+    }
+
+    .patients-table-body .patient-row {
+        min-height: 64px;
+    }
+
+    .patients-table-body .patient-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 9px;
+    }
+
+    .patients-table-body .patient-name {
+        font-size: 11px;
+    }
+
+    .patients-table-body .patient-email,
+    .patients-table-body .patient-phone {
+        font-size: 10px;
+    }
+
+    .patients-table-body .patient-gender {
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+
+    .patients-table-body .patient-action {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .patients-page {
+        padding: 18px 7px 30px;
+    }
+
+    .patients-header h1 {
+        font-size: 22px;
+    }
+
+    .patients-header p {
+        font-size: 11px;
+    }
+
+    .back-dashboard-btn {
+        font-size: 10.5px;
+        padding: 8px 10px;
+    }
+
+    .patient-stat-card {
+        min-height: 76px;
+        padding: 12px;
+    }
+
+    .patient-stat-card .stat-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 15px;
+    }
+
+    .patient-stat-card h2 {
+        font-size: 18px;
+    }
+
+    .patients-card {
+        padding: 15px 10px;
+    }
+
+    .patients-card-header h2 {
+        font-size: 16px;
+    }
+
+    .patient-search input {
+        height: 39px;
+        font-size: 11px;
+    }
+
+    .patients-table-head,
+    .patients-table-body .patient-row {
+        min-width: 620px;
+        gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICE SAFETY
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .patient-stat-card:hover,
+    .back-dashboard-btn:hover,
+    .patients-table-body .patient-row:hover,
+    .patients-table-body .patient-action:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+}

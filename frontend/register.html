@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | NalamCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<main class="register-page">
+    <div class="register-container">
+        <div class="register-card">
+            <div class="register-header">
+                <div class="register-icon">
+                    <i class="bi bi-person-plus"></i>
+                </div>
+                <span class="section-tag">JOIN NALAMCARE</span>
+                <h2>Create Your Account</h2>
+                <p id="registerDescription">Register to access personalized healthcare services</p>
+            </div>
+
+            <form class="register-form" id="registerForm">
+
+                <div class="role-selection">
+                    <label>Register As</label>
+                    <div class="role-options">
+                        <label class="role-option active">
+                            <input type="radio" name="role" value="patient" checked>
+                            <span><i class="bi bi-person"></i> Patient</span>
+                        </label>
+
+                        <label class="role-option">
+                            <input type="radio" name="role" value="doctor">
+                            <span><i class="bi bi-person-badge"></i> Doctor</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-person"></i>
+                            <input type="text" id="firstName" placeholder="First name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-person"></i>
+                            <input type="text" id="lastName" placeholder="Last name" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="email" placeholder="Enter email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-telephone"></i>
+                            <input type="tel" id="phone" placeholder="Phone number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row" id="patientFields">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-calendar3"></i>
+                            <input type="date" id="dob">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-gender-ambiguous"></i>
+                            <select id="gender" required>
+                                <option value="">Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="doctorFields" style="display:none;">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <div class="input-wrapper">
+                                <i class="bi bi-hospital"></i>
+                                <select id="department">
+                                    <option value="">Select department</option>
+                                    <option>General Medicine</option>
+                                    <option>Cardiology</option>
+                                    <option>Dermatology</option>
+                                    <option>Pediatrics</option>
+                                    <option>Dental</option>
+                                    <option>Orthopedics</option>
+                                    <option>Gynecology</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialization">Specialization</label>
+                            <div class="input-wrapper">
+                                <i class="bi bi-heart-pulse"></i>
+                                <input type="text" id="specialization" placeholder="e.g. General Physician">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="qualification">Qualification</label>
+                            <div class="input-wrapper">
+                                <i class="bi bi-mortarboard"></i>
+                                <input type="text" id="qualification" placeholder="e.g. MBBS, MD">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Experience</label>
+                            <div class="input-wrapper">
+                                <i class="bi bi-briefcase"></i>
+                                <input type="text" id="experience" placeholder="e.g. 8 years">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="license">Medical License No.</label>
+                        <div class="input-wrapper">
+                            <i class="bi bi-card-text"></i>
+                            <input type="text" id="license" placeholder="Enter medical license number">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" id="password" placeholder="Create password" required>
+                        <button type="button" class="password-toggle" id="togglePassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <i class="bi bi-shield-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                    </div>
+                </div>
+
+                <label class="terms-check">
+                    <input type="checkbox" required>
+                    <span>I agree to the <a href="#">Terms & Conditions</a> and Privacy Policy</span>
+                </label>
+
+                <button type="submit" class="register-btn">
+                    <span id="registerButtonText">Create Account</span>
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="register-divider">
+                <span>ALREADY HAVE AN ACCOUNT?</span>
+            </div>
+
+            <div class="login-link">
+                <a href="login.html">Sign In to Your Account <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+
+        <div class="register-side">
+            <div class="register-side-content">
+                <span class="login-badge">
+                    <i class="bi bi-heart-pulse"></i> NALAMCARE
+                </span>
+
+                <h1>Start Your<br><span>Healthy Journey.</span></h1>
+
+                <p id="sideDescription">
+                    Create your NalamCare account and make healthcare simpler, faster and more convenient.
+                </p>
+
+                <div class="register-points">
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Book appointments easily</span>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Manage your health visits</span>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Connect with trusted doctors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("registerForm");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const togglePassword = document.getElementById("togglePassword");
+
+    const roleOptions = document.querySelectorAll(".role-option");
+    const patientFields = document.getElementById("patientFields");
+    const doctorFields = document.getElementById("doctorFields");
+
+    const dob = document.getElementById("dob");
+    const gender = document.getElementById("gender");
+
+    const department = document.getElementById("department");
+    const specialization = document.getElementById("specialization");
+    const qualification = document.getElementById("qualification");
+    const experience = document.getElementById("experience");
+    const license = document.getElementById("license");
+
+    const registerDescription = document.getElementById("registerDescription");
+    const sideDescription = document.getElementById("sideDescription");
+    const registerButtonText = document.getElementById("registerButtonText");
+
+    togglePassword.addEventListener("click", () => {
+        const show = password.type === "password";
+
+        password.type = show ? "text" : "password";
+
+        togglePassword.innerHTML = show
+            ? '<i class="bi bi-eye-slash"></i>'
+            : '<i class="bi bi-eye"></i>';
+    });
+
+    function updateRoleFields() {
+
+        const role = document.querySelector('input[name="role"]:checked').value;
+
+        roleOptions.forEach(option => {
+            option.classList.remove("active");
+        });
+
+        document.querySelector(`input[value="${role}"]`)
+            .closest(".role-option")
+            .classList.add("active");
+
+        if (role === "doctor") {
+
+            patientFields.style.display = "none";
+            doctorFields.style.display = "block";
+
+            dob.removeAttribute("required");
+            gender.removeAttribute("required");
+
+            department.setAttribute("required", "");
+            specialization.setAttribute("required", "");
+            qualification.setAttribute("required", "");
+            experience.setAttribute("required", "");
+            license.setAttribute("required", "");
+
+            registerDescription.textContent =
+                "Register as a healthcare professional with NalamCare";
+
+            sideDescription.textContent =
+                "Join NalamCare as a trusted healthcare professional and manage your practice efficiently.";
+
+            registerButtonText.textContent = "Register as Doctor";
+
+        } else {
+
+            patientFields.style.display = "flex";
+            doctorFields.style.display = "none";
+
+            dob.setAttribute("required", "");
+            gender.setAttribute("required", "");
+
+            department.removeAttribute("required");
+            specialization.removeAttribute("required");
+            qualification.removeAttribute("required");
+            experience.removeAttribute("required");
+            license.removeAttribute("required");
+
+            registerDescription.textContent =
+                "Register to access personalized healthcare services";
+
+            sideDescription.textContent =
+                "Create your NalamCare account and make healthcare simpler, faster and more convenient.";
+
+            registerButtonText.textContent = "Create Account";
+        }
+    }
+
+    roleOptions.forEach(option => {
+        option.addEventListener("click", updateRoleFields);
+    });
+
+    updateRoleFields();
+
+    form.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const role = document.querySelector('input[name="role"]:checked').value;
+
+        if (password.value !== confirmPassword.value) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+
+        let requestBody = {
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone: phone,
+            password: password.value
+        };
+
+        let endpoint = "";
+
+        if (role === "doctor") {
+
+            endpoint = "/api/doctors/register";
+
+            requestBody.department = department.value;
+            requestBody.specialization = specialization.value.trim();
+            requestBody.qualification = qualification.value.trim();
+            requestBody.experience = experience.value.trim();
+            requestBody.license = license.value.trim();
+
+        } else {
+
+            endpoint = "/api/patients";
+
+            requestBody.dob = dob.value;
+            requestBody.gender = gender.value;
+        }
+
+        try {
+
+            const response = await fetch(endpoint, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(requestBody)
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+
+                alert(
+                    role === "doctor"
+                        ? "Doctor registration successful!"
+                        : "Registration successful!"
+                );
+
+                window.location.href = "login.html";
+
+            } else {
+                alert(data.message || "Registration failed!");
+            }
+
+        } catch (error) {
+
+            alert("Server connection failed!");
+            console.error(error);
+
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | NalamCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<main class="admin-dashboard">
+
+    <section class="dashboard-header">
+        <div class="dashboard-welcome">
+            <span class="dashboard-tag">ADMIN DASHBOARD</span>
+            <h1>Welcome back, <strong>Admin!</strong> 👋</h1>
+            <p>Monitor and manage NalamCare from one place.</p>
+        </div>
+
+        <div class="dashboard-profile">
+            <div class="profile-avatar">AD</div>
+            <div>
+                <h3>NalamCare Admin</h3>
+                <span>Administrator</span>
+            </div>
+            <button class="profile-menu">
+                <i class="bi bi-three-dots-vertical"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="admin-stats">
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">
+                <i class="bi bi-people"></i>
+            </div>
+            <div>
+                <span>Total Patients</span>
+                <h2 id="totalPatients">1,248</h2>
+                <small>+12% this month</small>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">
+                <i class="bi bi-person-badge"></i>
+            </div>
+            <div>
+                <span>Total Doctors</span>
+                <h2 id="totalDoctors">48</h2>
+                <small>+4 this month</small>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">
+                <i class="bi bi-calendar2-check"></i>
+            </div>
+            <div>
+                <span>Appointments</span>
+                <h2 id="totalAppointments">326</h2>
+                <small>24 today</small>
+            </div>
+        </div>
+
+        <div class="admin-stat-card">
+            <div class="admin-stat-icon">
+                <i class="bi bi-hospital"></i>
+            </div>
+            <div>
+                <span>Departments</span>
+                <h2>12</h2>
+                <small>All active</small>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="admin-main-grid">
+
+        <div class="dashboard-card admin-appointments">
+
+            <div class="card-heading">
+                <div>
+                    <span class="card-label">OVERVIEW</span>
+                    <h2>Recent Appointments</h2>
+                </div>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="admin-table">
+
+                <div class="admin-table-head">
+                    <span>Patient</span>
+                    <span>Doctor</span>
+                    <span>Date</span>
+                    <span>Status</span>
+                </div>
+                <div class="admin-table-body" id="adminAppointments">
+                    <p>Loading appointments...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-card admin-quick-actions">
+
+            <div class="card-heading">
+                <div>
+                    <span class="card-label">MANAGEMENT</span>
+                    <h2>Quick Actions</h2>
+                </div>
+            </div>
+
+            <a href="register.html" class="admin-action">
+                <div class="admin-action-icon">
+                    <i class="bi bi-person-plus"></i>
+                </div>
+                <div>
+                    <h3>Add Doctor</h3>
+                    <p>Register a new doctor</p>
+                </div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+            <a href="patients.html" class="admin-action">
+                <div class="admin-action-icon">
+                    <i class="bi bi-people"></i>
+                </div>
+                <div>
+                    <h3>Manage Patients</h3>
+                    <p>View patient records</p>
+                </div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+            <a href="appointments.html" class="admin-action">
+                <div class="admin-action-icon">
+                    <i class="bi bi-calendar-check"></i>
+                </div>
+                <div>
+                    <h3>Appointments</h3>
+                    <p>Manage all appointments</p>
+                </div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+            <a href="departments.html" class="admin-action">
+                <div class="admin-action-icon">
+                    <i class="bi bi-building"></i>
+                </div>
+                <div>
+                    <h3>Departments</h3>
+                    <p>Manage departments</p>
+                </div>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="admin-bottom-grid">
+
+        <div class="dashboard-card">
+
+            <div class="card-heading">
+                <div>
+                    <span class="card-label">DOCTORS</span>
+                    <h2>Doctor Overview</h2>
+                </div>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="doctor-overview-list" id="doctorOverviewList">
+                <p>Loading doctors..</p>
+            </div>
+
+        </div>
+
+        <div class="dashboard-card system-card">
+
+            <span class="card-label">SYSTEM</span>
+            <h2>System Overview</h2>
+
+            <div class="system-item">
+                <div>
+                    <span>Website Traffic</span>
+                    <strong id="websiteTraffic">82%</strong>
+                </div>
+                <div class="progress-bar">
+                    <span style="width:82%"></span>
+                </div>
+            </div>
+
+            <div class="system-item">
+                <div>
+                    <span>Appointment Capacity</span>
+                    <strong id="appointmentCapacity">68%</strong>
+                </div>
+                <div class="progress-bar">
+                    <span style="width:68%"></span>
+                </div>
+            </div>
+
+            <div class="system-item">
+                <div>
+                    <span>Doctor Availability</span>
+                    <strong id="doctorAvailability">91%</strong>
+                </div>
+                <div class="progress-bar">
+                    <span style="width:91%"></span>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <i class="bi bi-check-circle-fill"></i>
+                <p id="systemStatusText">All systems operational</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="admin-notification">
+        <div class="notification-icon">
+            <i class="bi bi-shield-check"></i>
+        </div>
+        <div>
+            <span>SYSTEM STATUS</span>
+            <h3>NalamCare is running smoothly.</h3>
+            <p>All major services and healthcare operations are currently active.</p>
+        </div>
+        <a href="#">System Details <i class="bi bi-arrow-right"></i></a>
+    </section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    const role = localStorage.getItem("role");
+
+    if (role !== "admin") {
+        window.location.href = "login.html";
+        return;
+    }
+
+    document.querySelector(".profile-menu")?.addEventListener("click", () => {
+        alert("Admin Profile\n\nNalamCare Administrator");
+    });
+
+    try {
+        const [patientsResponse, doctorsResponse, appointmentsResponse] =
+            await Promise.all([
+                fetch("/api/patients"),
+                fetch("/api/doctors"),
+                fetch("/api/appointments")
+            ]);
+
+        const patients = await patientsResponse.json();
+        const doctors = await doctorsResponse.json();
+        const doctorOverviewList = document.getElementById("doctorOverviewList");
+
+if (doctorOverviewList) {
+    doctorOverviewList.innerHTML = "";
+
+    doctors.slice(0, 5).forEach(doctor => {
+        const row = document.createElement("div");
+        row.className = "doctor-overview-row";
+
+        const initials = doctor.name
+            .replace(/^Dr\.\s*/i, "")
+            .split(" ")
+            .filter(Boolean)
+            .map(word => word[0])
+            .slice(0, 2)
+            .join("")
+            .toUpperCase();
+
+        row.innerHTML = `
+            <div class="doctor-overview-info">
+                <div class="doctor-overview-avatar">${initials}</div>
+                <div>
+                    <h3>${doctor.name}</h3>
+                    <p>${doctor.department || "General Medicine"}</p>
+                </div>
+            </div>
+
+            <span class="doctor-status">Registered</span>
+        `;
+
+        doctorOverviewList.appendChild(row);
+    });
+
+    if (doctors.length === 0) {
+        doctorOverviewList.innerHTML =
+            "<p>No doctors registered yet.</p>";
+    }
+}
+        const appointments = await appointmentsResponse.json();
+        const adminAppointments = document.getElementById("adminAppointments");
+
+if (adminAppointments) {
+    adminAppointments.innerHTML = "";
+
+    appointments.slice(0, 5).forEach(appointment => {
+
+        const patientName = appointment.patient_name || "Unknown Patient";
+        const doctorName = appointment.doctor_name || "Unknown Doctor";
+
+        const initials = patientName
+            .split(" ")
+            .filter(Boolean)
+            .map(word => word[0])
+            .slice(0, 2)
+            .join("")
+            .toUpperCase();
+
+        const row = document.createElement("div");
+        row.className = "admin-table-row";
+
+        row.innerHTML = `
+            <div class="admin-patient">
+                <div class="patient-avatar">${initials}</div>
+                <div>
+                    <h3>${patientName}</h3>
+                    <p>${appointment.department || "General Medicine"}</p>
+                </div>
+            </div>
+
+            <span>${doctorName}</span>
+
+            <span>
+                ${appointment.appointment_date},
+                ${appointment.appointment_time}
+            </span>
+
+            <span class="admin-status ${appointment.status}">
+                ${appointment.status}
+            </span>
+        `;
+
+        adminAppointments.appendChild(row);
+    });
+
+    if (appointments.length === 0) {
+        adminAppointments.innerHTML =
+            "<p>No appointments available.</p>";
+    }
+}
+
+        document.getElementById("totalPatients").textContent =
+            patients.length;
+
+        document.getElementById("totalDoctors").textContent =
+            doctors.length;
+            const systemStatusText = document.getElementById("systemStatusText");
+
+if (systemStatusText) {
+    systemStatusText.textContent =
+        "All NalamCare systems are operational.";
+}
+
+        document.getElementById("totalAppointments").textContent =
+            appointments.length;
+            const websiteTraffic = document.getElementById("websiteTraffic");
+const appointmentCapacity = document.getElementById("appointmentCapacity");
+const doctorAvailability = document.getElementById("doctorAvailability");
+
+if (websiteTraffic) {
+    websiteTraffic.textContent = appointments.length > 0
+        ? `${appointments.length * 12}`
+        : "0";
+}
+
+if (appointmentCapacity) {
+    const capacity = Math.min(100, Math.round((appointments.length / 10) * 100));
+    appointmentCapacity.textContent = `${capacity}%`;
+}
+
+if (doctorAvailability) {
+    doctorAvailability.textContent =
+        doctors.length > 0 ? "100%" : "0%";
+}
+
+    } catch (error) {
+        console.error("Admin dashboard loading error:", error);
+    }
+
+});
+</script>
+
+</body>
+</html>

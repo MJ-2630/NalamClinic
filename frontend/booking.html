@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="NalamCare - Book your doctor appointment quickly and conveniently.">
+
+    <title>Book Appointment | NalamCare</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <div class="brand-logo">
+                        <span class="logo-icon">
+                            <i class="bi bi-heart-pulse-fill"></i>
+                        </span>
+                        <div class="brand-text">
+                            <span class="brand-name">NalamCare</span>
+                            <small>Your Health, Our Care</small>
+                        </div>
+                    </div>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="doctors.html">
+                                Doctors
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="departments.html">
+                                Departments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="booking.html">
+                                Appointments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Navbar Actions -->
+                    <div class="nav-actions">
+                        <button class="nav-search" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <a href="login.html" class="login-link">
+                            <i class="bi bi-person"></i>
+                            Login
+                        </a>
+                        <a href="booking.html" class="btn nav-book-btn">
+                            Book Appointment
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ================= BOOKING HERO ================= -->
+    <section class="booking-hero">
+        <div class="container">
+            <div class="booking-hero-content">
+                <span class="section-tag">
+                    <i class="bi bi-calendar2-check"></i>
+                    APPOINTMENT BOOKING
+                </span>
+                <h1>
+                    Book Your
+                    <span>Appointment</span>
+                </h1>
+                <p>
+                    Choose your preferred doctor, select a convenient
+                    date and time, and confirm your appointment with ease.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- ================= BOOKING STEPS ================= -->
+    <section class="booking-steps">
+        <div class="container">
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="booking-step active">
+                    <div class="step-circle">
+                        <span>01</span>
+                    </div>
+                    <div class="step-info">
+                        <strong>Select Doctor</strong>
+                        <small>Choose your doctor</small>
+                    </div>
+                </div>
+                <!-- Connector -->
+                <div class="step-connector"></div>
+                <!-- Step 2 -->
+                <div class="booking-step">
+                    <div class="step-circle">
+                        <span>02</span>
+                    </div>
+                    <div class="step-info">
+                        <strong>Date & Time</strong>
+                        <small>Choose your slot</small>
+                    </div>
+                </div>
+                <!-- Connector -->
+                <div class="step-connector"></div>
+                <!-- Step 3 -->
+                <div class="booking-step">
+                    <div class="step-circle">
+                        <span>03</span>
+                    </div>
+                    <div class="step-info">
+                        <strong>Patient Details</strong>
+                        <small>Your information</small>
+                    </div>
+                </div>
+                <!-- Connector -->
+                <div class="step-connector"></div>
+                <!-- Step 4 -->
+                <div class="booking-step">
+                    <div class="step-circle">
+                        <span>04</span>
+                    </div>
+                    <div class="step-info">
+                        <strong>Confirmation</strong>
+                        <small>Confirm booking</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= DOCTOR SELECTION ================= -->
+    <section class="doctor-selection section-padding">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">STEP 01</span>
+                    <h2>
+                        Choose Your
+                        <span>Doctor</span>
+                    </h2>
+                    <p>
+                        Select a department and choose the doctor
+                        you would like to consult.
+                    </p>
+                </div>
+                <!-- Department Filter -->
+                <div class="doctor-filter">
+                    <label for="departmentSelect">
+                        <i class="bi bi-hospital"></i>
+                        Department
+                    </label>
+                    <select id="departmentSelect">
+                        <option selected>All Departments</option>
+                        <option>General Medicine</option>
+                        <option>Cardiology</option>
+                        <option>Pediatrics</option>
+                        <option>Dental Care</option>
+                        <option>Eye Care</option>
+                        <option>Neurology</option>
+                    </select>
+                </div>
+            </div>
+            <!--Doctors card-->
+            <div class="row g-4 mt-3" id="doctorList">
+                <div class="col-12">
+                    <div class="text-center py-4">
+                        <p>Loading Doctors...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= DATE & TIME SELECTION ================= -->
+    <section class="date-time-section section-padding">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="section-tag">STEP 02</span>
+                <h2>
+                    Select Your
+                    <span>Date & Time</span>
+                </h2>
+                <p>
+                    Choose a convenient date and available time slot
+                    for your consultation.
+                </p>
+            </div>
+            <div class="booking-date-time-wrapper">
+                <!-- Date Selection -->
+                <div class="date-selection">
+                    <div class="booking-card-header">
+                        <div>
+                            <span class="booking-mini-tag">
+                                <i class="bi bi-calendar3"></i>
+                                SELECT DATE
+                            </span>
+                            <h3>Choose a Date</h3>
+                        </div>
+                        <div class="calendar-month">
+                            <button type="button">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <strong>September 2026</strong>
+                            <button type="button">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Week Days -->
+                    <div class="calendar-week">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+                    <!-- Calendar -->
+                    <div class="calendar-days">
+                        <button type="button" class="calendar-day muted">30</button>
+                        <button type="button" class="calendar-day muted">31</button>
+                        <button type="button" class="calendar-day">1</button>
+                        <button type="button" class="calendar-day">2</button>
+                        <button type="button" class="calendar-day">3</button>
+                        <button type="button" class="calendar-day">4</button>
+                        <button type="button" class="calendar-day">5</button>
+                        <button type="button" class="calendar-day">6</button>
+                        <button type="button" class="calendar-day">7</button>
+                        <button type="button" class="calendar-day">8</button>
+                        <button type="button" class="calendar-day">9</button>
+                        <button type="button" class="calendar-day">10</button>
+                        <button type="button" class="calendar-day">11</button>
+                        <button type="button" class="calendar-day">12</button>
+                        <button type="button" class="calendar-day">13</button>
+                        <button type="button" class="calendar-day">14</button>
+                        <button type="button" class="calendar-day active">15</button>
+                        <button type="button" class="calendar-day">16</button>
+                        <button type="button" class="calendar-day">17</button>
+                        <button type="button" class="calendar-day">18</button>
+                        <button type="button" class="calendar-day">19</button>
+                        <button type="button" class="calendar-day">20</button>
+                        <button type="button" class="calendar-day">21</button>
+                        <button type="button" class="calendar-day">22</button>
+                        <button type="button" class="calendar-day">23</button>
+                        <button type="button" class="calendar-day">24</button>
+                        <button type="button" class="calendar-day">25</button>
+                        <button type="button" class="calendar-day">26</button>
+                        <button type="button" class="calendar-day">27</button>
+                        <button type="button" class="calendar-day">28</button>
+                        <button type="button" class="calendar-day">29</button>
+                        <button type="button" class="calendar-day">30</button>
+                        <button type="button" class="calendar-day muted">1</button>
+                        <button type="button" class="calendar-day muted">2</button>
+                        <button type="button" class="calendar-day muted">3</button>
+                    </div>
+                </div>
+                <!-- Time Selection -->
+                <div class="time-selection">
+                    <div class="booking-card-header">
+                        <div>
+                            <span class="booking-mini-tag">
+                                <i class="bi bi-clock"></i>
+                                SELECT TIME
+                            </span>
+                            <h3>Available Slots</h3>
+                        </div>
+                        <span class="slot-count">
+                            8 Slots Available
+                        </span>
+                    </div>
+                    <!-- Morning -->
+                    <div class="time-group">
+                        <h4>
+                            <i class="bi bi-sunrise"></i>
+                            Morning
+                        </h4>
+                        <div class="time-slots">
+                            <button type="button" class="time-slot">
+                                09:00 AM
+                            </button>
+                            <button type="button" class="time-slot">
+                                09:30 AM
+                            </button>
+                            <button type="button" class="time-slot selected">
+                                10:00 AM
+                            </button>
+                            <button type="button" class="time-slot">
+                                10:30 AM
+                            </button>
+                            <button type="button" class="time-slot disabled">
+                                11:00 AM
+                            </button>
+                            <button type="button" class="time-slot">
+                                11:30 AM
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Evening -->
+                    <div class="time-group">
+                        <h4>
+                            <i class="bi bi-sunset"></i>
+                            Evening
+                        </h4>
+                        <div class="time-slots">
+                            <button type="button" class="time-slot">
+                                04:00 PM
+                            </button>
+                            <button type="button" class="time-slot">
+                                04:30 PM
+                            </button>
+                            <button type="button" class="time-slot">
+                                05:00 PM
+                            </button>
+                            <button type="button" class="time-slot">
+                                05:30 PM
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Slot Note -->
+                    <div class="slot-note">
+                        <i class="bi bi-info-circle"></i>
+                        <span>
+                            Available slots are updated based on
+                            the doctor's schedule.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= PATIENT DETAILS ================= -->
+    <section class="patient-details-section section-padding">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-tag">STEP 03</span>
+                <h2>
+                    Enter Your
+                    <span>Patient Details</span>
+                </h2>
+                <p>
+                    Please provide your details so we can prepare
+                    your appointment and contact you when needed.
+                </p>
+            </div>
+            <div class="patient-form-wrapper">
+                <!-- Patient Information -->
+                <div class="patient-form-card">
+                    <div class="form-card-header">
+                        <div class="form-header-icon">
+                            <i class="bi bi-person-vcard"></i>
+                        </div>
+                        <div>
+                            <h3>Personal Information</h3>
+                            <p>Enter the patient's basic information.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <!-- Full Name -->
+                        <div class="col-md-6">
+                            <label for="patientName">
+                                Full Name
+                                <span>*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-person"></i>
+                                <input type="text"
+                                    id="patientName"
+                                    placeholder="Enter your full name"
+                                    required>
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="col-md-6">
+                            <label for="patientPhone">
+                                Phone Number
+                                <span>*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-telephone"></i>
+                                <input type="tel"
+                                    id="patientPhone"
+                                    placeholder="Enter your phone number"
+                                    required>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <label for="patientEmail">
+                                Email Address
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-envelope"></i>
+                                <input type="email"
+                                    id="patientEmail"
+                                    placeholder="Enter your email address">
+                            </div>
+                        </div>
+                        <!-- Date of Birth -->
+                        <div class="col-md-6">
+                            <label for="patientDob">
+                                Date of Birth
+                                <span>*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-calendar3"></i>
+                                <input type="date"
+                                    id="patientDob"
+                                    required>
+                            </div>
+                        </div>
+                        <!-- Gender -->
+                        <div class="col-md-6">
+                            <label for="patientGender">
+                                Gender
+                                <span>*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-gender-ambiguous"></i>
+                                <select id="patientGender" required>
+                                    <option value="" selected disabled>
+                                        Select Gender
+                                    </option>
+                                    <option value="male">
+                                        Male
+                                    </option>
+                                    <option value="female">
+                                        Female
+                                    </option>
+                                    <option value="other">
+                                        Other
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Age -->
+                        <div class="col-md-6">
+                            <label for="patientAge">
+                                Age
+                                <span>*</span>
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-person-badge"></i>
+                                <input type="number"
+                                    id="patientAge"
+                                    min="1"
+                                    max="120"
+                                    placeholder="Enter your age"
+                                    required>
+                            </div>
+                        </div>
+                        <!-- Reason -->
+                        <div class="col-12">
+                            <label for="visitReason">
+                                Reason for Visit
+                                <span>*</span>
+                            </label>
+                            <textarea id="visitReason"
+                                rows="4"
+                                placeholder="Briefly describe the reason for your visit..."
+                                required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Emergency Contact -->
+                <div class="emergency-contact-card">
+                    <div class="form-card-header">
+                        <div class="form-header-icon">
+                            <i class="bi bi-shield-plus"></i>
+                        </div>
+                        <div>
+                            <h3>Emergency Contact</h3>
+                            <p>Optional contact information for emergencies.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label for="emergencyName">
+                                Contact Name
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-person"></i>
+                                <input type="text"
+                                    id="emergencyName"
+                                    placeholder="Emergency contact name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="emergencyPhone">
+                                Contact Number
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-telephone"></i>
+                                <input type="tel"
+                                    id="emergencyPhone"
+                                    placeholder="Emergency contact number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Privacy Note -->
+                <div class="privacy-note">
+                    <i class="bi bi-lock-fill"></i>
+                    <div>
+                        <strong>Your information is secure</strong>
+                        <p>
+                            Your personal information will be kept private
+                            and used only for appointment-related purposes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= APPOINTMENT CONFIRMATION ================= -->
+    <section class="confirmation-section section-padding">
+        <div class="container">
+            <div class="section-heading text-center">
+                <span class="section-tag">STEP 04</span>
+                <h2>
+                    Review & Confirm Your
+                    <span>Appointment</span>
+                </h2>
+                <p>
+                    Check your appointment details carefully before
+                    confirming your booking.
+                </p>
+            </div>
+            <div class="confirmation-wrapper">
+                <!-- Appointment Summary -->
+                <div class="appointment-summary-card">
+                    <div class="summary-header">
+                        <div>
+                            <span class="summary-tag">
+                                <i class="bi bi-calendar-check"></i>
+                                APPOINTMENT SUMMARY
+                            </span>
+                            <h3>Your Appointment Details</h3>
+                        </div>
+                        <span class="confirmed-badge">
+                            <i class="bi bi-shield-check"></i>
+                            Secure Booking
+                        </span>
+                    </div>
+                    <!-- Doctor -->
+                    <div class="summary-doctor">
+                        <div class="summary-doctor-image">
+                            <img src="assets/images/doctor-1.jpg"
+                                alt="Selected Doctor">
+                        </div>
+                        <div class="summary-doctor-info">
+                            <span>GENERAL MEDICINE</span>
+                            <h4 id="summaryDoctor">Dr. Arun Kumar</h4>
+                            <p>
+                                <i class="bi bi-star-fill"></i>
+                                5.0
+                                <span>• General Physician</span>
+                            </p>
+                        </div>
+                        <button type="button" class="change-doctor-btn">
+                            Change
+                        </button>
+                    </div>
+                    <!-- Appointment Information -->
+                    <div class="summary-details">
+                        <div class="summary-detail-item">
+                            <div class="summary-detail-icon">
+                                <i class="bi bi-calendar3"></i>
+                            </div>
+                            <div>
+                                <span>Date</span>
+                                <strong id="summaryDate">15 September 2026</strong>
+                            </div>
+                        </div>
+                        <div class="summary-detail-item">
+                            <div class="summary-detail-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div>
+                                <span>Time</span>
+                                <strong id="summaryTime">10:00 AM</strong>
+                            </div>
+                        </div>
+                        <div class="summary-detail-item">
+                            <div class="summary-detail-icon">
+                                <i class="bi bi-hospital"></i>
+                            </div>
+                            <div>
+                                <span>Department</span>
+                                <strong id="summaryDepartment">General Medicine</strong>
+                            </div>
+                        </div>
+                        <div class="summary-detail-item">
+                            <div class="summary-detail-icon">
+                                <i class="bi bi-camera-video"></i>
+                            </div>
+                            <div>
+                                <span>Consultation</span>
+                                <strong>In-Clinic Visit</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Patient Summary -->
+                <div class="patient-summary-card">
+                    <div class="summary-header">
+                        <div>
+                            <span class="summary-tag">
+                                <i class="bi bi-person-check"></i>
+                                PATIENT INFORMATION
+                            </span>
+                            <h3>Patient Details</h3>
+                        </div>
+                        <button type="button" class="edit-details-btn">
+                            <i class="bi bi-pencil"></i>
+                            Edit
+                        </button>
+                    </div>
+                    <div class="patient-summary-grid">
+                        <div>
+                            <span>Patient Name</span>
+                            <strong id="summaryPatientName">Kiran Sugan</strong>
+                        </div>
+                        <div>
+                            <span>Phone Number</span>
+                            <strong id="summaryPatientPhone">+91 XXXXX XXXXX</strong>
+                        </div>
+                        <div>
+                            <span>Email Address</span>
+                            <strong id="summaryPatientEmail">patient@example.com</strong>
+                        </div>
+                        <div>
+                            <span>Age</span>
+                            <strong id="summaryPatientAge">25 Years</strong>
+                        </div>
+                    </div>
+                </div>
+                <!-- Consultation Fee -->
+                <div class="booking-fee-card">
+                    <div class="fee-info">
+                        <span>Consultation Fee</span>
+                        <small>
+                            <i class="bi bi-info-circle"></i>
+                            Pay at the clinic
+                        </small>
+                    </div>
+                    <strong>₹500</strong>
+                </div>
+                <!-- Terms -->
+                <div class="booking-terms">
+                    <label>
+                        <input type="checkbox" id="bookingTerms">
+                        <span>
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                            and
+                            <a href="#">Privacy Policy</a>.
+                        </span>
+                    </label>
+                </div>
+                <!-- Confirm Button -->
+                <div class="confirm-booking-area">
+                    <button type="button" class="confirm-booking-btn">
+                        <span>
+                            <i class="bi bi-calendar2-check"></i>
+                            Confirm Appointment
+                        </span>
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <p>
+                        <i class="bi bi-lock-fill"></i>
+                        Your appointment details are securely processed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand">
+                        <span class="logo-icon">
+                            <i class="bi bi-heart-pulse-fill"></i>
+                        </span>
+                        <span>NalamCare</span>
+                    </a>
+                    <p>
+                        Providing trusted, compassionate and convenient healthcare
+                        for you and your family.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 style="color: antiquewhite;">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 style="color: antiquewhite;">Patient Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="login.html">My Appointments</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 style="color: antiquewhite;">Get In Touch</h3>
+                    <ul class="contact-list">
+                    <li>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Nalam+Clinic%2C+Your+City%2C+Tamil+Nadu%2C+India" target="_blank" rel="noopener noreferrer">Nalam Clinic,<br>Your City, Tamil Nadu, India</a>
+                    </li>
+                    <li>
+                    <i class="bi bi-telephone-fill"></i>
+                    <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a>
+                    </li>
+                    <li>
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:info@nalamclinic.com">info@nalamclinic.com</a>
+                    </li>
+                     <li>
+                    <i class="bi bi-clock-fill"></i>
+                     <span>Mon - Sun : 8:00 AM - 12:00 AM</span>
+                    </li>
+                    </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 NalamCare. All Rights Reserved.
+                </p>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+     <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const userData = localStorage.getItem("user");
+    const role = localStorage.getItem("role");
+
+    if (!userData || role !== "patient") {
+        window.location.href = "login.html";
+        return;
+    }
+
+    const patient = JSON.parse(userData);
+
+    const fullName = `${patient.first_name || ""} ${patient.last_name || ""}`.trim();
+
+    document.getElementById("patientName").value = fullName;
+    document.getElementById("patientPhone").value = patient.phone || "";
+    document.getElementById("patientEmail").value = patient.email || "";
+    document.getElementById("patientDob").value = patient.dob || "";
+    document.getElementById("patientGender").value = patient.gender || "";
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const doctorList = document.getElementById("doctorList");
+
+    try {
+        const response = await fetch("/api/doctors");
+        const doctors = await response.json();
+
+        doctorList.innerHTML = "";
+
+        if (!doctors.length) {
+            doctorList.innerHTML = `
+                <div class="col-12">
+                    <p class="text-center">No doctors available.</p>
+                </div>
+            `;
+            return;
+        }
+
+        doctors.forEach((doctor, index) => {
+
+            const doctorName = doctor.name || "Doctor";
+            const department = doctor.department || "General Medicine";
+            const specialization = doctor.specialization || department;
+            const imageNumber = (index % 4) + 1;
+
+            const col = document.createElement("div");
+            col.className = "col-md-6 col-lg-3";
+
+            col.innerHTML = `
+                <div class="booking-doctor-card">
+
+                    <div class="booking-doctor-image">
+                        <img src="doctor-${imageNumber}.jpg"
+                            alt="${doctorName}">
+
+                        <span class="doctor-status">
+                            <i class="bi bi-circle-fill"></i>
+                            Available
+                        </span>
+                    </div>
+
+                    <div class="booking-doctor-content">
+
+                        <span class="doctor-specialty">
+                            ${specialization}
+                        </span>
+
+                        <h3>${doctorName}</h3>
+
+                        <div class="doctor-rating">
+                            <i class="bi bi-star-fill"></i>
+                            <strong>5.0</strong>
+                            <span>New Doctor</span>
+                        </div>
+
+                        <p>
+                            Professional healthcare services
+                            with trusted medical care.
+                        </p>
+
+                        <button class="select-doctor-btn"
+                            type="button">
+                            Select Doctor
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            `;
+
+            const button = col.querySelector(".select-doctor-btn");
+
+            button.addEventListener("click", function () {
+
+    window.selectedDoctorId = doctor.id;
+
+    document
+        .querySelectorAll(".select-doctor-btn")
+        .forEach(btn => {
+            btn.classList.remove("selected");
+            btn.innerHTML = `
+                Select Doctor
+                <i class="bi bi-arrow-right"></i>
+            `;
+        });
+
+    this.classList.add("selected");
+
+    this.innerHTML = `
+        Selected
+        <i class="bi bi-check-lg"></i>
+    `;
+
+    const summaryDoctor =
+        document.getElementById("summaryDoctor");
+
+    const summaryDepartment =
+        document.getElementById("summaryDepartment");
+
+    if (summaryDoctor) {
+        summaryDoctor.textContent = doctorName;
+    }
+
+    if (summaryDepartment) {
+        summaryDepartment.textContent = department;
+    }
+
+    console.log("Selected Doctor ID:", doctor.id);
+    console.log("Selected Doctor:", doctorName);
+});
+
+            doctorList.appendChild(col);
+        });
+
+    } catch (error) {
+
+        console.error("Doctor loading error:", error);
+
+        doctorList.innerHTML = `
+            <div class="col-12">
+                <p class="text-center">
+                    Failed to load doctors.
+                </p>
+            </div>
+        `;
+    }
+
+});
+</script>
+</body>
+</html>

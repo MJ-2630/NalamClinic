@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Doctors | NalamClinic</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <div class="brand-logo">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                    </div>
+                    <div class="brand-text">
+                        <strong>Nalam<span>Clinic</span></strong>
+                        <small>YOUR HEALTH, OUR CARE</small>
+                    </div>
+                </a>
+                <!-- Mobile Toggle -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <!-- Navigation -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="about.html">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "
+                               href="doctors.html">
+                                Doctors
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "
+                               href="departments.html">
+                                Departments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="booking.html">
+                                Appointments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                               href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Navbar Actions -->
+                    <div class="nav-actions">
+                        <button class="nav-search"
+                                type="button"
+                                aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <a href="login.html"
+                           class="nav-login">
+                            <i class="bi bi-person"></i>
+                            Login
+                        </a>
+                        <a href="booking.html"
+                           class="nav-book-btn">
+                            Book Appointment
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- Hero -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content">
+            <span class="section-tag"><i class="bi bi-chat-heart"></i> GET IN TOUCH</span>
+            <h1>We're Here To <span>Help You</span></h1>
+            <p>Have a question, need assistance or want to book an appointment? Reach out to the NalamClinic team.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Info -->
+<section class="contact-info section-padding">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">CONTACT US</span>
+            <h2>Let's Stay <span>Connected</span></h2>
+            <p>We're always happy to help you with your healthcare needs and appointment queries.</p>
+        </div>
+
+        <div class="contact-info-grid">
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <h3>Visit Our Clinic</h3>
+                <p>Main Road, Thisaiyanvillai,<br>Tamil Nadu, India</p>
+                <a href="#clinic-map">View On Map <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                <h3>Call Us</h3>
+                <p>+91 XXXXX XXXXX<br>Mon - Sat, 9 AM - 8 PM</p>
+                <a href="tel:+91XXXXXXXXXX">Call Now <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                <h3>Email Us</h3>
+                <p>care@nalamclinic.com<br>We reply within 24 hours.</p>
+                <a href="mailto:care@nalamclinic.com">Send Email <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
+                <h3>Working Hours</h3>
+                <p>Monday - Sunday<br>12:00 AM - 11:59 PM</p>
+                <a href="#working-hours">View Hours <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-form-section section-padding">
+    <div class="container">
+        <div class="contact-form-wrapper">
+            <div class="contact-form-content">
+                <span class="section-tag">SEND A MESSAGE</span>
+                <h2>How Can We <span>Help?</span></h2>
+                <p>Fill out the form and our team will get back to you as soon as possible.</p>
+
+                <div class="contact-form-points">
+                    <div><i class="bi bi-check-circle-fill"></i><span>Quick response from our support team</span></div>
+                    <div><i class="bi bi-check-circle-fill"></i><span>Appointment and healthcare assistance</span></div>
+                    <div><i class="bi bi-check-circle-fill"></i><span>Your information is handled with care</span></div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="contact-form-row">
+                    <div class="contact-field">
+                        <label for="contactName">Full Name</label>
+                        <div class="contact-input">
+                            <i class="bi bi-person"></i>
+                            <input type="text" id="contactName" placeholder="Enter your name" required>
+                        </div>
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="contactPhone">Phone Number</label>
+                        <div class="contact-input">
+                            <i class="bi bi-telephone"></i>
+                            <input type="tel" id="contactPhone" placeholder="Enter phone number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-field">
+                    <label for="contactEmail">Email Address</label>
+                    <div class="contact-input">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" id="contactEmail" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="contact-field">
+                    <label for="contactSubject">Subject</label>
+                    <div class="contact-input">
+                        <i class="bi bi-chat-left-text"></i>
+                        <select id="contactSubject" required>
+                            <option value="" selected disabled>Select a subject</option>
+                            <option>Appointment Enquiry</option>
+                            <option>Doctor Enquiry</option>
+                            <option>General Enquiry</option>
+                            <option>Feedback</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="contact-field">
+                    <label for="contactMessage">Your Message</label>
+                    <div class="contact-input contact-textarea">
+                        <i class="bi bi-pencil-square"></i>
+                        <textarea id="contactMessage" rows="5" placeholder="Write your message..." required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="contact-submit-btn">
+                    Send Message <i class="bi bi-send"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Map -->
+<section class="clinic-map-section" id="clinic-map">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">FIND US</span>
+            <h2>Visit <span>NalamClinic</span></h2>
+            <p>We're conveniently located in Thisaiyanvillai. Find us easily using the map below.</p>
+        </div>
+
+        <div class="clinic-map-wrapper">
+            <iframe
+                src="https://www.google.com/maps?q=Thisaiyanvillai,Tamil%20Nadu,India&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+
+            <div class="map-location-card">
+                <div class="map-location-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                    <strong>Nalam Clinic</strong>
+                    <span>Main Road, Thisaiyanvillai</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Thisaiyanvillai,Tamil%20Nadu,India" target="_blank" class="map-direction-btn">
+                <i class="bi bi-sign-turn-right"></i> Get Directions
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Working Hours -->
+<section class="working-hours section-padding" id="working-hours">
+    <div class="container">
+        <div class="working-hours-wrapper">
+            <div class="working-hours-content">
+                <span class="section-tag">WHEN WE'RE AVAILABLE</span>
+                <h2>Our <span>Working Hours</span></h2>
+                <p>Plan your visit during our consultation hours. For appointments, booking in advance is recommended.</p>
+            </div>
+
+            <div class="hours-card">
+                <div class="hours-row">
+                    <span>Monday - Friday</span>
+                    <strong>9:00 AM - 8:00 PM</strong>
+                </div>
+                <div class="hours-row">
+                    <span>Saturday</span>
+                    <strong>12:00 AM - 11:59 PM</strong>
+                </div>
+                <div class="hours-row closed">
+                    <span>Sunday</span>
+                    <strong>Closed</strong>
+                </div>
+                <div class="hours-note">
+                    <i class="bi bi-info-circle"></i>
+                    <span>Emergency assistance may be available depending on the situation.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="contact-cta">
+    <div class="container">
+        <div class="contact-cta-content">
+            <span class="section-tag">NEED AN APPOINTMENT?</span>
+            <h2>Your Health Deserves <span>Timely Care</span></h2>
+            <p>Don't wait when you can take the first step today. Book an appointment with our doctors.</p>
+            <div class="contact-cta-buttons">
+                <a href="booking.html" class="cta-primary-btn">
+                    Book Appointment <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="doctors.html" class="cta-secondary-btn">
+                    Find A Doctor <i class="bi bi-people"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand">
+                        <span class="logo-icon">
+                            <i class="bi bi-heart-pulse-fill"></i>
+                        </span>
+                        <span>NalamClinic</span>
+                    </a>
+                    <p>
+                        Providing trusted, compassionate and convenient healthcare
+                        for you and your family.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 style="color: antiquewhite;">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3 style="color: antiquewhite;">Patient Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="login.html">My Appointments</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 style="color: antiquewhite;">Get In Touch</h3>
+                    <ul class="contact-list">
+                    <li>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Nalam+Clinic%2C+Your+City%2C+Tamil+Nadu%2C+India" target="_blank" rel="noopener noreferrer">Nalam Clinic,<br>Your City, Tamil Nadu, India</a>
+                    </li>
+                    <li>
+                    <i class="bi bi-telephone-fill"></i>
+                    <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a>
+                    </li>
+                    <li>
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:info@nalamclinic.com">info@nalamclinic.com</a>
+                    </li>
+                     <li>
+                    <i class="bi bi-clock-fill"></i>
+                     <span>Mon - Sun : 8:00 AM - 12:00 AM</span>
+                    </li>
+                    </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 NalamClinic. All Rights Reserved.
+                </p>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

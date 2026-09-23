@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Doctors | NalamClinic</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <div class="brand-logo">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                    </div>
+                    <div class="brand-text">
+                        <strong>Nalam<span>Clinic</span></strong>
+                        <small>YOUR HEALTH, OUR CARE</small>
+                    </div>
+                </a>
+                <!-- Mobile Toggle -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <!-- Navigation -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="about.html">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                               href="doctors.html">
+                                Doctors
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="departments.html">
+                                Departments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="booking.html">
+                                Appointments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Navbar Actions -->
+                    <div class="nav-actions">
+                        <button class="nav-search"
+                                type="button"
+                                aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <a href="login.html"
+                           class="nav-login">
+                            <i class="bi bi-person"></i>
+                            Login
+                        </a>
+                        <a href="booking.html"
+                           class="nav-book-btn">
+                            Book Appointment
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Doctors Hero -->
+<section class="doctors-hero">
+    <div class="container">
+        <div class="doctors-hero-content">
+            <span class="section-tag">
+                <i class="bi bi-person-hearts"></i>
+                OUR MEDICAL TEAM
+            </span>
+            <h1>Meet Our <span>Doctors</span></h1>
+            <p>Experienced healthcare professionals dedicated to providing trusted, personalized care for every patient.</p>
+        </div>
+    </div>
+</section>
+<!-- Doctor Search -->
+<section class="doctor-search-section">
+    <div class="container">
+        <div class="doctor-search-box">
+            <div class="doctor-search-input">
+                <i class="bi bi-search"></i>
+                <input type="text" id="doctorSearch" placeholder="Search doctor by name or specialty...">
+            </div>
+            <div class="doctor-department-filter">
+                <i class="bi bi-funnel"></i>
+                <select id="doctorDepartment">
+                    <option selected>All Departments</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="no-doctors-found" id="noDoctorFound">
+    <i class="bi bi-person-x"></i>
+    <h3>No Doctors Found</h3>
+    <p>Try Searching with another name or department.</p>
+</div>
+<!-- Featured Doctors -->
+<section class="featured-doctors section-padding">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">FEATURED DOCTORS</span>
+            <h2>Our <span>Specialists</span></h2>
+            <p>Meet our experienced medical professionals committed to delivering quality healthcare.</p>
+        </div>
+
+        <div class="row g-4 mt-3" id="featuredDoctorsList">
+            <div class="col-12 text-center">
+                <p>Loading doctors..</p>
+            </div>
+        </div>
+            
+    </div>
+</section>
+<!-- All Doctors -->
+<section class="all-doctors section-padding">
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <span class="section-tag">OUR DOCTORS</span>
+                <h2>Find The Right <span>Doctor</span></h2>
+                <p>Explore our medical team and choose the right specialist for your healthcare needs.</p>
+            </div>
+            <span class="doctor-count" id="doctorCount">
+                <i class="bi bi-people">
+                </i>loading..</span>
+        </div>
+         <div class="row g-4 mt-3" id="allDoctorsList">
+            <div class="col-12 text-center">
+                <p>Loading doctors..</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-- Availability -->
+<section class="doctor-availability section-padding">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">DOCTOR AVAILABILITY</span>
+            <h2>Plan Your Visit <span>With Ease</span></h2>
+            <p>Check consultation timings and book an appointment at a convenient time.</p>
+        </div>
+
+        <div class="availability-wrapper">
+            <div class="availability-card">
+                <div class="availability-icon"><i class="bi bi-calendar2-week"></i></div>
+                <div>
+                    <h3>Flexible Consultation Hours</h3>
+                    <p>Choose from available morning and evening consultation slots based on your doctor's schedule.</p>
+                </div>
+            </div>
+            <div class="availability-card">
+                <div class="availability-icon"><i class="bi bi-clock-history"></i></div>
+                <div>
+                    <h3>Easy Slot Selection</h3>
+                    <p>View available time slots and select the one that works best for your schedule.</p>
+                </div>
+            </div>
+            <div class="availability-card">
+                <div class="availability-icon"><i class="bi bi-bell"></i></div>
+                <div>
+                    <h3>Appointment Reminders</h3>
+                    <p>Get timely reminders about your upcoming appointment so you never miss your consultation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA -->
+<section class="doctors-cta">
+    <div class="container">
+        <div class="doctors-cta-content">
+            <span class="section-tag">YOUR HEALTH MATTERS</span>
+            <h2>Ready to Meet Your <span>Doctor?</span></h2>
+            <p>Take the first step towards better health. Choose your doctor and book your appointment today.</p>
+            <div class="doctors-cta-buttons">
+                <a href="booking.html" class="cta-primary-btn">Book Appointment <i class="bi bi-arrow-right"></i></a>
+                <a href="contact.html" class="cta-secondary-btn">Contact Us <i class="bi bi-telephone"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand">
+                        <span class="logo-icon">
+                            <i class="bi bi-heart-pulse-fill"></i>
+                        </span>
+                        <span>NalamClinic</span>
+                    </a>
+                    <p>
+                        Providing trusted, compassionate and convenient healthcare
+                        for you and your family.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+               <div class="col-lg-4">
+                    <h3 style="color: antiquewhite;">Get In Touch</h3>
+                    <ul class="contact-list">
+                    <li>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Nalam+Clinic%2C+Your+City%2C+Tamil+Nadu%2C+India" target="_blank" rel="noopener noreferrer">Nalam Clinic,<br>Your City, Tamil Nadu, India</a>
+                    </li>
+                    <li>
+                    <i class="bi bi-telephone-fill"></i>
+                    <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a>
+                    </li>
+                    <li>
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:info@nalamclinic.com">info@nalamclinic.com</a>
+                    </li>
+                     <li>
+                    <i class="bi bi-clock-fill"></i>
+                     <span>Mon - Sun : 8:00 AM - 12:00 AM</span>
+                    </li>
+                    </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 NalamClinic. All Rights Reserved.
+                </p>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+<button class="back-to-top" id="backToTop">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<!--doctors & search-->
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    const featuredList = document.getElementById("featuredDoctorsList");
+    const allDoctorsList = document.getElementById("allDoctorsList");
+    const searchInput = document.getElementById("doctorSearch");
+    const departmentFilter = document.getElementById("doctorDepartment");
+    const doctorCount = document.getElementById("doctorCount");
+    const noDoctorFound = document.getElementById("noDoctorFound");
+
+    let doctors = [];
+    let ratings = {};
+
+    try {
+        const response = await fetch("/api/doctors");
+
+        if (!response.ok) {
+            throw new Error("Failed to load doctors");
+        }
+
+        doctors = await response.json();
+
+        for (const doctor of doctors) {
+            try {
+                const ratingResponse =
+                    await fetch(`/api/doctors/${doctor.id}/rating`);
+
+                if (ratingResponse.ok) {
+                    ratings[doctor.id] =
+                        await ratingResponse.json();
+                }
+            } catch (error) {
+                ratings[doctor.id] = {
+                    average_rating: 5,
+                    review_count: 0
+                };
+            }
+        }
+
+        const departments = [
+            ...new Set(
+                doctors
+                    .map(doctor => doctor.department)
+                    .filter(Boolean)
+            )
+        ];
+
+        departmentFilter.innerHTML =
+            `<option value="">All Departments</option>` +
+            departments.map(department => `
+                <option value="${department}">
+                    ${department}
+                </option>
+            `).join("");
+
+        doctorCount.innerHTML =
+            `<i class="bi bi-people"></i> ${doctors.length} Doctors`;
+
+        renderDoctors(doctors);
+
+    } catch (error) {
+        console.error("Doctor page loading error:", error);
+
+        featuredList.innerHTML = `
+            <div class="col-12 text-center">
+                <p>Unable to load doctors.</p>
+            </div>
+        `;
+
+        allDoctorsList.innerHTML = "";
+    }
+
+    function renderDoctors(list) {
+        if (!list.length) {
+            featuredList.innerHTML = "";
+            allDoctorsList.innerHTML = "";
+            noDoctorFound.classList.add("active");
+            return;
+        }
+
+        noDoctorFound.classList.remove("active");
+
+        const featuredDoctors = list.slice(0, 4);
+        const remainingDoctors = list.slice(4);
+
+        featuredList.innerHTML =
+            featuredDoctors.map((doctor, index) =>
+                createDoctorCard(doctor, index)
+            ).join("");
+
+        allDoctorsList.innerHTML =
+            remainingDoctors.map((doctor, index) =>
+                createDoctorCard(doctor, index + 4)
+            ).join("");
+    }
+
+    function createDoctorCard(doctor, index) {
+        const rating = ratings[doctor.id] || {};
+        const averageRating =
+            Number(rating.average_rating || 5).toFixed(1);
+
+        const reviewCount =
+            rating.review_count || 0;
+
+        const imageNumber = (index % 8) + 1;
+
+        const specialty =
+            doctor.specialization ||
+            doctor.department ||
+            "Specialist";
+
+        const description =
+            doctor.specialization
+                ? `${doctor.specialization} specialist providing patient-focused healthcare.`
+                : `Experienced ${doctor.department || "medical"} specialist providing quality patient care.`;
+
+        return `
+            <div class="col-lg-3 col-md-6 doctor-item">
+                <div class="doctor-page-card">
+
+                    <div class="doctor-page-image">
+                        <img
+                            src="doctor-${imageNumber}.jpg"
+                            alt="${doctor.name}"
+                        >
+
+                        <span class="doctor-available">
+                            <i class="bi bi-circle-fill"></i>
+                            Available
+                        </span>
+                    </div>
+
+                    <div class="doctor-page-content">
+
+                        <span class="doctor-specialty">
+                            ${specialty}
+                        </span>
+
+                        <h3>${doctor.name}</h3>
+
+                        <div class="doctor-rating">
+                            <i class="bi bi-star-fill"></i>
+
+                            <strong>${averageRating}</strong>
+
+                            <span>
+                                (${reviewCount} Reviews)
+                            </span>
+                        </div>
+
+                        <p>${description}</p>
+
+                        <div class="doctor-card-footer">
+
+                            <span>
+                                <i class="bi bi-clock"></i>
+                                Available
+                            </span>
+
+                            <a href="booking.html?doctor=${doctor.id}">
+                                Book Now
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function filterDoctors() {
+        const searchValue =
+            searchInput.value
+                .trim()
+                .toLowerCase();
+
+        const selectedDepartment =
+            departmentFilter.value;
+
+        const filteredDoctors =
+            doctors.filter(doctor => {
+
+                const name =
+                    (doctor.name || "").toLowerCase();
+
+                const department =
+                    (doctor.department || "").toLowerCase();
+
+                const specialization =
+                    (doctor.specialization || "").toLowerCase();
+
+                const matchesSearch =
+                    !searchValue ||
+                    name.includes(searchValue) ||
+                    department.includes(searchValue) ||
+                    specialization.includes(searchValue);
+
+                const matchesDepartment =
+                    !selectedDepartment ||
+                    doctor.department === selectedDepartment;
+
+                return matchesSearch && matchesDepartment;
+            });
+
+        renderDoctors(filteredDoctors);
+    }
+
+    searchInput?.addEventListener(
+        "input",
+        filterDoctors
+    );
+
+    departmentFilter?.addEventListener(
+        "change",
+        filterDoctors
+    );
+});
+</script>
+</body>
+</html>
