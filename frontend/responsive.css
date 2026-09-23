@@ -10312,3 +10312,247 @@ img {
     }
 
 }
+
+/* =========================================
+   APPOINTMENTS PAGE - RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .appointments-page {
+        padding: 35px 4% 50px;
+    }
+
+    .appointment-stats {
+        gap: 15px;
+    }
+
+    .appointment-stat-card {
+        padding: 20px;
+    }
+
+    .appointments-card-header {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .appointments-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .back-dashboard-btn {
+        width: fit-content;
+    }
+
+    .appointment-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-stat-card {
+        min-height: 100px;
+    }
+
+    .appointments-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .appointment-search {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .appointments-page {
+        padding: 25px 15px 40px;
+    }
+
+    .appointments-header {
+        margin-bottom: 25px;
+    }
+
+    .dashboard-tag {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .appointments-header h1 {
+        font-size: 27px;
+    }
+
+    .appointments-header p {
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .back-dashboard-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+
+
+    /* Stats */
+
+    .appointment-stats {
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .appointment-stat-card {
+        min-height: 88px;
+        padding: 17px;
+        gap: 13px;
+        border-radius: 13px;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 11px;
+        font-size: 19px;
+    }
+
+    .appointment-stat-card span {
+        font-size: 12px;
+    }
+
+    .appointment-stat-card h2 {
+        font-size: 23px;
+    }
+
+
+    /* Main card */
+
+    .appointments-card {
+        border-radius: 13px;
+    }
+
+    .appointments-card-header {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .card-label {
+        font-size: 10px;
+    }
+
+    .appointments-card-header h2 {
+        font-size: 19px;
+    }
+
+
+    /* Search */
+
+    .appointment-search {
+        width: 100%;
+    }
+
+    .appointment-search input {
+        height: 40px;
+        font-size: 12px;
+    }
+
+
+    /* Table */
+
+    .appointments-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .appointments-table-head,
+    .appointment-row {
+        min-width: 720px;
+    }
+
+    .appointments-table-head {
+        padding: 12px 18px;
+    }
+
+    .appointments-table-head span {
+        font-size: 10px;
+    }
+
+    .appointment-row {
+        padding: 15px 18px;
+    }
+
+    .appointment-patient,
+    .appointment-doctor,
+    .appointment-date {
+        font-size: 12px;
+    }
+
+    .appointment-patient small,
+    .appointment-doctor small,
+    .appointment-date small {
+        font-size: 10px;
+    }
+
+    .appointment-status {
+        padding: 5px 9px;
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .appointments-page {
+        padding: 22px 12px 35px;
+    }
+
+    .appointments-header h1 {
+        font-size: 24px;
+    }
+
+    .appointment-stat-card {
+        padding: 15px;
+    }
+
+    .stat-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .appointment-stat-card h2 {
+        font-size: 21px;
+    }
+
+    .appointments-card-header {
+        padding: 16px;
+    }
+
+    .appointments-table-head,
+    .appointment-row {
+        min-width: 700px;
+    }
+
+}
